@@ -1,6 +1,6 @@
 import Head from "next/head"
-import { Work } from "../../components/organisms/Work"
-import { Layout } from "../../components/pages/Layout"
+import { Work } from "../components/organisms/Work"
+import { Layout } from "../components/pages/Layout"
 
 export default function WorkPage() {
   return (
