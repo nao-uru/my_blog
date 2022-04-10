@@ -1,23 +1,18 @@
 import { createClient } from "contentful";
-
-import { Layout } from "../../components/pages/Layout";
-import { BlogCard } from "../../components/molecules/BlogCard"
 import { Flex, Grid } from "@chakra-ui/react";
-import { Menu } from "../../components/molecules/Menu";
-import { TabLink } from "../../components/atoms/TabLink";
+
+import { Layout } from "../components/pages/Layout";
+import { BlogCard } from "../components/molecules/BlogCard"
+import { TabLink } from "../components/atoms/TabLink";
+
+import { getAllPosts } from "../libs/contentful";
 
 
 export async function getStaticProps() {
-  const client = createClient({
-    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-  });
-
-  const res = await client.getEntries({ content_type: 'blogPost'})
-  
+  const posts = await getAllPosts();
   return{
     props: {
-      blogPosts: res.items,
+      blogPosts: posts,
     }
   }
 }
@@ -43,6 +38,7 @@ export default function BlogPage({ blogPosts }) {
       key={blogPost.sys.id} 
       title={blogPost.fields.title}
       url={blogPost.fields.media.fields.file.url}
+      slug={blogPost.fields.slug}
       />
     })} 
       </Grid>
@@ -51,3 +47,5 @@ export default function BlogPage({ blogPosts }) {
     </>
   )
 }
+
+

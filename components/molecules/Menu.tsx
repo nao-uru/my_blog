@@ -13,25 +13,25 @@ export const Menu = () => {
 
     <Flex align="baseline">
 
-    <Link href="/main/Blog" passHref>
+    <Link href="/Blog" passHref>
     <Box mr="32px">
     <HeaderLink>Blog</HeaderLink>
     </Box>
     </Link>
     
-    <Link href="/main/Work" passHref>
+    <Link href="/Work" passHref>
     <Box mr="32px">
     <HeaderLink>Work</HeaderLink>
     </Box>
     </Link>
 
-    <Link href="/main/About" passHref>
+    <Link href="/About" passHref>
     <Box mr="32px">
     <HeaderLink>About</HeaderLink>
     </Box>
     </Link>
 
-    <Link href="/main/Contact" passHref>
+    <Link href="/Contact" passHref>
     <Box>
     <HeaderLink>Contact</HeaderLink>
     </Box>

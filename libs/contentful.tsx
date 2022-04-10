@@ -1,43 +1,28 @@
 import { createClient } from "contentful";
 
-import { Layout } from "../components/pages/Layout";
-import { BlogCard } from "../components/molecules/BlogCard";
-import { Flex, Grid } from "@chakra-ui/react";
+const client = createClient({
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+});
 
-
-export async function getStaticProps() {
-  const client = createClient({
-    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+export async function getAllPosts() {
+  const entries = await client.getEntries({
+    content_type:'blogPost',
+    order:"-fields.date",
   });
-
-  const res = await client.getEntries({ content_type: 'blogPost'})
-  
-  return{
-    props: {
-      blogPosts: res.items,
-    }
+  if(entries.items) {
+    return entries.items;
   }
 }
 
-export default function BlogPage({ blogPosts }) {
 
-  console.log(blogPosts);
-
-  return (
-    <>
-    <Layout>
-      <Grid templateColumns='repeat(3, 1fr)' gap={8}>
-      {blogPosts.map((blogPost:any) => {
-      return <BlogCard 
-      key={blogPost.sys.id} 
-      title={blogPost.fields.title}
-      url={blogPost.fields.media.fields.file.url}
-      />
-    })} 
-      </Grid>
-    
-    </Layout>
-    </>
-  )
+export async function getPostBySlug(slug) {
+  const entries = await client.getEntries({
+    content_type:'blogPost',
+    limit:1,
+    "fields.slug":slug,
+  });
+  if(entries.items) {
+    return entries.items[0];
+  }
 }
