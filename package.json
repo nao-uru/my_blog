@@ -16,6 +16,7 @@
   "devDependencies": {
     "@chakra-ui/icons": "^1.1.7",
     "@chakra-ui/react": "^1.8.7",
+    "@contentful/rich-text-react-renderer": "^15.12.0",
     "@emotion/babel-plugin": "^11.7.2",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
