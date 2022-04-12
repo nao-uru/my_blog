@@ -1,9 +1,11 @@
-import { ArrowRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";
-import { Box, Flex, Heading, Img, Text } from "@chakra-ui/react";
+import { ChevronLeftIcon } from "@chakra-ui/icons";
+import { Flex, Heading, Img, Text } from "@chakra-ui/react";
 import {createClient} from "contentful"
-import {documentToReactComponents} from "@contentful/rich-text-react-renderer";
 
 import { Layout } from "../components/pages/Layout"
+import Head from "next/head";
+
+const md = require('markdown-it')();
 
 
 const client = createClient({
@@ -50,6 +52,9 @@ export default function PostPage({blogPost}) {
 
   return (
    <>
+   <Head>
+     <title>{blogPost.fields.title}</title>
+   </Head>
    <Layout>
      <Text fontSize="2xl"><ChevronLeftIcon boxSize={10} />Back</Text>
      <Heading mt={20} size="lg">{blogPost.fields.title}</Heading>
@@ -58,7 +63,9 @@ export default function PostPage({blogPost}) {
      <Text>Tag</Text>
      </Flex>
      <Img src={`https:${blogPost.fields.media.fields.file.url}`} w="full" h="400px" objectFit="cover" />
-     <div>{documentToReactComponents(blogPost.fields.text)}</div>
+     {/* <ReactMarkdown>{blogText}</ReactMarkdown> */}
+     <div dangerouslySetInnerHTML={{__html:md.render(blogPost.fields.text)}}></div>
+
    </Layout>
    </>
   );
