@@ -1,0 +1,19 @@
+on:
+  push:                 
+    branches:           
+      - master    
+name: Build and Deploy  
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Blog   
+    runs-on: ubuntu-latest      
+    steps:
+      - uses: actions/checkout@master                   
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@2.0.0   
+        env:                                        
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}     
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }} 
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }} 
+          LOCAL_DIR: ./                           
+          REMOTE_DIR: "naosjournal.com/public_htm/"
