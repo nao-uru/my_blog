@@ -9,7 +9,10 @@ export default function Home({ blogPosts }) {
 
   return (
     <>
-    <Layout>HELLO This is HOME</Layout>
+    <Layout>
+      HELLO This is HOME
+      <p>test</p>
+      </Layout>
     </>
   )
 }
