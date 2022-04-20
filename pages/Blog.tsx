@@ -6,6 +6,7 @@ import { BlogCard } from "../components/molecules/BlogCard"
 import { TabLink } from "../components/atoms/TabLink";
 
 import { getAllPosts } from "../libs/contentful";
+import { Title } from "../components/atoms/Title";
 
 
 export async function getStaticProps() {
@@ -24,6 +25,8 @@ export default function BlogPage({ blogPosts }) {
   return (
     <>
     <Layout>
+
+      <Title>Blog</Title>
 
     <Flex>
       <TabLink>All</TabLink>

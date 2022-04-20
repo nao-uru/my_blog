@@ -16,7 +16,7 @@ export const Work:VFC<Props> = () => {
       <Box>
       <Title>Works</Title>
       
-      <Flex mt={10}>
+      <Flex>
       <TabLink>All</TabLink>
       <TabLink>Web site</TabLink>
       <TabLink>Apps</TabLink>
