@@ -1,4 +1,4 @@
-import { Flex, Heading, Img, Text } from "@chakra-ui/react";
+import { Flex, Heading, Img, Text, useBreakpointValue } from "@chakra-ui/react";
 import {createClient} from "contentful"
 
 import { Layout } from "../components/pages/Layout"
@@ -50,6 +50,8 @@ export default function PostPage({blogPost}) {
 
   console.log(blogPost);
 
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
   return (
    <>
    <Head>
@@ -57,7 +59,7 @@ export default function PostPage({blogPost}) {
    </Head>
    <Layout>
      <Back />
-     <Heading mt={20} size="lg">{blogPost.fields.title}</Heading>
+     <Heading mt={{base: 10,md: 20}} size="lg">{blogPost.fields.title}</Heading>
      <Flex justify="start" align="baseline">
      <Text mt={4}>Date:{`${year}.${month}.${day}`}</Text>
      <Text>Tag</Text>

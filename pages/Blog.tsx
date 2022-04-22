@@ -1,11 +1,10 @@
-import { createClient } from "contentful";
-import { Flex, Grid } from "@chakra-ui/react";
+import { Box, ChakraProvider, Flex, Grid, useBreakpointValue } from "@chakra-ui/react";
+
+import { getAllPosts } from "../libs/contentful";
 
 import { Layout } from "../components/pages/Layout";
 import { BlogCard } from "../components/molecules/BlogCard"
 import { TabLink } from "../components/atoms/TabLink";
-
-import { getAllPosts } from "../libs/contentful";
 import { Title } from "../components/atoms/Title";
 
 
@@ -18,9 +17,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function BlogPage({ blogPosts }) {
-
-  console.log(blogPosts);
+export default function  BlogPage ({ blogPosts }) {
 
   return (
     <>
@@ -35,7 +32,7 @@ export default function BlogPage({ blogPosts }) {
       <TabLink>Life</TabLink>
     </Flex>
 
-      <Grid mt={8} templateColumns='repeat(3, 1fr)' gap={8}>
+      <Grid mt={8} templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} gap={8}>
       {blogPosts.map((blogPost:any) => {
       return <BlogCard 
       key={blogPost.sys.id} 
@@ -50,5 +47,4 @@ export default function BlogPage({ blogPosts }) {
     </>
   )
 }
-
 
