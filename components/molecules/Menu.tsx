@@ -11,7 +11,7 @@ export const Menu = () => {
   const [menu,setMenu] = useState(false);
   const location = useRouter();
   const path = location.pathname;
-  
+
   return (
     <>
     <ChakraProvider>
