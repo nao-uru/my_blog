@@ -1,7 +1,7 @@
 
 import React, { VFC } from "react";
 import { useRouter } from 'next/router'
-import { Box, ChakraProvider, Text } from "@chakra-ui/react";
+import { Box, ChakraProvider, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import { css } from "@emotion/react";
 
@@ -9,13 +9,28 @@ import { css } from "@emotion/react";
 export const Back = () => {
 
   const router = useRouter();
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
+  if(isMobile) {
+    return(
+      <>
+      <ChakraProvider>
+      <Flex css={sHover} onClick={() => router.back()}>
+      <ChevronLeftIcon boxSize={8} />
+      <Text fontSize="xl" fontWeight="bold">Back</Text>
+      </Flex>
+      </ChakraProvider>
+      </>
+    )
+  }
 
   return (
     <>
     <ChakraProvider>
-      <Box css={sHover} onClick={() => router.back()}>
-      <Text fontSize="2xl"><ChevronLeftIcon boxSize={10} />Back</Text>
-      </Box>
+      <Flex css={sHover} onClick={() => router.back()}>
+      <ChevronLeftIcon boxSize={10} />
+      <Text fontSize="2xl" fontWeight="bold">Back</Text>
+      </Flex>
     </ChakraProvider>
     </> 
   )

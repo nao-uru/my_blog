@@ -1,11 +1,11 @@
-import {  ChakraProvider, Flex } from "@chakra-ui/react";
 import React, { VFC } from "react";
+import {  ChakraProvider, Flex, useBreakpointValue } from "@chakra-ui/react";
 import { Menu } from "./Menu";
 import {ChevronUpIcon} from "@chakra-ui/icons"
 import { css } from "@emotion/react";
 
 
-export const MenuBack:VFC = () => {
+export const BackTop:VFC = () => {
 
   const returnTop = () => {
     window.scrollTo({
@@ -17,10 +17,7 @@ export const MenuBack:VFC = () => {
   return (
     <>
     <ChakraProvider>
-      <Flex align="baseline" justify="center">
       <ChevronUpIcon css={sHover} onClick={returnTop} w={16} h={16}  mr="6" alignSelf="top" />
-      <Menu />
-      </Flex>
     </ChakraProvider>
     </>
   )
