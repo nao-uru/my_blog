@@ -6,9 +6,6 @@ import React, { VFC } from "react";
 
 export const BlogCard:VFC<Props> = (props) => {
 
-  console.log(props.slug);
-
-
   return(
     <>
     <ChakraProvider>
