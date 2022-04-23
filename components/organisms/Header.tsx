@@ -1,54 +1,25 @@
 import React, { VFC } from "react";
 import Image from "next/image";
-import { Box, ChakraProvider,  Flex,  Center, useBreakpointValue, 
-  useDisclosure, Stack,Drawer,DrawerOverlay,DrawerContent, DrawerCloseButton, 
-  DrawerHeader, DrawerBody} from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
 
+import { Box, ChakraProvider,  Flex,  Center, useBreakpointValue} from "@chakra-ui/react";
 
 import { Menu } from "../molecules/Menu";
 import { MainTitle } from "../atoms/MainTitle";
-import Link from "next/link";
 
 const Icon = require('../../public/img/icon.png')
 
-export const Header:VFC = () => {
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef<HTMLButtonElement>(null)
+export const Header:VFC = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   if(isMobile){
     return(
       <>
-      <Flex w="90%" m="auto" mt={4} justify="space-between">
-      <Flex alignItems="baseline">
-      <Image src="/img/icon.png" alt="icon" width="40px" height="50%" />
+      <Flex w="100%" justify="space-between" alignItems="center" css={Border} py={2} px={4}>
       <MainTitle>NAOS Journal</MainTitle>
+      <Menu />
       </Flex>
-      <HamburgerIcon w={10} h={10} onClick={onOpen} />
-      </Flex>
-
-
-      <Drawer
-        isOpen={isOpen}
-        onClose={onClose}
-        placement="left"
-        finalFocusRef={btnRef}
-      >
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader>
-              Menu
-            </DrawerHeader>
-            <DrawerBody>
-              <Navigation />
-            </DrawerBody>
-          </DrawerContent>
-        </DrawerOverlay>
-      </Drawer>
       </>
     )
   }
@@ -86,13 +57,3 @@ const Border = css`
  border-bottom: 2px solid #E8E5DE;
 `
 
-const Navigation = () => {
-  return (
-    <Stack as="nav">
-      <Link href="/burger">Burger</Link>
-      <Link href="/sidemenu">Sidemenu</Link>
-      <Link href="/drink">Drink</Link>
-      <Link href="/takeout">Takeout</Link>
-    </Stack>
-  )
-}
