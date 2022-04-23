@@ -9,7 +9,7 @@ export const AboutTable:VFC = () => {
     <>
     <ChakraProvider>
       <SubTitle>Intoroduce</SubTitle>
-      <Table w="400px" mt="8">
+      <Table w={{base:"100%", md:"60%"}} >
         <Tbody >
           <Tr>
           <Td  fontSize="lg" fontWeight="bold">Name</Td>

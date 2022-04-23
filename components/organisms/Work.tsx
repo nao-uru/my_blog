@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Flex, SimpleGrid} from "@chakra-ui/react";
+import { Box, ChakraProvider, Flex, SimpleGrid, useBreakpointValue} from "@chakra-ui/react";
 import { Props } from "framer-motion/types/types";
 import React, { VFC } from "react";
 import { TabLink } from "../atoms/TabLink";
@@ -7,6 +7,35 @@ import { ViewCard } from "../molecules/ViewCard";
 
 
 export const Work:VFC<Props> = () => {
+
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
+  if(isMobile) {
+    return (
+      <>
+      <Box>
+      <Title>Works</Title>
+      
+      <Flex>
+      <TabLink>All</TabLink>
+      <TabLink>Web site</TabLink>
+      <TabLink>Apps</TabLink>
+      <TabLink>Flyers</TabLink>
+      </Flex>
+
+      </Box>
+      <SimpleGrid columns={1} spacingY='80px' m="auto" mt="16" w="100%">
+        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
+        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
+        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
+        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
+        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
+        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
+
+      </SimpleGrid>
+      </>
+    )
+  }
 
 
   return(
