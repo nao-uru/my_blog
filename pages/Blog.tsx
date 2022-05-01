@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Flex, Grid, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, Grid} from "@chakra-ui/react";
 
 import { getAllPosts } from "../libs/contentful";
 

@@ -5,10 +5,17 @@ import { TabLink } from "../atoms/TabLink";
 import { Title } from "../atoms/Title";
 import { ViewCard } from "../molecules/ViewCard";
 
+import {GetDribblePost} from "../../libs/dribblepost"
+
 
 export const Work:VFC<Props> = () => {
 
   const isMobile = useBreakpointValue({ base: true, md: false });
+
+  const dribblePost = GetDribblePost();
+  const items = dribblePost.items;
+
+
 
   if(isMobile) {
     return (
@@ -25,13 +32,17 @@ export const Work:VFC<Props> = () => {
 
       </Box>
       <SimpleGrid columns={1} spacingY='80px' m="auto" mt="16" w="100%">
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
-
+      {items.map((item:any) => {
+        return <ViewCard 
+        key={item.id}
+        title={item.title}
+        img={item.images.hidpi}
+        url={item.html_url}
+        />
+      })}
+      {items.map((item:any) => {
+        return console.log(item)
+      })}
       </SimpleGrid>
       </>
     )
@@ -56,13 +67,24 @@ export const Work:VFC<Props> = () => {
 
 
       <SimpleGrid columns={3} spacingY='80px' m="auto" mt="16" w="100%">
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
-        <Box w="100%" m="auto"><ViewCard title="Web site1" /></Box>
+        {items.map((item:any) => {
 
+        const date = item.published_at;
+        const year = new Date(date).getFullYear();
+        const month = new Date(date).getMonth();
+        const day = new Date(date).getDate();
+
+        return <ViewCard 
+        key={item.id}
+        title={item.title}
+        img={item.images.hidpi}
+        url={item.html_url}
+        date={`${year}.${month}.${day}`}
+        />
+      })}
+      {items.map((item:any) => {
+        return console.log(item)
+      })}
       </SimpleGrid>
 
     </ChakraProvider>
