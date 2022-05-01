@@ -9,12 +9,13 @@ export const ViewCard:VFC<Props> = (props) => {
   return(
     <>
     <ChakraProvider>
+        <a href={props.url}>
       <Box css={sHover} w="320px" m="auto" p="4">
         <Heading size="md">{props.title}</Heading>
-        <Image src={props.url} w="full" h="180px" mt="4" mb="4" fit="cover" alt="ポートフォリオの写真" />
-        <Text size="md">Company name</Text>
-        <Text size="xl">This is a sample site A</Text>
+        <Image src={props.img} w="full" h="180px" mt="4" mb="4" fit="cover" alt="DribbbleにUPしているサンプル" />
+        <Text size="md" fontWeight="bold">{props.date}</Text>
       </Box>
+        </a>
     </ChakraProvider>
     </>
   )

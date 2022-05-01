@@ -17,7 +17,7 @@ export const Header:VFC = () => {
     return(
       <>
       <Flex w="100%" justify="space-between" alignItems="center" css={Border} py={2} px={4}>
-      <MainTitle>NAOS Journal</MainTitle>
+      <MainTitle>NAO&#39; Journal</MainTitle>
       <Menu />
       </Flex>
       </>
@@ -36,7 +36,7 @@ export const Header:VFC = () => {
 
 
          <Center>
-           <MainTitle>NAOS Journal</MainTitle>
+           <MainTitle>NAO&#39; Journal</MainTitle>
          </Center>
 
          <Box mr="72px">
