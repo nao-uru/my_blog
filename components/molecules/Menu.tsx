@@ -92,19 +92,19 @@ export const Menu = () => {
     <Flex align="baseline">
 
     <Link href="/Blog" passHref>
-    <Box mr={8} css={path.startsWith('/Blog') ? sBorder:''}>
+    <Box mr={12} css={path.startsWith('/Blog') ? sBorder:''}>
     <HeaderLink>Blog</HeaderLink>
     </Box>
     </Link>
     
     <Link href="/Work" passHref>
-    <Box mr={8} css={path.startsWith('/Work') ? sBorder:''}>
+    <Box mr={12} css={path.startsWith('/Work') ? sBorder:''}>
     <HeaderLink>Work</HeaderLink>
     </Box>
     </Link>
 
     <Link href="/About" passHref>
-    <Box mr={8} css={path.startsWith('/About') ? sBorder:''}>
+    <Box mr={12} css={path.startsWith('/About') ? sBorder:''}>
     <HeaderLink>About</HeaderLink>
     </Box>
     </Link>
