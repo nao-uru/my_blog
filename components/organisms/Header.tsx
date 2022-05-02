@@ -16,8 +16,8 @@ export const Header:VFC = () => {
   if(isMobile){
     return(
       <>
-      <Flex w="100%" justify="space-between" alignItems="center" css={Border} py={2} px={4}>
-      <MainTitle>NAO&#39; Journal</MainTitle>
+      <Flex w="100%" justify="space-between" alignItems="center" css={sBorder} py={2} px={4}>
+      <MainTitle>NAO&#39;S JOURNAL</MainTitle>
       <Menu />
       </Flex>
       </>
@@ -27,16 +27,16 @@ export const Header:VFC = () => {
   return (
     <>
     <ChakraProvider>
-      <Box  css={Border} pb="16px">
-        <Flex h="120px" align="flex-end" justify="space-between">
+      <Box pb="16px" w="100%" position="fixed" zIndex={10} css={sBack}>
+        <Flex h="80px" align="flex-end" justify="space-between">
 
-         <Box boxSize='80px' ml="120px">
-         <Image src="/img/icon.png" alt="icon" width="80px" height="100%" />
+         <Box boxSize='60px' ml="120px">
+         <Image src="/img/icon.png" alt="icon" width="60px" height="80%" />
          </Box>
 
 
          <Center>
-           <MainTitle>NAO&#39; Journal</MainTitle>
+           <MainTitle>NAO&#39;S JOURNAL</MainTitle>
          </Center>
 
          <Box mr="72px">
@@ -53,7 +53,16 @@ export const Header:VFC = () => {
   )
 }
 
-const Border = css`
+const sBorder = css`
  border-bottom: 2px solid #E8E5DE;
+`
+
+const sBack = css`
+ background: rgba( 255, 255, 255, 0.25 );
+ box-shadow: 0 8px 28px 0 rgba( 139, 142, 184, 0.1 );
+ backdrop-filter: blur( 5px );
+ -webkit-backdrop-filter: blur( 5px );
+ border-radius: 10px;
+ border: 1px solid rgba( 255, 255, 255, 0.1 );
 `
 

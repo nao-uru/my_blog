@@ -8,7 +8,9 @@ export default function WorkPage() {
     <Head>
       <title>Work</title>
     </Head>
-    <Layout><Work /></Layout>
+    <Layout>
+      <Work />
+    </Layout>
     </>
   )
 }
