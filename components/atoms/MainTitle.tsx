@@ -23,7 +23,7 @@ export const MainTitle = ({children}) => {
     <>
     <ChakraProvider>
     <Link href="/" passHref>
-    <Heading css={sMainTitle} size="lg">{children}</Heading>
+    <Heading css={sMainTitle} size="md">{children}</Heading>
     </Link>
     </ChakraProvider>
     </>
