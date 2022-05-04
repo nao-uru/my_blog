@@ -28,9 +28,9 @@ export const Header:VFC = () => {
     <>
     <ChakraProvider>
       <Box pb="16px" w="100%" position="fixed" zIndex={10} css={sBack}>
-        <Flex h="80px" align="flex-end" justify="space-between">
+        <Flex h="80px" w="80%" m="auto" align="flex-end" justify="space-between">
 
-         <Box boxSize='60px' ml="120px">
+         <Box boxSize='60px'>
          <Image src="/img/icon.png" alt="icon" width="60px" height="80%" />
          </Box>
 
@@ -39,7 +39,7 @@ export const Header:VFC = () => {
            <MainTitle>NAO&#39;S JOURNAL</MainTitle>
          </Center>
 
-         <Box mr="72px">
+         <Box>
           <Menu />
          </Box>
 
@@ -58,7 +58,8 @@ const sBorder = css`
 `
 
 const sBack = css`
- background: rgba( 255, 255, 255, 0.25 );
+ /* background: rgba( 255, 255, 255, 0.25 ); */
+ background: rgba(231, 231, 231, 0.25);
  box-shadow: 0 8px 28px 0 rgba( 139, 142, 184, 0.1 );
  backdrop-filter: blur( 5px );
  -webkit-backdrop-filter: blur( 5px );
