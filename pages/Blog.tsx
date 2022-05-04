@@ -25,12 +25,12 @@ export default function  BlogPage ({ blogPosts }) {
 
       <Title>Blog</Title>
 
-    <Flex>
+    {/* <Flex>
       <TabLink>All</TabLink>
       <TabLink>Design</TabLink>
       <TabLink>English</TabLink>
       <TabLink>Life</TabLink>
-    </Flex>
+    </Flex> */}
 
       <Grid mt={8} templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} gap={8}>
       {blogPosts.map((blogPost:any) => {
