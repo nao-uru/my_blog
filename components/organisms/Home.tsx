@@ -8,9 +8,9 @@ export const HomeContents = () => {
 
   if(isMobile) {
     return (
-      <>
-      <p>this is home page</p>
-      </>
+     <>
+      <p>mobile page</p>
+    </>
     )
   }
 
@@ -24,7 +24,7 @@ export const HomeContents = () => {
         <Text fontSize="120px" fontWeight="bold">JOURNAL</Text>
         </Box>
         <Box>
-        <Image position="relative" src="" ml="auto" mt={10} backgroundColor="green.300" h="500px" w="80%" fit="cover" alt="Main Image"/>
+        <Image position="relative" src="/img/spain.jpeg" ml="auto" mt={10} h="500px" w="80%" fit="cover" alt="Main Image"/>
         </Box>
       </Container>
     </ChakraProvider>

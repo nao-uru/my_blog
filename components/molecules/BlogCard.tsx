@@ -23,9 +23,12 @@ export const BlogCard:VFC<Props> = (props) => {
 
 
 const sCard = css`
- box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
- :hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.06);
+  
+  :hover {
     cursor: pointer;
     background-color: #f4f4f4;
+    background: #E7E7E7;
+    box-shadow: 16px 16px 19px #DADADA, -12px -12px 19px #FAFAFA;
   }
 `

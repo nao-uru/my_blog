@@ -1,12 +1,11 @@
-import { Box, ChakraProvider, Flex, SimpleGrid, useBreakpointValue} from "@chakra-ui/react";
+import { Box, ChakraProvider, Flex, SimpleGrid, useBreakpointValue, Text} from "@chakra-ui/react";
 import { Props } from "framer-motion/types/types";
 import React, { VFC } from "react";
-import { TabLink } from "../atoms/TabLink";
 import { Title } from "../atoms/Title";
 import { ViewCard } from "../molecules/ViewCard";
 
 import {GetDribblePost} from "../../libs/dribblepost"
-
+import Link from "next/link";
 
 export const Work:VFC<Props> = () => {
 
@@ -23,15 +22,23 @@ export const Work:VFC<Props> = () => {
       <Box>
       <Title>Works</Title>
       
-      <Flex>
+      {/* <Flex>
       <TabLink>All</TabLink>
       <TabLink>Web site</TabLink>
       <TabLink>Apps</TabLink>
       <TabLink>Flyers</TabLink>
-      </Flex>
+      </Flex> */}
 
+      <Text>実績は非公開になっています。</Text>
       </Box>
-      <SimpleGrid columns={1} spacingY='80px' m="auto" mt="16" w="100%">
+
+      <Box>
+      <Title>Output</Title>
+      <Text>Daily UIなど日々のアウトプットをDribbbleにUPしています</Text>
+      <Link href="https://dribbble.com/nao_uru" passHref><Text mt={1} fontWeight="bold" cursor="pointer">アカウントはこちら</Text></Link>
+      </Box>
+
+      <SimpleGrid columns={1} spacingY='80px' m="auto" mt="16" w="80%">
       {items.map((item:any) => {
         return <ViewCard 
         key={item.id}
@@ -53,22 +60,18 @@ export const Work:VFC<Props> = () => {
     <>
     <ChakraProvider>
 
-      <Box>
+      <Box mb={20}>
       <Title>Works</Title>
-      
-      <Flex>
-      <TabLink>All</TabLink>
-      <TabLink>Web site</TabLink>
-      <TabLink>Apps</TabLink>
-      <TabLink>Flyers</TabLink>
-      </Flex>
-
+      <Text>実績は非公開になっています。</Text>
       </Box>
 
-
-      <SimpleGrid columns={3} spacingY='80px' m="auto" mt="16" w="100%">
+      <Box>
+      <Title>Output</Title>
+      <Text>Daily UIなど日々のアウトプットをDribbbleにUPしています</Text>
+      <Link href="https://dribbble.com/nao_uru" passHref><Text mt={1} fontWeight="bold" cursor="pointer">アカウントはこちら</Text></Link>
+      </Box>
+      <SimpleGrid columns={3} mt={12} spacingY={20} w="100%">
         {items.map((item:any) => {
-
         const date = item.published_at;
         const year = new Date(date).getFullYear();
         const month = new Date(date).getMonth();
