@@ -1,13 +1,15 @@
-import { HomeContents } from "../components/organisms/Home";
 import { Header } from "../components/organisms/Header";
 import { Footer } from "../components/organisms/Footer";
+import { Top } from "../components/organisms/Top"
+
+
 
 export default function Home() {
 
   return (
     <>
     <Header />
-      <HomeContents />
+    <Top />
     <Footer />
     </>
   )
