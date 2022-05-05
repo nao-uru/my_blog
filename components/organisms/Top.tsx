@@ -1,4 +1,4 @@
-import { ChakraProvider,Text, Box, Image, Container } from "@chakra-ui/react";
+import { ChakraProvider,Text, Box, Image,  } from "@chakra-ui/react";
 
 
 export const Top = () => {

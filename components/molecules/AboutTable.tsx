@@ -1,7 +1,5 @@
 import { ChakraProvider,Table, Tbody, Td, Tr, } from "@chakra-ui/react";
-import Link from "next/link";
 import React, { VFC } from "react";
-import { Title } from "../atoms/Title";
 
 
 export const AboutTable:VFC = () => {
