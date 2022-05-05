@@ -1,6 +1,5 @@
 import { ChakraProvider,Table, Tbody, Td, Tr, } from "@chakra-ui/react";
 import React, { VFC } from "react";
-import { SubTitle } from "../atoms/SubTitle";
 
 
 export const AboutTable:VFC = () => {
@@ -8,8 +7,7 @@ export const AboutTable:VFC = () => {
   return (
     <>
     <ChakraProvider>
-      <SubTitle>Intoroduce</SubTitle>
-      <Table w={{base:"100%", md:"60%"}} >
+      <Table w={{base:"100%", md:"60%"}} mt={10}>
         <Tbody >
           <Tr>
           <Td  fontSize="lg" fontWeight="bold">Name</Td>
@@ -18,7 +16,7 @@ export const AboutTable:VFC = () => {
 
           <Tr>
           <Td fontSize="lg" fontWeight="bold">Age</Td>
-          <Td fontSize="lg">25</Td>
+          <Td fontSize="lg">26</Td>
           </Tr>
 
           <Tr>
@@ -29,6 +27,10 @@ export const AboutTable:VFC = () => {
           <Tr>
           <Td fontSize="lg" fontWeight="bold">Hobby</Td>
           <Td fontSize="lg">Movie Manga</Td>
+          </Tr>
+          <Tr>
+          <Td fontSize="lg" fontWeight="bold">Contact</Td>
+          <Td fontSize="lg">nao.uru0419@gmail.com</Td>
           </Tr>
 
         </Tbody>

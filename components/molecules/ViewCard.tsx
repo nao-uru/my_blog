@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Heading, Image, Text} from "@chakra-ui/react";
+import { Box, ChakraProvider, Heading, Image, } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import { Props } from "framer-motion/types/types";
 import React, { VFC } from "react";

@@ -20,9 +20,8 @@ export const About:VFC<Props> = () => {
        <ImgTitle url="/img/Chefchaouen.jpeg" title="About" />
        </Box>
        
-       <Box  w="90%" m="auto">
+       <Box  w="100%" m="auto">
        <AboutTable />
-       <AboutContent />
        <AboutContent />
        </Box>
        
@@ -44,7 +43,6 @@ export const About:VFC<Props> = () => {
 
         <Box>
         <AboutTable />
-        <AboutContent />
         <AboutContent />
         </Box>
 

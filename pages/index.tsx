@@ -1,6 +1,7 @@
-import { Header } from "../components/organisms/Header";
-import { Footer } from "../components/organisms/Footer";
+import Head from "next/head";
+
 import { Top } from "../components/organisms/Top"
+import { Layout } from "../components/pages/Layout";
 
 
 
@@ -8,9 +9,12 @@ export default function Home() {
 
   return (
     <>
-    <Header />
-    <Top />
-    <Footer />
+    <Head>
+      <title>Home</title>
+    </Head>
+    <Layout>
+      <Top />
+    </Layout>
     </>
   )
 }
