@@ -10,7 +10,7 @@ export const Title:VFC<Props> = ({children}) => {
   if(isMobile) {
     return(
       <>
-      <Heading as="h4" size="md" ml={4} mb={4}>{children}</Heading>
+      <Heading as="h4" size="md" mb={4} mt={4}>{children}</Heading>
       </>
     )
   }
