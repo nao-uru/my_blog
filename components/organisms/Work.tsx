@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Flex, SimpleGrid, useBreakpointValue, Text} from "@chakra-ui/react";
+import { Box, ChakraProvider, SimpleGrid, useBreakpointValue, Text} from "@chakra-ui/react";
 import { Props } from "framer-motion/types/types";
 import React, { VFC } from "react";
 import { Title } from "../atoms/Title";
@@ -13,8 +13,6 @@ export const Work:VFC<Props> = () => {
 
   const dribblePost = GetDribblePost();
   const items = dribblePost.items;
-
-
 
   if(isMobile) {
     return (
