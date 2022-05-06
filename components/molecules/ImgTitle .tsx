@@ -13,14 +13,14 @@ export const ImgTitle:VFC<Props> = ( props ) => {
     return (
       <>
       <Box position="relative">
-      <Box position="absolute" bottom="10%" left="10%" zIndex={10}>
+      <Box position="absolute" bottom="10%" left="0" zIndex={10}>
       <Flex align="center" css={sRouteSp}>
       <Box css={sRouteSp}></Box>
       <Heading as="h2" size="xl" mr="2" ml="2">{props.title}</Heading>
       <Box css={sBorderSp}></Box>
       </Flex>
       </Box>
-     <Image src={props.url} boxSize="320px" h="200px" w="100%" fit="cover" alt="title with Image"/>
+     <Image src={props.url} h="200px" w="100%" fit="cover" alt="title with Image"/>
     </Box>
       </>
     )

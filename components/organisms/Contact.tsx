@@ -3,8 +3,6 @@ import { ChakraProvider, Flex, Box, useBreakpointValue} from "@chakra-ui/react";
 import { Props } from "framer-motion/types/types";
 
 import { ImgTitle } from "../molecules/ImgTitle ";
-import { ContactTable } from "../molecules/ContactTable";
-import { ContactText } from "../molecules/ContactText";
 
 
 export const Contact:VFC<Props> = () => {
@@ -21,9 +19,6 @@ export const Contact:VFC<Props> = () => {
         </Box>
 
         <Box w="90%" m="auto" mt={16}>
-        <ContactTable />
-        <ContactText />
-        <ContactText />
         
         </Box>
 
@@ -43,9 +38,7 @@ export const Contact:VFC<Props> = () => {
         </Box>
 
         <Box>
-        <ContactTable />
-        <ContactText />
-        <ContactText />
+        
         </Box>
 
       </Flex>

@@ -4,7 +4,7 @@ import { Props } from "framer-motion/types/types";
 
 import { ImgTitle } from "../molecules/ImgTitle ";
 import { AboutContent } from "../molecules/AboutContent";
-import { AboutTable } from "../molecules/AboutTable";
+import { TableContent } from "../molecules/Table";
 
 
 export const About:VFC<Props> = () => {
@@ -20,9 +20,8 @@ export const About:VFC<Props> = () => {
        <ImgTitle url="/img/Chefchaouen.jpeg" title="About" />
        </Box>
        
-       <Box  w="90%" m="auto">
-       <AboutTable />
-       <AboutContent />
+       <Box>
+       <TableContent />
        <AboutContent />
        </Box>
        
@@ -43,8 +42,7 @@ export const About:VFC<Props> = () => {
         </Box>
 
         <Box>
-        <AboutTable />
-        <AboutContent />
+        <TableContent />
         <AboutContent />
         </Box>
 

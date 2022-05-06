@@ -36,7 +36,7 @@ export const Work:VFC<Props> = () => {
       <Link href="https://dribbble.com/nao_uru" passHref><Text mt={1} fontWeight="bold" cursor="pointer">アカウントはこちら</Text></Link>
       </Box>
 
-      <SimpleGrid columns={1} spacingY='80px' m="auto" mt="16" w="80%">
+      <SimpleGrid columns={1} spacingY='80px' m="auto" mt="16">
       {items.map((item:any) => {
         return <ViewCard 
         key={item.id}

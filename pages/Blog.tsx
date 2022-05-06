@@ -1,10 +1,10 @@
-import { Flex, Grid} from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
+import Head from "next/head";
 
 import { getAllPosts } from "../libs/contentful";
 
 import { Layout } from "../components/pages/Layout";
 import { BlogCard } from "../components/molecules/BlogCard"
-import { TabLink } from "../components/atoms/TabLink";
 import { Title } from "../components/atoms/Title";
 
 
@@ -21,9 +21,11 @@ export default function  BlogPage ({ blogPosts }) {
 
   return (
     <>
+    <Head>
+      <title>Blog</title>
+    </Head>
     <Layout>
-
-      <Title>Blog</Title>
+       <Title>Blog</Title>
 
     {/* <Flex>
       <TabLink>All</TabLink>
