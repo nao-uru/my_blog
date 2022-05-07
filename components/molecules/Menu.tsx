@@ -18,7 +18,7 @@ const Navigation = () => {
   const path = location.pathname; 
 
   return (
-    <Stack as="nav" w="30%">
+    <Stack as="nav" w="40%" ml={4}>
       <Link href="/Blog" passHref>
       <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}>
       <HeaderLink>Blog</HeaderLink>

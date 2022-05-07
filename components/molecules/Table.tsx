@@ -7,7 +7,7 @@ export const TableContent:VFC = () => {
   return (
     <>
     <ChakraProvider>
-      <Table w={{base:"100%", md:"100%"}} mt={10} m="auto">
+      <Table w={{base:"100%", md:"100%"}} mt={10} ml="auto">
         <Tbody>
           <Tr>
           <Td fontSize="md" fontWeight="bold">Name</Td>

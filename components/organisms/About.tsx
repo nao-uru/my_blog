@@ -3,7 +3,7 @@ import { ChakraProvider, Flex, Box, useBreakpointValue } from "@chakra-ui/react"
 import { Props } from "framer-motion/types/types";
 
 import { ImgTitle } from "../molecules/ImgTitle ";
-import { AboutContent } from "../molecules/AboutContent";
+import { Content } from "../molecules/Content";
 import { TableContent } from "../molecules/Table";
 
 
@@ -20,9 +20,9 @@ export const About:VFC<Props> = () => {
        <ImgTitle url="/img/Chefchaouen.jpeg" title="About" />
        </Box>
        
-       <Box>
+       <Box mt={4}>
        <TableContent />
-       <AboutContent />
+       <Content />
        </Box>
        
       </Box>
@@ -43,7 +43,7 @@ export const About:VFC<Props> = () => {
 
         <Box>
         <TableContent />
-        <AboutContent />
+        <Content />
         </Box>
 
         </Flex>
