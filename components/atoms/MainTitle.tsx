@@ -5,6 +5,12 @@ import Link from "next/link";
 
 export const MainTitle = ({children}) => {
 
+  return(
+    <>
+    sample
+    </>
+  )
+
   // const isMobile = useBreakpointValue({ base: true, md: false });
 
   // if(isMobile) {
