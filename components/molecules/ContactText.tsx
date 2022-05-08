@@ -1,7 +1,6 @@
-import { ChakraProvider, Stack, Text, Flex} from "@chakra-ui/react";
+import { ChakraProvider, Stack, Text, Flex, Heading} from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 import React, { VFC } from "react";
-import { SubTitle } from "../atoms/SubTitle";
 
 
 export const ContactText:VFC = () => {
@@ -12,7 +11,7 @@ export const ContactText:VFC = () => {
      <Stack mr="10" mt="10">
        <Flex>
         <StarIcon w={6} h={6} mr={2} />
-        <SubTitle>Instagram</SubTitle>
+        <Heading>Instagram</Heading>
        </Flex>
 
         <Text mt="8">

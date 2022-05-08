@@ -1,7 +1,7 @@
 
-import React, { VFC } from "react";
+import React from "react";
 import { useRouter } from 'next/router'
-import { Box, ChakraProvider, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
+import { ChakraProvider, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import { css } from "@emotion/react";
 

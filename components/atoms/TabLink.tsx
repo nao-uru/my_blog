@@ -1,11 +1,11 @@
-import React, { useState, VFC,  } from "react";
+import React from "react";
 import { Button, ChakraProvider } from "@chakra-ui/react";
 
 import { css } from "@emotion/react";
 import { Props } from "framer-motion/types/types";
 
 
-export const TabLink:VFC<Props> = (props) => {
+export const TabLink = (props) => {
 
   return (
     <>
