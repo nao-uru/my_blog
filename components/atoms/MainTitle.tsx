@@ -5,29 +5,29 @@ import Link from "next/link";
 
 export const MainTitle = ({children}) => {
 
-  const isMobile = useBreakpointValue({ base: true, md: false });
+  // const isMobile = useBreakpointValue({ base: true, md: false });
 
-  if(isMobile) {
-    return(
-      <>
-      <ChakraProvider>
-      <Link href="/" passHref>
-      <Heading css={sMainTitle} size="sm">{children}</Heading>
-      </Link>
-      </ChakraProvider>
-      </>
-    )
-  }
+  // if(isMobile) {
+  //   return(
+  //     <>
+  //     <ChakraProvider>
+  //     <Link href="/" passHref>
+  //     <Heading css={sMainTitle} size="sm">{children}</Heading>
+  //     </Link>
+  //     </ChakraProvider>
+  //     </>
+  //   )
+  // }
 
-  return (
-    <>
-    <ChakraProvider>
-    <Link href="/" passHref>
-    <Heading css={sMainTitle} size="md">{children}</Heading>
-    </Link>
-    </ChakraProvider>
-    </>
-  )
+  // return (
+  //   <>
+  //   <ChakraProvider>
+  //   <Link href="/" passHref>
+  //   <Heading css={sMainTitle} size="md">{children}</Heading>
+  //   </Link>
+  //   </ChakraProvider>
+  //   </>
+  // )
 }
 
 const sMainTitle = css`

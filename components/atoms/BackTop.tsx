@@ -1,5 +1,5 @@
 import React, { VFC } from "react";
-import {  ChakraProvider, Flex, useBreakpointValue } from "@chakra-ui/react";
+import {  ChakraProvider } from "@chakra-ui/react";
 import {ChevronUpIcon} from "@chakra-ui/icons"
 import { css } from "@emotion/react";
 
