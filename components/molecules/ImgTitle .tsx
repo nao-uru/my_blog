@@ -31,7 +31,7 @@ export const ImgTitle:VFC<Props> = ( props ) => {
     
     <ChakraProvider>
 
-    <Box position="relative">
+    <Box position="relative" ml={16}>
       <Box position="absolute" bottom="50%" left="-85%" zIndex={10}>
        <Flex align="center" css={sRoute}>
 

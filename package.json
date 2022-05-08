@@ -11,10 +11,13 @@
   "dependencies": {
     "js-base64": "^3.7.2",
     "markdown-it": "^12.3.2",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-mark": "^3.0.1",
     "next": "^12.1.6-canary.3",
     "node-fetch": "^3.2.3",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "toc": "^0.4.0"
   },
   "devDependencies": {
     "@chakra-ui/icons": "^1.1.7",

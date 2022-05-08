@@ -1,15 +1,14 @@
 import React, { VFC } from "react";
 import { Props } from "framer-motion/types/types";
-import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue } from "@chakra-ui/react";
+import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Heading, Link } from "@chakra-ui/react";
 
-import { MainTitle } from "../atoms/MainTitle";
-import { BackTop } from "../molecules/MenuBack";
+import { BackTop } from "../atoms/BackTop";
 import { Menu } from "../molecules/Menu";
 import { css } from "@emotion/react";
 
 
 
-export const Footer:VFC<Props> = ({children}) => {
+export const Footer:VFC<Props> = () => {
 
   const returnTop = () => {
     window.scrollTo({
@@ -38,8 +37,13 @@ export const Footer:VFC<Props> = ({children}) => {
       <Box h="240px" css={Border} pt="4" mt="52">
         <Box w="90%" m="auto">
         <Flex align="baseline">
-          <MainTitle>NAOS Journal</MainTitle>
+
+          <Link href="/">
+           <Heading css={sMainTitle} size="md">NAO&#39;S JOURNAL</Heading>
+          </Link>
+
           <Spacer />
+
           <BackTop />
           <Menu />
         </Flex>
@@ -52,4 +56,11 @@ export const Footer:VFC<Props> = ({children}) => {
 
 const Border = css`
  border-top: 2px solid #E8E5DE;
+`
+const sMainTitle = css`
+cursor: pointer;
+ 
+ :hover {
+   opacity: 0.8;
+ }
 `

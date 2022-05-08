@@ -10,7 +10,7 @@ export const Layout:VFC<Props> = ( {children} ) => {
     <>
     <ChakraProvider>
       <Header />
-      <Container maxW={{base:"90%", md:"1000px"}} m="auto" p="0" pt={{base:16,md:20}}>
+      <Container maxW={{base:"90%", md:"1000px"}} m="auto" p="0" pt={{base:16,md:28}}>
         {children}
       </Container>
       <Footer />

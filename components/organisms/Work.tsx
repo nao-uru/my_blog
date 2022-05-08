@@ -2,7 +2,7 @@ import { Box, ChakraProvider, SimpleGrid, useBreakpointValue, Text} from "@chakr
 import { Props } from "framer-motion/types/types";
 import React, { VFC } from "react";
 import { Title } from "../atoms/Title";
-import { ViewCard } from "../molecules/ViewCard";
+import { ViewCard } from "../molecules/DribbbleCard";
 
 import {GetDribblePost} from "../../libs/dribblepost"
 import Link from "next/link";

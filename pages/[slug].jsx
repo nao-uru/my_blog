@@ -1,11 +1,22 @@
-import { Box, Flex, Heading, Img, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
 import {createClient} from "contentful"
 
 import { Layout } from "../components/pages/Layout"
 import { Back } from "../components/atoms/Back"
 import Head from "next/head";
 
-const md = require('markdown-it')();
+const md = require('markdown-it')({
+  injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
+  breaks: true, // 改行コードを<br>に変換する
+  html: true, // HTML タグを有効にする
+  linkify: true, // URLに似たテキストをリンクに自動変換する
+  typography: true,
+  use: [
+    ''
+  ]
+});
+const mark = require('markdown-it-mark');
+md.use(mark);
 
 
 const client = createClient({
@@ -43,9 +54,11 @@ export async function getStaticProps({ params }) {
 
 export default function PostPage({blogPost}) {
 
-  const date = blogPost.sys.createdAt;
+  // const date = blogPost.sys.createdAt;
+  const date = blogPost.fields.date;
   const year = new Date(date).getFullYear();
-  const month = new Date(date).getMonth();
+  const smonth = new Date(date).getMonth();
+  const month = smonth +1;
   const day = new Date(date).getDate();
 
   console.log(blogPost);
@@ -61,11 +74,15 @@ export default function PostPage({blogPost}) {
      <Back />
      <Heading mt={{base: 10,md: 20}} size="lg">{blogPost.fields.title}</Heading>
      <Flex justify="start" align="baseline">
-     <Text mt={4}>Date:{`${year}.${month}.${day}`}</Text>
-     <Text>Tag</Text>
+     <Text mt={6}>Date:{`${year}.${month}.${day}`}</Text>
+     {/* <Text>Tag</Text> */}
      </Flex>
-     <Img src={`https:${blogPost.fields.media.fields.file.url}`} w="full"  h={{base:"200px",md:"400px"}} objectFit="cover" />
+     <Img src={`https:${blogPost.fields.media.fields.file.url}`} mt={2} w="full" h={{base:"200px",md:"400px"}} objectFit="cover" />
+
+     <Box w="90%" m="auto" mt={8} lineHeight="180%">
      <div dangerouslySetInnerHTML={{__html:md.render(blogPost.fields.text)}}></div>
+     </Box>
+
      </Box>
 
    </Layout>

@@ -1,8 +1,9 @@
 import React, { VFC } from "react";
-import { ChakraProvider, Flex, Box, useBreakpointValue} from "@chakra-ui/react";
+import { ChakraProvider, Flex, Box, useBreakpointValue, Spacer} from "@chakra-ui/react";
 import { Props } from "framer-motion/types/types";
 
 import { ImgTitle } from "../molecules/ImgTitle ";
+import { Content } from "../molecules/Content"
 
 
 export const Contact:VFC<Props> = () => {
@@ -12,10 +13,11 @@ export const Contact:VFC<Props> = () => {
   if(isMobile) {
     return (
       <>
+      <ChakraProvider>
       <Box w="ful">
 
         <Box w="full">
-        <ImgTitle url="/img/Chefchaouen.jpeg" title="Contact" />
+        <ImgTitle url="/img/Chefchaouen.jpeg" title="Social Media" />
         </Box>
 
         <Box w="90%" m="auto" mt={16}>
@@ -23,6 +25,7 @@ export const Contact:VFC<Props> = () => {
         </Box>
 
         </Box>
+      </ChakraProvider>
       </>
     )
   }
@@ -31,18 +34,7 @@ export const Contact:VFC<Props> = () => {
   return(
     <>
     <ChakraProvider>
-
-      <Flex w="ful" mt={16}>
-        <Box w="full">
-        <ImgTitle url="/img/Chefchaouen.jpeg" title="Contact" />
-        </Box>
-
-        <Box>
-        
-        </Box>
-
-      </Flex>
-
+      
     </ChakraProvider>
     </>
   )
