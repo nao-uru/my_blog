@@ -1,11 +1,9 @@
 import React, { VFC } from "react";
 import Image from "next/image";
 import { css } from "@emotion/react";
-
-import { Box, ChakraProvider,  Flex,  Center, useBreakpointValue} from "@chakra-ui/react";
+import { Box, ChakraProvider,  Flex,  Center, useBreakpointValue, Heading, Link} from "@chakra-ui/react";
 
 import { Menu } from "../molecules/Menu";
-import { MainTitle } from "../atoms/MainTitle";
 
 const Icon = require('../../public/img/icon.png')
 
@@ -17,7 +15,9 @@ export const Header:VFC = () => {
     return(
       <>
       <Flex w="100%" justify="space-between" alignItems="center" py={2} px={4} zIndex={60} position="fixed" css={sBack} >
-      <MainTitle>NAO&#39;S JOURNAL</MainTitle>
+      <Link href="/">
+      <Heading css={sMainTitle} size="sm">NAO&#39;S JOURNAL</Heading>
+      </Link>
       <Menu />
       </Flex>
       </>
@@ -27,23 +27,21 @@ export const Header:VFC = () => {
   return (
     <>
     <ChakraProvider>
-      <Box pb="16px" w="100%" position="fixed" zIndex={60} css={sBack} >
+      <Box w="100%" position="fixed" zIndex={60} css={sBack} >
         <Flex h="80px" w="80%" m="auto" align="flex-end" justify="space-between">
 
-         <Box boxSize='60px'>
+         <Flex align="flex-end">
          <Image src="/img/icon.png" alt="icon" width="60px" height="80%" />
-         </Box>
+
+          <Link href="/" pb={4} ml={2}>
+          <Heading textDecoration="none" css={sMainTitle} size="md">NAO&#39;S JOURNAL</Heading>
+          </Link>
+         </Flex>
 
 
-         <Center>
-           <MainTitle>NAO&#39;S JOURNAL</MainTitle>
-         </Center>
-
-         <Box>
+         <Box pb={4}>
           <Menu />
          </Box>
-
-
         </Flex>
 
       </Box>
@@ -62,3 +60,10 @@ const sBack = css`
  border: 1px solid rgba( 255, 255, 255, 0.1 );
 `
 
+const sMainTitle = css`
+cursor: pointer;
+ 
+ :hover {
+   opacity: 0.8;
+ }
+`

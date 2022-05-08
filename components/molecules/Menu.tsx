@@ -8,10 +8,9 @@ import { HeaderLink } from "../atoms/HeaderLink";
 import { 
   Box, ChakraProvider,  Flex, useBreakpointValue, 
   useDisclosure, Stack,Drawer,DrawerOverlay,DrawerContent, 
-  DrawerCloseButton, DrawerHeader, DrawerBody
+  DrawerCloseButton, DrawerHeader, DrawerBody, Heading
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { MainTitle } from "../atoms/MainTitle";
 
 const Navigation = () => {
   const location = useRouter();
@@ -71,7 +70,7 @@ export const Menu = () => {
           <DrawerContent>
             <DrawerCloseButton w={10} h={10} />
             <DrawerHeader>
-              <MainTitle>Naos Journal</MainTitle>
+              <Heading css={sMainTitle} size="md">NAO&#39;S JOURNAL</Heading>
             </DrawerHeader>
             <DrawerBody>
               <Navigation />
@@ -131,4 +130,11 @@ const sBorder = css`
 const sBorderLink = css`
  border-bottom: 2px solid #6BA791;
  padding-bottom: 8px;
+`
+const sMainTitle = css`
+cursor: pointer;
+ 
+ :hover {
+   opacity: 0.8;
+ }
 `
