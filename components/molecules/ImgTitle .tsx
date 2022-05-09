@@ -41,7 +41,7 @@ export const ImgTitle:VFC<Props> = ( props ) => {
 
       </Flex>
       </Box>
-     <Image src={props.url} boxSize="320px" h="900px" fit="cover" alt="title with Image"/>
+     <Image src={props.url} boxSize="320px" h="1000px" fit="cover" alt="title with Image"/>
     </Box>
 
     </ChakraProvider>
