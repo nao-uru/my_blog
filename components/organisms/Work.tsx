@@ -6,6 +6,7 @@ import { ViewCard } from "../molecules/DribbbleCard";
 
 import {GetDribblePost} from "../../libs/dribblepost"
 import Link from "next/link";
+import { ButtonPrime } from "../atoms/Button";
 
 export const Work:VFC<Props> = () => {
 
@@ -33,7 +34,7 @@ export const Work:VFC<Props> = () => {
       <Box>
       <Title>Output</Title>
       <Text>Daily UIなど日々のアウトプットをDribbbleにUPしています</Text>
-      <Link href="https://dribbble.com/nao_uru" passHref><Text mt={1} fontWeight="bold" cursor="pointer">アカウントはこちら</Text></Link>
+        <ButtonPrime link="https://dribbble.com/nao_uru">アカウントはこちら！</ButtonPrime>
       </Box>
 
       <SimpleGrid columns={1} spacingY='80px' m="auto" mt="16">
@@ -66,7 +67,7 @@ export const Work:VFC<Props> = () => {
       <Box>
       <Title>Output</Title>
       <Text>Daily UIなど日々のアウトプットをDribbbleにUPしています</Text>
-      <Link href="https://dribbble.com/nao_uru" passHref><Text mt={1} fontWeight="bold" cursor="pointer">アカウントはこちら</Text></Link>
+      <ButtonPrime link="https://dribbble.com/nao_uru">アカウントはこちら！</ButtonPrime>
       </Box>
       <SimpleGrid columns={3} mt={12} spacingY={20} w="100%">
         {items.map((item:any) => {
