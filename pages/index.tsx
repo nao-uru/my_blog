@@ -1,17 +1,19 @@
-import Head from "next/head";
-
 import { Top } from "../components/organisms/Top"
 import { Layout } from "../components/pages/Layout";
-
-
+import { HeadSetting } from "../components/pages/Head";
 
 export default function Home() {
 
   return (
     <>
-    <Head>
-      <title>HOME</title>
-    </Head>
+    <HeadSetting 
+    title={'Home'}
+    description={"ホーム"}
+    url="https://www.naosjournal.com/Blog"
+    card="/img/spain.jpeg"
+    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
+     />
+
     <Layout>
       <Top />
     </Layout>

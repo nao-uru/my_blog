@@ -38,11 +38,35 @@ const Navigation = () => {
       </Box>
       </Link>
 
-      {/* <Link href="/Contact" passHref>
-      <Box mr={8} css={path.startsWith('/Contact') ? sBorderLink:''}>
-      <HeaderLink>Contact</HeaderLink>
+      <Flex pt={8}>
+
+      <Box css={sLink} mr={8}>
+      <Link href="https://twitter.com/naos_journal" passHref>
+      <a target="_blank">
+      <AiOutlineTwitter size={40} />
+      </a>
+      </Link>
       </Box>
-      </Link> */}
+      
+      <Box css={sLink} mr={8}>
+      <Link href="https://www.instagram.com/nao.journal__/" passHref>
+      <a target="_blank">
+      <AiOutlineInstagram size={40} />
+      </a>
+      </Link>
+      </Box>
+  
+      <Box css={sLink} mr={8}>
+      <Link href="https://www.youtube.com/channel/UCnBdJFjL13ySAZ0wLf7TrFg" passHref>
+      <a target="_blank">
+      <AiOutlineYoutube size={40} />
+      </a>
+      </Link>
+      </Box>
+
+      </Flex>
+
+
     </Stack>
   )
 }
@@ -91,12 +115,6 @@ export const Menu = () => {
     <ChakraProvider>
 
     <Flex align="baseline" alignItems="center">
-
-    {/* <Link href="/" passHref>
-    <Box mr={12} css={path.substring('') ? sBorder:''}>
-    <HeaderLink>Home</HeaderLink>
-    </Box>
-    </Link> */}
 
     <Link href="/Blog" passHref>
     <Box mr={12} css={path.startsWith('/Blog') ? sBorder:''}>
