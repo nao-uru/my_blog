@@ -20,11 +20,12 @@ export default function  BlogPage ({ blogPosts }) {
 
   return (
     <>
+    {console.log(blogPosts)}
     <HeadSetting 
     title={'Blog'}
     description={""}
-    url={"https://www.naosjournal.com/Blog"}
-    card={'/public/img/spain.jpeg'}
+    path={"/Blog"}
+    card='/img/spain.jpeg'
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 

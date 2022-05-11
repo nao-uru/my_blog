@@ -61,6 +61,8 @@ export default function PostPage({blogPost}) {
   const month = smonth +1;
   const day = new Date(date).getDate();
 
+  const image = "https:" + blogPost.fields.media.fields.file.url;
+
   console.log(blogPost);
 
   return (
@@ -68,9 +70,9 @@ export default function PostPage({blogPost}) {
    <HeadSetting 
     title={blogPost.fields.title}
     description={blogPost.fields.subtitle}
-    url={`https://www.naosjournal.com/${blogPost.fields.title}`}
-    card={`https:${blogPost.fields.media.fields.file.url}`}
+    card={image}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
+    path={`/Blog/${blogPost.fields.slug}`}
      />
     
    <Layout>
@@ -82,7 +84,7 @@ export default function PostPage({blogPost}) {
      <Text mt={6}>Date:{`${year}.${month}.${day}`}</Text>
      {/* <Text>Tag</Text> */}
      </Flex>
-     <Img src={`https:${blogPost.fields.media.fields.file.url}`} mt={2} w="full" h={{base:"200px",md:"400px"}} objectFit="cover" />
+     <Img src={image} mt={2} w="full" h={{base:"200px",md:"400px"}} objectFit="cover" />
 
      <Box w="90%" m="auto" mt={8} lineHeight="180%">
      <div dangerouslySetInnerHTML={{__html:md.render(blogPost.fields.text)}}></div>
