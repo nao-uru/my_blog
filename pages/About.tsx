@@ -1,5 +1,3 @@
-import Head from "next/head"
-
 import { About } from "../components/organisms/About"
 import { Layout } from "../components/pages/Layout"
 import { HeadSetting } from "../components/pages/Head";

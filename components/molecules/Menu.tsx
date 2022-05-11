@@ -11,6 +11,8 @@ import {
   DrawerCloseButton, DrawerHeader, DrawerBody, Heading
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { AiOutlineInstagram,AiOutlineTwitter, AiOutlineYoutube } from "react-icons/ai";
+
 
 const Navigation = () => {
   const location = useRouter();
@@ -88,7 +90,7 @@ export const Menu = () => {
     <>
     <ChakraProvider>
 
-    <Flex align="baseline">
+    <Flex align="baseline" alignItems="center">
 
     {/* <Link href="/" passHref>
     <Box mr={12} css={path.substring('') ? sBorder:''}>
@@ -109,10 +111,35 @@ export const Menu = () => {
     </Link>
 
     <Link href="/About" passHref>
-    <Box css={path.startsWith('/About') ? sBorder:''}>
+    <Box mr={8} css={path.startsWith('/About') ? sBorder:''}>
     <HeaderLink>About</HeaderLink>
     </Box>
     </Link>
+
+    <Box css={sLink} mr={4}>
+    <Link href="https://twitter.com/naos_journal" passHref>
+    <a target="_blank">
+    <AiOutlineTwitter size={28} />
+    </a>
+    </Link>
+    </Box>
+    
+    <Box css={sLink} mr={4}>
+    <Link href="https://www.instagram.com/nao.journal__/" passHref>
+    <a target="_blank">
+    <AiOutlineInstagram size={28} />
+    </a>
+    </Link>
+    </Box>
+
+    <Box css={sLink}>
+    <Link href="https://www.youtube.com/channel/UCnBdJFjL13ySAZ0wLf7TrFg" passHref>
+    <a target="_blank">
+    <AiOutlineYoutube size={28} />
+    </a>
+    </Link>
+    </Box>
+
 
 
     </Flex>
@@ -138,4 +165,9 @@ cursor: pointer;
  :hover {
    opacity: 0.8;
  }
+`
+const sLink = css`
+  :hover {
+    color: #6BA791;
+  }
 `
