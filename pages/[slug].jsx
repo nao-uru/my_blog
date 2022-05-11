@@ -55,7 +55,6 @@ export async function getStaticProps({ params }) {
 
 export default function PostPage({blogPost}) {
 
-  // const date = blogPost.sys.createdAt;
   const date = blogPost.fields.date;
   const year = new Date(date).getFullYear();
   const smonth = new Date(date).getMonth();
@@ -63,14 +62,13 @@ export default function PostPage({blogPost}) {
   const day = new Date(date).getDate();
 
   const image = `https:${blogPost.fields.media.fields.file.url}`;
-  // const url = '<https://www.naosjournal.com/>' + path;
 
   console.log(blogPost);
   console.log(`https:${blogPost.fields.media.fields.file.url}`)
 
   return (
    <>
-   <Head>
+   {/* <Head>
       <title>{blogPost.fields.title}</title>
       <meta charSet="utf-8" />
       <meta property="og:title" content={blogPost.fields.title} />
@@ -88,7 +86,15 @@ export default function PostPage({blogPost}) {
       <meta name="twitter:description" content={""} />
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={'<https://www.naosjournal.com/>' + blogPost.fields.slug} />
-    </Head>
+    </Head> */}
+
+    <HeadSetting 
+    title={blogPost.fields.title}
+    description={blogPost.fields.subtitle}
+    path={'<https://www.naosjournal.com/>' + blogPost.fields.slug}
+    card={image}
+    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
+     />
     
    <Layout>
 
