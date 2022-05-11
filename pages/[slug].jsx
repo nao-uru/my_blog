@@ -62,10 +62,11 @@ export default function PostPage({blogPost}) {
   const month = smonth +1;
   const day = new Date(date).getDate();
 
-  const image = "https:" + blogPost.fields.media.fields.file.url;
+  const image = `https:${blogPost.fields.media.fields.file.url}`;
   // const url = '<https://www.naosjournal.com/>' + path;
 
   console.log(blogPost);
+  console.log(`https:${blogPost.fields.media.fields.file.url}`)
 
   return (
    <>
