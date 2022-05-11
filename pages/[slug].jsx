@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
 import {createClient} from "contentful"
+import Head from 'next/head';
 
 import { Layout } from "../components/pages/Layout"
 import { Back } from "../components/atoms/Back"
@@ -62,18 +63,31 @@ export default function PostPage({blogPost}) {
   const day = new Date(date).getDate();
 
   const image = "https:" + blogPost.fields.media.fields.file.url;
+  // const url = '<https://www.naosjournal.com/>' + path;
 
   console.log(blogPost);
 
   return (
    <>
-   <HeadSetting 
-    title={blogPost.fields.title}
-    description={blogPost.fields.subtitle}
-    card={image}
-    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
-    path={`/Blog/${blogPost.fields.slug}`}
-     />
+   <Head>
+      <title>{blogPost.fields.title}</title>
+      <meta charSet="utf-8" />
+      <meta property="og:title" content={blogPost.fields.title} />
+      <meta property="og:description" content={""} />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content={'<https://www.naosjournal.com/>' + blogPost.fields.slug} />
+      <meta property="og:image" content={image} />
+      <meta property="og:site_name" content={blogPost.fields.title} />
+      <meta name="keywords" content={"ブログ"} />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@naos_journal" />
+      <meta name="twitter:url" content={'<https://www.naosjournal.com/>' + blogPost.fields.slug} />
+      <meta name="twitter:title" content={blogPost.fields.title} />
+      <meta name="twitter:description" content={""} />
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={'<https://www.naosjournal.com/>' + blogPost.fields.slug} />
+    </Head>
     
    <Layout>
 
