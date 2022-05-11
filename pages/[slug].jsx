@@ -1,9 +1,10 @@
 import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
 import {createClient} from "contentful"
+import Head from "next/head";
 
 import { Layout } from "../components/pages/Layout"
 import { Back } from "../components/atoms/Back"
-import Head from "next/head";
+import { HeadSetting } from "../components/pages/Head";
 
 const md = require('markdown-it')({
   injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
@@ -65,9 +66,14 @@ export default function PostPage({blogPost}) {
 
   return (
    <>
-   <Head>
-     <title>{blogPost.fields.title}</title>
-   </Head>
+   <HeadSetting 
+    title={blogPost.fields.title}
+    description={blogPost.fields.subtitle}
+    url={`https://www.naosjournal.com/${blogPost.fields.title}`}
+    card={blogPost.fields.media.fields.file.url}
+    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
+     />
+    
    <Layout>
 
      <Box m="auto" w={{base:"90%",md:""}} >

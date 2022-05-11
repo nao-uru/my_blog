@@ -25,7 +25,7 @@ const Navigation = () => {
       </Link>
 
       <Link href="/Work" passHref>
-      <Box mr={8} mt={8} css={path.startsWith('/Work') ? sBorderLink:''}>
+      <Box mr={8} css={path.startsWith('/Work') ? sBorderLink:''}>
       <HeaderLink>Work</HeaderLink>
       </Box>
       </Link>
@@ -36,11 +36,11 @@ const Navigation = () => {
       </Box>
       </Link>
 
-      <Link href="/Contact" passHref>
+      {/* <Link href="/Contact" passHref>
       <Box mr={8} css={path.startsWith('/Contact') ? sBorderLink:''}>
       <HeaderLink>Contact</HeaderLink>
       </Box>
-      </Link>
+      </Link> */}
     </Stack>
   )
 }
@@ -90,6 +90,12 @@ export const Menu = () => {
 
     <Flex align="baseline">
 
+    {/* <Link href="/" passHref>
+    <Box mr={12} css={path.substring('') ? sBorder:''}>
+    <HeaderLink>Home</HeaderLink>
+    </Box>
+    </Link> */}
+
     <Link href="/Blog" passHref>
     <Box mr={12} css={path.startsWith('/Blog') ? sBorder:''}>
     <HeaderLink>Blog</HeaderLink>
@@ -103,16 +109,11 @@ export const Menu = () => {
     </Link>
 
     <Link href="/About" passHref>
-    <Box mr={12} css={path.startsWith('/About') ? sBorder:''}>
+    <Box css={path.startsWith('/About') ? sBorder:''}>
     <HeaderLink>About</HeaderLink>
     </Box>
     </Link>
 
-    <Link href="/Contact" passHref>
-    <Box css={path.startsWith('/Contact') ? sBorder:''}>
-    <HeaderLink>Contact</HeaderLink>
-    </Box>
-    </Link>
 
     </Flex>
 
