@@ -9,7 +9,7 @@ export default function AboutPage() {
     <HeadSetting 
     title={'About'}
     description={""}
-    url={"https://www.naosjournal.com/About"}
+    path={"/About"}
     card={'/public/img/spain.jpeg'}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
