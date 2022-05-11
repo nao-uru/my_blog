@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
-export const HeadSetting = ({ title, description, keyword, url }) => {
+export const HeadSetting = ({ title, description, keyword, url,card }) => {
   return (
     <Head>
       <title>{title}</title>
@@ -14,9 +14,9 @@ export const HeadSetting = ({ title, description, keyword, url }) => {
       <meta property="og:site_name" content={title} />
       <meta name="keywords" content={keyword} />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
-      <meta name="twitter:card" content="Card" />
+      <meta name="twitter:card" content={card} />
       <meta name="twitter:site" content="@naos_journal" />
-      <meta name="twitter:url" content={"https://www.naosjournal.com/"} />
+      <meta name="twitter:url" content={"https://twitter.com/naos_journal"} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={"/favicon.ico"} />

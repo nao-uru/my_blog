@@ -6,6 +6,7 @@ import { getAllPosts } from "../libs/contentful";
 import { Layout } from "../components/pages/Layout";
 import { BlogCard } from "../components/molecules/BlogCard"
 import { Title } from "../components/atoms/Title";
+import { HeadSetting } from "../components/pages/Head";
 
 
 export async function getStaticProps() {
@@ -21,9 +22,14 @@ export default function  BlogPage ({ blogPosts }) {
 
   return (
     <>
-    <Head>
-      <title>Blog</title>
-    </Head>
+    <HeadSetting 
+    title={'Blog'}
+    description={""}
+    url={"https://www.naosjournal.com/Blog"}
+    card={'/public/img/spain.jpeg'}
+    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
+     />
+
     <Layout>
        <Title>Blog</Title>
 
