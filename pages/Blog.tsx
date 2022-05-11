@@ -1,6 +1,4 @@
 import { Grid } from "@chakra-ui/react";
-import Head from "next/head";
-
 import { getAllPosts } from "../libs/contentful";
 
 import { Layout } from "../components/pages/Layout";

@@ -1,7 +1,8 @@
 import React, { VFC } from "react";
 import Image from "next/image";
 import { css } from "@emotion/react";
-import { Box, ChakraProvider,  Flex,  Center, useBreakpointValue, Heading, Link} from "@chakra-ui/react";
+import { Box, ChakraProvider,  Flex, useBreakpointValue, Heading, Link} from "@chakra-ui/react";
+
 
 import { Menu } from "../molecules/Menu";
 

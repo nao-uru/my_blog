@@ -1,6 +1,5 @@
 import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
 import {createClient} from "contentful"
-import Head from "next/head";
 
 import { Layout } from "../components/pages/Layout"
 import { Back } from "../components/atoms/Back"
