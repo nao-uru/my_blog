@@ -9,7 +9,7 @@ export default function Home() {
     <HeadSetting 
     title={'Home'}
     description={"ホーム"}
-    url="https://www.naosjournal.com/Blog"
+    path="/"
     card="/img/spain.jpeg"
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />

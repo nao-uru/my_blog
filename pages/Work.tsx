@@ -9,7 +9,7 @@ export default function WorkPage() {
     <HeadSetting 
     title={'NAOs JOURNAL'}
     description={""}
-    url={"https://www.naosjournal.com/Work"}
+    path={"/Work"}
     card={'/public/img/spain.jpeg'}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
