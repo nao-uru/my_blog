@@ -69,7 +69,7 @@ export default function PostPage({blogPost}) {
     title={blogPost.fields.title}
     description={blogPost.fields.subtitle}
     url={`https://www.naosjournal.com/${blogPost.fields.title}`}
-    card={blogPost.fields.media.fields.file.url}
+    card={`https:${blogPost.fields.media.fields.file.url}`}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
     
