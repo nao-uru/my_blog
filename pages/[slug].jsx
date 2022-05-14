@@ -1,10 +1,12 @@
-import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Img, Text, } from "@chakra-ui/react";
 import {createClient} from "contentful"
-import Head from 'next/head';
 
 import { Layout } from "../components/pages/Layout"
 import { Back } from "../components/atoms/Back"
 import { HeadSetting } from "../components/pages/Head";
+import { css } from "@emotion/react";
+import { Title } from "../components/atoms/Title";
+import { ButtonPrime } from "../components/atoms/Button";
 
 const md = require('markdown-it')({
   injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
@@ -18,6 +20,26 @@ const md = require('markdown-it')({
 });
 const mark = require('markdown-it-mark');
 md.use(mark);
+
+md.use(require('markdown-it-container'), 'sample', {
+ 
+  validate: function(params) {
+    return params.trim().match(/^style\s+(.*)$/);
+  },
+
+  render: function (tokens, idx) {
+    var m = tokens[idx].info.trim().match(/^style\s+(.*)$/);
+
+    if (tokens[idx].nesting === 1) {
+      return '<div class="style ' + md.utils.escapeHtml(m[1]) + '"><div class="style-body">';
+
+    } else {
+      return '</div></div>\n';
+    }
+  }
+});
+
+console.log(md.render('::: spoiler click me\n*content*\n:::\n'));
 
 
 const client = createClient({
@@ -68,26 +90,6 @@ export default function PostPage({blogPost}) {
 
   return (
    <>
-   {/* <Head>
-      <title>{blogPost.fields.title}</title>
-      <meta charSet="utf-8" />
-      <meta property="og:title" content={blogPost.fields.title} />
-      <meta property="og:description" content={""} />
-      <meta property="og:type" content="article" />
-      <meta property="og:url" content={'<https://www.naosjournal.com/>' + blogPost.fields.slug} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content={blogPost.fields.title} />
-      <meta name="keywords" content={"ブログ"} />
-      <meta name="viewport" content="width=device-width,initial-scale=1" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@naos_journal" />
-      <meta name="twitter:url" content={'<https://www.naosjournal.com/>' + blogPost.fields.slug} />
-      <meta name="twitter:title" content={blogPost.fields.title} />
-      <meta name="twitter:description" content={""} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={'<https://www.naosjournal.com/>' + blogPost.fields.slug} />
-    </Head> */}
-
     <HeadSetting 
     title={blogPost.fields.title}
     description={blogPost.fields.subtitle}
@@ -103,13 +105,17 @@ export default function PostPage({blogPost}) {
      <Heading mt={{base: 10,md: 20}} size="lg">{blogPost.fields.title}</Heading>
      <Flex justify="start" align="baseline">
      <Text mt={6}>Date:{`${year}.${month}.${day}`}</Text>
-     {/* <Text>Tag</Text> */}
      </Flex>
      <Img src={image} mt={2} w="full" h={{base:"200px",md:"400px"}} objectFit="cover" />
 
-     <Box w="90%" m="auto" mt={8} lineHeight="180%">
-     <div dangerouslySetInnerHTML={{__html:md.render(blogPost.fields.text)}}></div>
+     <Box css={sBack} pt={6} pb={24} lineHeight="180%">
+     <Box w="90%" m="auto" dangerouslySetInnerHTML={{__html:md.render(blogPost.fields.text)}} />
+
      </Box>
+
+     {/* <Flex flexDirection="column" align="center">
+       <Heading fontSize={20}>Share</Heading>
+     </Flex> */}
 
      </Box>
 
@@ -118,3 +124,12 @@ export default function PostPage({blogPost}) {
   );
 }
 
+const sBack = css`
+  background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 225, 225, 225, 0.2 );
+  backdrop-filter: blur( 8px );
+  -webkit-backdrop-filter: blur( 8px );
+  border-radius: 0 0 10px 10px;
+  border-left: 1px #e7e7e7 solid;
+  border-right: 1px #e7e7e7 solid;
+`
