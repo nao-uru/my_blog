@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
     <>
     <HeadSetting 
     title={'NAOs JOURNAL'}
-    description={'なおのブログ'}
+    description={'NAOs JOURNAL'}
     url={'https://www.naosjournal.com/'}
     card={'/public/img/spain.jpeg'}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
