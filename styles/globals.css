@@ -4,8 +4,8 @@ body {
   margin: 0;
   color: #222222;
   scroll-behavior: smooth;
-  /* font-family: 'Montserrat', sans-serif;
-  font-family:'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  /* font-family:'Open Sans', 'Helvetica Neue', sans-serif; */
 }
 
 #__next {
@@ -27,7 +27,6 @@ a {
   font-weight: bold;
   font-size: 20px;
   border-left: 3px #6BA791 solid;
-  /* box-shadow: 10px 10px 20px #E1E1E1, -8px -8px 20px #F5F5F5; */
 }
 
 .is-title {

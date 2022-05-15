@@ -23,7 +23,7 @@ export default function  BlogPage ({ blogPosts }) {
     {console.log(blogPosts)}
     <HeadSetting 
     title={'Blog'}
-    description={""}
+    description={"なおのブログ"}
     path={"/Blog"}
     card='/img/spain.jpeg'
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
