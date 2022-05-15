@@ -1,5 +1,7 @@
 import '../styles/globals.css'
 import { HeadSetting } from '../components/pages/Head'
+import Head from 'next/head';
+
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -11,6 +13,7 @@ function MyApp({ Component, pageProps }) {
     card={'/public/img/spain.jpeg'}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
+
     <Component {...pageProps} />
     </>
   )

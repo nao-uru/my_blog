@@ -38,8 +38,10 @@ export const Footer:VFC<Props> = () => {
         <Box w="90%" m="auto">
         <Flex align="baseline">
 
-          <Link href="/">
+          <Link href="/" textDecoration="none">
+           <a>
            <Heading css={sMainTitle} size="md">NAO&#39;S JOURNAL</Heading>
+           </a>
           </Link>
 
           <Spacer />

@@ -1,11 +1,11 @@
-import { Box, Button, Flex, Heading, Img, Text, } from "@chakra-ui/react";
+import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
 import {createClient} from "contentful"
+import { FaLine, FaTwitter } from "react-icons/fa";
 
 import { Layout } from "../components/pages/Layout"
 import { Back } from "../components/atoms/Back"
 import { HeadSetting } from "../components/pages/Head";
 import { css } from "@emotion/react";
-import { Title } from "../components/atoms/Title";
 import { ButtonPrime } from "../components/atoms/Button";
 
 const md = require('markdown-it')({
@@ -100,7 +100,7 @@ export default function PostPage({blogPost}) {
     
    <Layout>
 
-     <Box m="auto" w={{base:"90%",md:""}} >
+     <Box m="auto" w={{base:"100%",md:"90%"}} >
      <Back />
      <Heading mt={{base: 10,md: 20}} size="lg">{blogPost.fields.title}</Heading>
      <Flex justify="start" align="baseline">
@@ -109,20 +109,38 @@ export default function PostPage({blogPost}) {
      <Img src={image} mt={2} w="full" h={{base:"200px",md:"400px"}} objectFit="cover" />
 
      <Box css={sBack} pt={6} pb={24} lineHeight="180%">
-     <Box w="90%" m="auto" dangerouslySetInnerHTML={{__html:md.render(blogPost.fields.text)}} />
-
+     <Box w={{base:"95%",md:"90%"}} m="auto" dangerouslySetInnerHTML={{__html:md.render(blogPost.fields.text)}} />
      </Box>
 
-     {/* <Flex flexDirection="column" align="center">
-       <Heading fontSize={20}>Share</Heading>
-     </Flex> */}
+     <Flex flexDirection="column" align="center" mt={24} css={sBorder} >
+       <Heading fontSize={24} pt={12}>Share</Heading>
+
+       <Flex mt={8} flexDirection={{base:"column", md:"row"}} align="center">
+
+      <ButtonPrime 
+       href={`https://twitter.com/share?url=https://www.naosjournal.com/${blogPost.fields.slug}&text=sample&hashtags=sample`} 
+       icon={<FaTwitter size={28} color="#73a1c7" />}
+       color="#73a1c7"
+       border="2px #73a1c7 solid" >Twitterでシェア</ButtonPrime>
+      
+      <Box mt={{base:4,md:0}}>
+      <ButtonPrime       
+       href={`https://social-plugins.line.me/lineit/share?url=https://www.naosjournal.com/${blogPost.fields.slug}`} 
+       icon={<FaLine size={28} color="#6BA791" />}
+       color="#6BA791"
+       border="2px #6BA791 solid">LINEで送る</ButtonPrime>
+      </Box>
+
+       </Flex>
+
+     </Flex>
 
      </Box>
 
    </Layout>
    </>
   );
-}
+} 
 
 const sBack = css`
   background: rgba( 255, 255, 255, 0.2 );
@@ -132,4 +150,7 @@ const sBack = css`
   border-radius: 0 0 10px 10px;
   border-left: 1px #e7e7e7 solid;
   border-right: 1px #e7e7e7 solid;
+`
+const sBorder = css`
+ border-top: 1px #222222 solid;
 `
