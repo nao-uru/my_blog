@@ -2,8 +2,6 @@ import React from "react";
 import { Button, ChakraProvider } from "@chakra-ui/react";
 
 import { css } from "@emotion/react";
-import { Props } from "framer-motion/types/types";
-
 
 export const TabLink = (props) => {
 
@@ -15,7 +13,6 @@ export const TabLink = (props) => {
     </>
   )
 }
-
 
 const sTabLink = css`
 padding: 12px 32px;

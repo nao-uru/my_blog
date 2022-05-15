@@ -23,6 +23,8 @@ export const BackTop:VFC = () => {
 }
 
 const sHover = css`
+ cursor: pointer;
+ 
  :hover {
    color: #6BA791;
  }

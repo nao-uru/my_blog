@@ -11,8 +11,8 @@ export const ViewCard:VFC<Props> = (props) => {
     <ChakraProvider>
         <a href={props.url} target="_blank" rel="noreferrer">
       <Box css={sCard} w="95%" m="auto" p={4}>
-        <Image src={props.img} w="full" h="180px" mt="4" mb="4" fit="cover" alt="DribbbleにUPしているサンプル" />
-        <Heading size="md">{props.title}</Heading>
+        <Image src={props.img} w="full" h="180px" fit="cover" alt="DribbbleにUPしているサンプル" />
+        <Heading size="md" mt={2}>{props.title}</Heading>
         {/* <Text size="md">{props.date}</Text> */}
       </Box>
         </a>
