@@ -34,3 +34,11 @@ a {
   font-size: 24px;
   font-weight: bold;
 }
+
+.is-line {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 120px;
+  border-top: 1px  #222222 solid;
+}
