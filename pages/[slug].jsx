@@ -39,8 +39,6 @@ md.use(require('markdown-it-container'), 'sample', {
   }
 });
 
-console.log(md.render('::: spoiler click me\n*content*\n:::\n'));
-
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
