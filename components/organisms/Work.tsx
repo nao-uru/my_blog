@@ -34,13 +34,13 @@ export const Work:VFC<Props> = () => {
 
       <Box>
       <Title>Output</Title>
-      <Text>Daily UIなど日々のアウトプットをDribbbleにUPしています</Text>
+      <Text mb={4}>Daily UIなど日々のアウトプットをDribbbleにUPしています</Text>
+      
       <ButtonPrime 
       href="https://dribbble.com/nao_uru" 
-      color="1px #222222 solid" 
-      icon={<ImDribbble size={32} />}>
-        アカウントはこちら！
-      </ButtonPrime>
+      border="2px #cb7cab solid" 
+      color="#cb7cab"
+      icon={<ImDribbble color="#cb7cab" size={20} />} >アカウントはこちら！</ButtonPrime>
       </Box>
 
       <SimpleGrid columns={1} spacingY='80px' m="auto" mt={12}>
