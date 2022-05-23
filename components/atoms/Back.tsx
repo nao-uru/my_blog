@@ -32,8 +32,8 @@ export const Back = () => {
     <ChakraProvider>
       <Link passHref href="/Blog">
       <Flex css={sHover}>
-      <ChevronLeftIcon boxSize={10} />
-      <Text fontSize="2xl" fontWeight="bold">Back</Text>
+      <ChevronLeftIcon boxSize={8} />
+      <Text fontSize="xl" fontWeight="bold">Back to All Blog</Text>
       </Flex>
       </Link>
     </ChakraProvider>
@@ -44,6 +44,6 @@ export const Back = () => {
 const sHover = css`
 cursor: pointer;
 :hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 `
