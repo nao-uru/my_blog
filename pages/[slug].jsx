@@ -82,9 +82,9 @@ export default function PostPage({blogPost}) {
   const day = new Date(date).getDate();
 
   const image = `https:${blogPost.fields.media.fields.file.url}`;
+  const tags = blogPost.fields.tags;
 
   console.log(blogPost);
-  console.log(`https:${blogPost.fields.media.fields.file.url}`)
 
   return (
    <>
@@ -101,8 +101,11 @@ export default function PostPage({blogPost}) {
      <Box m="auto" w={{base:"100%",md:"90%"}} >
      <Back />
      <Heading mt={{base: 10,md: 20}} size="lg">{blogPost.fields.title}</Heading>
-     <Flex justify="start" align="baseline">
-     <Text mt={6}>Date:{`${year}.${month}.${day}`}</Text>
+     <Flex mt={6} justify="start" align="baseline">
+     <Text mt={6} mr={6}>Date:{`${year}.${month}.${day}`}</Text>
+     {tags.map((tagEl) => {
+       return <Text css={sTag} key={tagEl.length}>{tagEl}</Text>
+       })}
      </Flex>
      <Img src={image} mt={2} w="full" h={{base:"200px",md:"400px"}} objectFit="cover" />
 
@@ -110,11 +113,11 @@ export default function PostPage({blogPost}) {
      <Box w={{base:"95%",md:"90%"}} m="auto" dangerouslySetInnerHTML={{__html:md.render(blogPost.fields.text)}} />
      </Box>
 
+     {/* 共有ボタン */}
      <Flex flexDirection="column" align="center" mt={24} css={sBorder} >
        <Heading fontSize={24} pt={12}>Share</Heading>
 
        <Flex mt={8} flexDirection={{base:"column", md:"row"}} align="center">
-
       <ButtonPrime 
        href={`https://twitter.com/share?url=https://www.naosjournal.com/${blogPost.fields.slug}&text=sample&hashtags=sample`} 
        icon={<FaTwitter size={28} color="#73a1c7" />}
@@ -151,4 +154,10 @@ const sBack = css`
 `
 const sBorder = css`
  border-top: 1px #222222 solid;
+`
+const sTag = css`
+ margin: 0 10px 0 0;
+ padding: 5px 10px;
+ border-radius: 8px;
+ border: 1px #222222 solid;
 `

@@ -1,10 +1,11 @@
-import { Grid } from "@chakra-ui/react";
+import { Flex, Grid } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
 
 import { Layout } from "../components/pages/Layout";
 import { BlogCard } from "../components/molecules/BlogCard"
 import { Title } from "../components/atoms/Title";
 import { HeadSetting } from "../components/pages/Head";
+import { TabLink } from "../components/atoms/TabLink";
 
 
 export async function getStaticProps() {
@@ -33,9 +34,9 @@ export default function  BlogPage ({ blogPosts }) {
        <Title>Blog</Title>
 
     {/* <Flex>
-      <TabLink>All</TabLink>
-      <TabLink>Design</TabLink>
-      <TabLink>English</TabLink>
+      <TabLink url="/Blog">All</TabLink>
+      <TabLink >Design</TabLink>
+      <TabLink url="/tagpages/Book">Book</TabLink>
       <TabLink>Life</TabLink>
     </Flex> */}
 
