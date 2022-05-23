@@ -13,7 +13,6 @@ export const ViewCard:VFC<Props> = (props) => {
       <Box css={sCard} w="95%" m="auto" p={4}>
         <Image src={props.img} w="full" h="180px" fit="cover" alt="DribbbleにUPしているサンプル" />
         <Heading size="md" mt={2}>{props.title}</Heading>
-        {/* <Text size="md">{props.date}</Text> */}
       </Box>
         </a>
     </ChakraProvider>
