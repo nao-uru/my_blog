@@ -26,3 +26,4 @@ export async function getPostBySlug(slug) {
     return entries.items[0];
   }
 }
+

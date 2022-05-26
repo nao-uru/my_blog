@@ -32,7 +32,7 @@ export const Header:VFC = () => {
         <Flex h="80px" w="80%" m="auto" align="flex-end" justify="space-between">
 
          <Flex align="flex-end">
-         <Image src="/img/icon.png" alt="icon" width="60px" height="80%" />
+         <Image src="/img/icon.png" alt="icon" width="70%" height="70%" />
 
           <Link href="/" pb={4} ml={2}>
           <Heading textDecoration="none" css={sMainTitle} size="md">NAO&#39;S JOURNAL</Heading>
