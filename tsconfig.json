@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/atoms/TabLink.tsx", "libs/contentful.tsxx", "pages/[slug].jsx", "pages/_document.js"  ],
+, "components/atoms/TabLink.tsx", "libs/contentful.tsxx", "pages/[slug].jsx", "pages/_document.js", "libs/gtag.js"  ],
   "exclude": [
     "node_modules"
   ]
