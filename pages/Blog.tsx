@@ -1,4 +1,4 @@
-import { Flex, Grid } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
 
 import { Layout } from "../components/pages/Layout";

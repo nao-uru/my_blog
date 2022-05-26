@@ -104,7 +104,7 @@ export default function PostPage({blogPost}) {
      <Flex mt={6} justify="start" align="baseline">
      <Text mt={6} mr={6}>Date:{`${year}.${month}.${day}`}</Text>
      {tags.map((tagEl) => {
-       return <Text css={sTag} key={tagEl.length}>{tagEl}</Text>
+       return <Text css={sTag} key={tagEl.length}>{tagEl}</Text>;
        })}
      </Flex>
      <Img src={image} mt={2} w="full" h={{base:"200px",md:"400px"}} objectFit="cover" />
