@@ -62,6 +62,7 @@ export const getStaticPaths = async () => {
   }
 }
 
+// パスの自動生成
 export async function getStaticProps({ params }) {
   const { items } = await client.getEntries({
     content_type: 'blogPost',

@@ -33,7 +33,7 @@ export const Back = () => {
       <Link passHref href="/Blog">
       <Flex css={sHover}>
       <ChevronLeftIcon boxSize={8} />
-      <Text fontSize="xl" fontWeight="bold">Back to All Blog</Text>
+      <Text fontSize="xl" fontWeight="bold">Back</Text>
       </Flex>
       </Link>
     </ChakraProvider>
