@@ -9,7 +9,7 @@ body {
 }
 
 #__next {
-  background-color: #e7e7e7;
+  background: linear-gradient(180deg, #E9EDF0 0%, #E9EDF0 100%);
 }
 
 a {

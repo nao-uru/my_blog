@@ -24,7 +24,6 @@ export const Footer:VFC<Props> = () => {
       <>
       <ChakraProvider>
       <Box h="240px" css={Border} pt="4" mt="52">
-      <BackTop />
       </Box>
       </ChakraProvider>
       </>
@@ -46,7 +45,6 @@ export const Footer:VFC<Props> = () => {
 
           <Spacer />
 
-          <BackTop />
           <Menu />
         </Flex>
         </Box>
@@ -57,7 +55,7 @@ export const Footer:VFC<Props> = () => {
 }
 
 const Border = css`
- border-top: 2px solid #E8E5DE;
+ border-top:2px solid rgba(255, 255, 255, 0.1);
 `
 const sMainTitle = css`
 cursor: pointer;

@@ -30,9 +30,8 @@ const sCard = css`
   :hover {
     transition: 0.2s;
     cursor: pointer;
-    background-color: #f4f4f4;
-    background: #E7E7E7;
-    box-shadow: 16px 16px 19px #DADADA, -12px -12px 19px #FAFAFA;
+    background: linear-gradient(180deg, #EEF0F5 0%, #E6E9EF 100%);
+    box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
     
     /* .image {
       transition: 0.2s;
