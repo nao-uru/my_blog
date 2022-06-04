@@ -6,6 +6,8 @@ import { BlogCard } from "../components/molecules/BlogCard"
 import { Title } from "../components/atoms/Title";
 import { HeadSetting } from "../components/pages/Head";
 import { TabLink } from "../components/atoms/TabLink";
+import dynamic from 'next/dynamic';
+
 
 
 export async function getStaticProps() {
@@ -18,6 +20,11 @@ export async function getStaticProps() {
 }
 
 export default function  BlogPage ({ blogPosts }) {
+
+  const ScrollRevealContainer = dynamic(
+    import('../components/pages/Scroll'),
+    {ssr: false,}
+  );
 
   return (
     <>
