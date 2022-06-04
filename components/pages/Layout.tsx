@@ -18,11 +18,11 @@ export const Layout:VFC<Props> = ( {children} ) => {
     <>
     <ChakraProvider>
       <Header />
-      <ScrollRevealContainer>
       <Container maxW={{base:"90%", md:"1000px"}} m="auto" p="0" pt={{base:16,md:28}}>
+      {/* <ScrollRevealContainer> */}
         {children}
+      {/* </ScrollRevealContainer> */}
       </Container>
-      </ScrollRevealContainer>
       <BackTop />
       <Footer />
     </ChakraProvider>
