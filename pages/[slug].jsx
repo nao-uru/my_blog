@@ -1,4 +1,6 @@
 import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
+import dynamic from 'next/dynamic';
+
 import {createClient} from "contentful"
 import { FaLine, FaTwitter } from "react-icons/fa";
 
@@ -76,6 +78,11 @@ export async function getStaticProps({ params }) {
 
 export default function PostPage({blogPost}) {
 
+  const ScrollRevealContainer = dynamic(
+    import('../components/pages/Scroll'),
+    {ssr: false,}
+  );
+
   const date = blogPost.fields.date;
   const year = new Date(date).getFullYear();
   const smonth = new Date(date).getMonth();
@@ -98,6 +105,7 @@ export default function PostPage({blogPost}) {
      />
     
    <Layout>
+     <ScrollRevealContainer>
 
      <Box m="auto" w={{base:"100%",md:"90%"}} >
      <Back />
@@ -139,6 +147,7 @@ export default function PostPage({blogPost}) {
 
      </Box>
 
+     </ScrollRevealContainer>
    </Layout>
    </>
   );
