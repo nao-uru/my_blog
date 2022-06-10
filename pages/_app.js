@@ -1,8 +1,8 @@
 import '../styles/globals.css'
 import { HeadSetting } from '../components/pages/Head';
+import { AnimatePresence } from 'framer-motion';
 
-
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
     <>
     <HeadSetting 
@@ -13,10 +13,11 @@ function MyApp({ Component, pageProps }) {
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 
-    <Component {...pageProps} />
+    <AnimatePresence>
+    <Component key={router.asPath} {...pageProps} />
+    </AnimatePresence>
     </>
   )
 }
 
 export default MyApp
-

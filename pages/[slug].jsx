@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
-import dynamic from 'next/dynamic';
 
 import {createClient} from "contentful"
+import { getAllPosts } from "../libs/contentful";
 import { FaLine, FaTwitter } from "react-icons/fa";
 
 import { Layout } from "../components/pages/Layout"
@@ -9,6 +9,7 @@ import { Back } from "../components/atoms/Back"
 import { HeadSetting } from "../components/pages/Head";
 import { css } from "@emotion/react";
 import { ButtonPrime } from "../components/atoms/Button";
+import { LatestCard } from "../components/molecules/LatestCard";
 
 const md = require('markdown-it')({
   injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
@@ -64,25 +65,25 @@ export const getStaticPaths = async () => {
   }
 }
 
-// パスの自動生成
+// データ取得（記事一覧と記事個別の内容）
 export async function getStaticProps({ params }) {
   const { items } = await client.getEntries({
     content_type: 'blogPost',
     'fields.slug':params.slug
   })
 
+  const posts = await getAllPosts();
+
   return {
-    props:{ blogPost: items[0]}
+    props:{ blogPost: items[0], allPosts: posts}
   }
 }
 
 
-export default function PostPage({blogPost, blogPosts}) {
+export default function PostPage({blogPost,allPosts}) {
 
-  const ScrollRevealContainer = dynamic(
-    import('../components/pages/Scroll'),
-    {ssr: false,}
-  );
+  console.log(allPosts);
+  console.log(blogPost);
 
   const date = blogPost.fields.date;
   const year = new Date(date).getFullYear();
@@ -93,7 +94,6 @@ export default function PostPage({blogPost, blogPosts}) {
   const image = `https:${blogPost.fields.media.fields.file.url}`;
   const tags = blogPost.fields.tags;
 
-  console.log(blogPost);
 
   return (
    <>
@@ -106,11 +106,11 @@ export default function PostPage({blogPost, blogPosts}) {
      />
     
    <Layout>
-     <ScrollRevealContainer>
+    <Flex flexDirection={{base:"column", lg:"row"}}>
 
-     <Box m="auto" w={{base:"100%",md:"90%"}} >
+    <Box m="auto" w={{base:"100%",md:"90%"}} mr={8}>
      <Back />
-     <Heading mt={{base: 10,md: 20}} size="lg">{blogPost.fields.title}</Heading>
+     <Heading size="lg">{blogPost.fields.title}</Heading>
      <Flex mt={6} justify="start" align="baseline">
      <Text mt={6} mr={6}>Date:{`${year}.${month}.${day}`}</Text>
      {tags.map((tagEl) => {
@@ -146,9 +146,21 @@ export default function PostPage({blogPost, blogPosts}) {
 
      </Flex>
 
-     </Box>
+    </Box>
 
-     </ScrollRevealContainer>
+    <Box m='auto' mt={{base: 24,lg:"640px"}} borderTop="1px solid #373737" w={{base:'100%',md:"40%"}}>
+    <Heading size="md" mt={8} mb={12}>最新の投稿</Heading>
+      {allPosts.map((shinglePost) => {
+      return <LatestCard
+      key={shinglePost.sys.id} 
+      title={shinglePost.fields.title}
+      url={shinglePost.fields.media.fields.file.url}
+      slug={shinglePost.fields.slug}
+      />
+    }).slice(0,4)} 
+    </Box>
+
+    </Flex>
    </Layout>
    </>
   );
