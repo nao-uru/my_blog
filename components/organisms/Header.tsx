@@ -57,7 +57,7 @@ const sBack = css`
  box-shadow: 0 8px 28px 0 rgba( 139, 142, 184, 0.1 );
  backdrop-filter: blur( 5px );
  -webkit-backdrop-filter: blur( 5px );
- border-radius: 10px;
+ border-radius: 0 0 10px 10px;
  border: 1px solid rgba( 255, 255, 255, 0.1 );
 `
 
