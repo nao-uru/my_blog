@@ -40,8 +40,8 @@ export const About:VFC<Props> = () => {
       また、ブログやSNSでの発信も頑張っていきたいのでフォローしていただけると嬉しいです😊
        </Content>
 
-       </Box>
-       
+       </Box> 
+
       </Box>
       </>
     )

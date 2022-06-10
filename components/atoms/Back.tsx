@@ -17,7 +17,7 @@ export const Back = () => {
       <>
       <ChakraProvider>
       <Link href="/Blog" passHref>
-      <Flex css={sHover}>
+      <Flex css={sHover} mb={10}>
       <ChevronLeftIcon boxSize={8} />
       <Text fontSize="xl" fontWeight="bold">Back</Text>
       </Flex>
@@ -31,7 +31,7 @@ export const Back = () => {
     <>
     <ChakraProvider>
       <Link passHref href="/Blog">
-      <Flex css={sHover}>
+      <Flex css={sHover} mb={20} >
       <ChevronLeftIcon boxSize={8} />
       <Text fontSize="xl" fontWeight="bold">Back</Text>
       </Flex>

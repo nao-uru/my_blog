@@ -1,14 +1,8 @@
 import { About } from "../components/organisms/About"
 import { Layout } from "../components/pages/Layout"
 import { HeadSetting } from "../components/pages/Head";
-import dynamic from 'next/dynamic';
 
 export default function AboutPage() {
-
-  const ScrollRevealContainer = dynamic(
-    import('../components/pages/Scroll'),
-    {ssr: false,}
-  );
 
   return (
     <>
@@ -20,9 +14,7 @@ export default function AboutPage() {
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
     <Layout>
-      <ScrollRevealContainer>
       <About />
-      </ScrollRevealContainer>
     </Layout>
     </>
   )
