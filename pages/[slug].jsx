@@ -9,6 +9,7 @@ import { Back } from "../components/atoms/Back"
 import { HeadSetting } from "../components/pages/Head";
 import { css } from "@emotion/react";
 import { ButtonPrime } from "../components/atoms/Button";
+import { Sample } from "../components/organisms/LatestCards";
 
 const md = require('markdown-it')({
   injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
@@ -76,7 +77,8 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default function PostPage({blogPost}) {
+
+export default function PostPage({blogPost, blogPosts}) {
 
   const ScrollRevealContainer = dynamic(
     import('../components/pages/Scroll'),
@@ -141,11 +143,13 @@ export default function PostPage({blogPost}) {
        border="2px #6BA791 solid">LINEで送る</ButtonPrime>
       </Box>
 
-       </Flex>
+      </Flex>
 
      </Flex>
 
      </Box>
+
+     <Sample sample={blogPosts}/>
 
      </ScrollRevealContainer>
    </Layout>
