@@ -76,7 +76,8 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default function PostPage({blogPost}) {
+
+export default function PostPage({blogPost, blogPosts}) {
 
   const ScrollRevealContainer = dynamic(
     import('../components/pages/Scroll'),
@@ -141,7 +142,7 @@ export default function PostPage({blogPost}) {
        border="2px #6BA791 solid">LINEで送る</ButtonPrime>
       </Box>
 
-       </Flex>
+      </Flex>
 
      </Flex>
 
