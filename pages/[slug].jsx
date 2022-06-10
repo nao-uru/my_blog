@@ -9,7 +9,6 @@ import { Back } from "../components/atoms/Back"
 import { HeadSetting } from "../components/pages/Head";
 import { css } from "@emotion/react";
 import { ButtonPrime } from "../components/atoms/Button";
-import { Sample } from "../components/organisms/LatestCards";
 
 const md = require('markdown-it')({
   injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
@@ -148,8 +147,6 @@ export default function PostPage({blogPost, blogPosts}) {
      </Flex>
 
      </Box>
-
-     <Sample sample={blogPosts}/>
 
      </ScrollRevealContainer>
    </Layout>
