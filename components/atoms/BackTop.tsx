@@ -42,7 +42,6 @@ const sBack = css`
  :hover {
    color:  linear-gradient(180deg, #EEF0F5 0%, #E6E9EF 100%);
    background: #6BA791;
-   border: #FFFFFF;
    filter:none;
  }
 `

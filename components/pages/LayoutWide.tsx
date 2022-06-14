@@ -7,7 +7,7 @@ import { BackTop } from "../atoms/BackTop";
 import { Footer } from "../organisms/Footer";
 import { Header } from "../organisms/Header";
 
-export const Layout:VFC<Props> = ( {children} ) => {
+export const LayoutWide:VFC<Props> = ( {children} ) => {
   
   return(
     <>
@@ -21,7 +21,7 @@ export const Layout:VFC<Props> = ( {children} ) => {
       exit={{ opacity: 0 }} 
       >
 
-      <Container maxW={{base:"95%", md:"1000px"}} m="auto" p="0" pt={{base:16,md:28}}>
+      <Container maxW={{base:"95%", md:"1200px"}} m="auto" p="0" pt={{base:16,md:28}}>
         {children}
       </Container>
 
