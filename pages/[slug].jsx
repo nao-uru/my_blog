@@ -1,53 +1,18 @@
 import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
-
-import {createClient} from "contentful"
-import { getAllPosts } from "../libs/contentful";
 import { FaLine, FaTwitter } from "react-icons/fa";
-
-import { Layout } from "../components/pages/Layout"
-import { Back } from "../components/atoms/Back"
-import { HeadSetting } from "../components/pages/Head";
 import { css } from "@emotion/react";
-import { ButtonPrime } from "../components/atoms/Button";
+import { getAllPosts, client } from "../libs/contentful";
+import { md } from '../libs/markdown';
+
+import { HeadSetting } from "../components/pages/Head";
+import { ButtonPrime } from "../components/atoms/button/ButtonPrime";
 import { LatestCard } from "../components/molecules/LatestCard";
+import { Title } from "../components/atoms/Title";
+import { LayoutWide } from "../components/pages/LayoutWide";
+import { Profile } from "../components/molecules/Profile";
+import { ButtonSecond } from "../components/atoms/button/ButtonSecond";
 
-const md = require('markdown-it')({
-  injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
-  breaks: true, // 改行コードを<br>に変換する
-  html: true, // HTML タグを有効にする
-  linkify: true, // URLに似たテキストをリンクに自動変換する
-  typography: true,
-  use: [
-    ''
-  ]
-});
-const mark = require('markdown-it-mark');
-md.use(mark);
-
-md.use(require('markdown-it-container'), 'sample', {
- 
-  validate: function(params) {
-    return params.trim().match(/^style\s+(.*)$/);
-  },
-
-  render: function (tokens, idx) {
-    var m = tokens[idx].info.trim().match(/^style\s+(.*)$/);
-
-    if (tokens[idx].nesting === 1) {
-      return '<div class="style ' + md.utils.escapeHtml(m[1]) + '"><div class="style-body">';
-
-    } else {
-      return '</div></div>\n';
-    }
-  }
-});
-
-
-const client = createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-});
-
+// パスの生成
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
     content_type: 'blogPost'
@@ -105,12 +70,11 @@ export default function PostPage({blogPost,allPosts}) {
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
     
-   <Layout>
+   <LayoutWide>
     <Flex flexDirection={{base:"column", lg:"row"}}>
 
-    <Box m="auto" w={{base:"100%",md:"90%"}} mr={8}>
-     <Back />
-     <Heading size="lg">{blogPost.fields.title}</Heading>
+    <Box m="auto" w="100%" mr={12}>
+     <Title>{blogPost.fields.title}</Title>
      <Flex mt={6} justify="start" align="baseline">
      <Text mt={6} mr={6}>Date:{`${year}.${month}.${day}`}</Text>
      {tags.map((tagEl) => {
@@ -148,7 +112,10 @@ export default function PostPage({blogPost,allPosts}) {
 
     </Box>
 
-    <Box m='auto' mt={{base: 24,lg:"640px"}} borderTop="1px solid #373737" w={{base:'100%',md:"40%"}}>
+    {/* Aside  */}
+    <Box m='auto' mt={{base:24,lg:"160px"}} w={{base:'100%',md:"35%"}} >
+    <Profile />
+    <Box borderTop="1px solid #373737" mt={24}>
     <Heading size="md" mt={8} mb={12}>最新の投稿</Heading>
       {allPosts.map((shinglePost) => {
       return <LatestCard
@@ -158,10 +125,12 @@ export default function PostPage({blogPost,allPosts}) {
       slug={shinglePost.fields.slug}
       />
     }).slice(0,4)} 
+    <ButtonSecond href="/Blog" color="#6BA791">All Posts</ButtonSecond>
+    </Box>
     </Box>
 
     </Flex>
-   </Layout>
+   </LayoutWide>
    </>
   );
 } 

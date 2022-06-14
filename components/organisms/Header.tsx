@@ -6,7 +6,7 @@ import { Box, ChakraProvider,  Flex, useBreakpointValue, Heading, Link} from "@c
 
 import { Menu } from "../molecules/Menu";
 
-const Icon = require('../../public/img/icon.png')
+// const Icon = require('../../public/img/icon.png')
 
 
 export const Header:VFC = () => {
