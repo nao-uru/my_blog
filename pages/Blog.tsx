@@ -1,4 +1,4 @@
-import { Grid } from "@chakra-ui/react";
+import { Box, Grid } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
 
 import { Layout } from "../components/pages/Layout";
@@ -36,7 +36,7 @@ export default function  BlogPage ({ blogPosts }) {
      />
 
     <Layout>
-       <Title>Blog</Title>
+    <Title>Blog</Title>
 
     {/* <Flex>
       <TabLink url="/Blog">All</TabLink>
@@ -53,7 +53,7 @@ export default function  BlogPage ({ blogPosts }) {
       url={blogPost.fields.media.fields.file.url}
       slug={blogPost.fields.slug}
       />
-    })} 
+      })} 
       </Grid>
     </Layout>
     </>

@@ -42,3 +42,7 @@ a {
   margin-bottom: 120px;
   border-top: 1px  #222222 solid;
 }
+
+html {
+  prime-main: #10407a;
+}

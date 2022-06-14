@@ -4,7 +4,7 @@ import React, { VFC } from "react";
 import { ImDribbble } from "react-icons/im";
 
 import { Title } from "../atoms/Title";
-import { ButtonPrime } from "../atoms/Button";
+import { ButtonPrime } from "../atoms/button/ButtonPrime";
 import { ViewCard } from "../molecules/DribbbleCard";
 
 import {GetDribblePost} from "../../libs/dribblepost"
