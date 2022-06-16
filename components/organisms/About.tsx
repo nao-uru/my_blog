@@ -1,5 +1,5 @@
 import React, { VFC } from "react";
-import { ChakraProvider, Flex, Box, useBreakpointValue } from "@chakra-ui/react";
+import { ChakraProvider, Flex, Box, useBreakpointValue, Image } from "@chakra-ui/react";
 import { Props } from "framer-motion/types/types";
 
 import { ImgTitle } from "../molecules/ImgTitle ";
@@ -17,10 +17,11 @@ export const About:VFC<Props> = () => {
       <Box>
 
        <Box w="full">
-       <ImgTitle url="/img/Chefchaouen.jpeg" title="About" />
+       <ImgTitle url="/img/photo.png" title="About" />
        </Box>
        
        <Box mt={4}>
+       <Content title="Profile" />
        <TableContent />
 
        <Content title="Career">
@@ -54,12 +55,18 @@ export const About:VFC<Props> = () => {
 
     <Flex w="ful" mt={16}>
 
-    <Box w="full" mt={4}>
-    <ImgTitle url="/img/Chefchaouen.jpeg" title="About" />
+    <Box w="full">
+    <ImgTitle url="/img/photo.png" title="About" />
     </Box>
     
     <Box ml={16}>
-    <TableContent />
+    <Content title="Profile" />
+
+    <Flex alignItems="center" justifyContent="space-around">
+     <Image src="/img/icon.png" w={36} h={36} mr={4} alt="Main Image" /> 
+     <TableContent />
+    </Flex>
+
     <Content title="Career">
       法学部を在学中、就職に失敗し、ヨーロッパをバックパック。
       その後フリーターをしていました。
@@ -68,13 +75,13 @@ export const About:VFC<Props> = () => {
       その後はフリーランスでデザインとWEB制作両方の仕事をしています。<br />
       どっちつかずは良くないなと思いながらも両方楽しくて常に情報をキャッチアップしています！<br />
       このブログもデザインから自分で構築しました!（Next,js,contentful）<br />
-      お仕事の割合はデザイン8割。
+      お仕事の割合はデザイン7割。
     </Content>
     
     <Content title="Goal">
       これからの目標は、趣味としてプログラミングを勉強しつつ、コーディングとデザインはプロとしてのクオリティを追求することです。<br />
-      また最近はサボっている英語の学習を再開し、30歳までに海外での仕事をしてみたいと思っています。<br />
-      決して簡単なことではないですが、自信を持って挑戦できるスキルを身につけたいと思います！<br />
+      いつか海外で働いてみたいという夢があり、現在はキャリアを重視し就職するか、思い切ってワーキングホリデーに挑戦するかで悩んでいます・・・<br />
+      どちらにしても決して簡単なことではないですが、自信を持って挑戦できるスキルを身につけたいと思います！<br />
       また、ブログやSNSでの発信も頑張っていきたいのでフォローしていただけると嬉しいです😊
     </Content>
     

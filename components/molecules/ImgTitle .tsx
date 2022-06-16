@@ -13,7 +13,7 @@ export const ImgTitle:VFC<Props> = ( props ) => {
     return (
       <>
       <Box position="relative">
-      <Box position="absolute" bottom="10%" left="0" zIndex={10}>
+      <Box position="absolute" bottom="10%" left="20%" zIndex={10}>
       <Flex align="center" css={sRouteSp}>
       <Box css={sRouteSp}></Box>
       <Heading as="h2" size="xl" mr="2" ml="2">{props.title}</Heading>
@@ -31,8 +31,8 @@ export const ImgTitle:VFC<Props> = ( props ) => {
     
     <ChakraProvider>
 
-    <Box position="relative" ml={16}>
-      <Box position="absolute" bottom="50%" left="-110%" zIndex={10}>
+    <Box position="relative" ml={4}>
+      <Box position="absolute" bottom="50%" left="-260px" zIndex={10}>
        <Flex align="center" css={sRoute}>
 
       <Box css={sBorder}></Box>
@@ -41,7 +41,7 @@ export const ImgTitle:VFC<Props> = ( props ) => {
 
       </Flex>
       </Box>
-     <Image src={props.url} boxSize="320px" h="1000px" fit="cover" alt="title with Image"/>
+     <Image src={props.url} w='100%' h="100%" fit="cover" alt="title with Image"/>
     </Box>
 
     </ChakraProvider>
