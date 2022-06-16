@@ -1,22 +1,20 @@
-import { ChakraProvider,Text, Box, Image,  } from "@chakra-ui/react";
-
+import { ChakraProvider,Text, Box, Image, Flex, keyframes,  } from "@chakra-ui/react";
 
 export const Top = () => {
-  
-  const imgs = ["/img/spain.jpeg","/img/Chefchaouen.jpeg","/img/spain.jpeg"];
-  let count = 0;
 
+  const imgs = ["/img/top-img.png","/img/top-img2.png","/img/top-img3.png"];
   
   return(
     <>
     <ChakraProvider>
-      <Box>
-        <Box position="absolute" zIndex={10} top={{base:40,md:64}} left={{base:4, md:20}} >
+      <Flex justifyContent="end" w="100%">
+        <Image src={`${imgs[2]}`} h="auto" w={{base:"80%",md:"100%"}} fit="contain" alt="Main Image"/>
+
+        <Box position="absolute" zIndex={10} top={{base:40,md:80}} left={{base:4, md:20}} >
         <Text fontSize={{base:"60px",md:"120px"}} fontWeight="bold">NAO&#39;S</Text>
         <Text fontSize={{base:"60px",md:"120px"}} fontWeight="bold">JOURNAL</Text>
         </Box>
-        <Image position="relative" src={imgs[count]} ml="auto" mt={10} h="500px" w={{base:"80%",md:"100%"}} fit="cover" alt="Main Image"/>
-      </Box>
+      </Flex>
     </ChakraProvider>
     </>
   )

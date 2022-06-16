@@ -21,7 +21,7 @@ export const LayoutWide:VFC<Props> = ( {children} ) => {
       exit={{ opacity: 0 }} 
       >
 
-      <Container maxW={{base:"95%", md:"1200px"}} m="auto" p="0" pt={{base:16,md:28}}>
+      <Container maxW={{base:"95%", md:"1200px"}} m="auto" p="0" pt={{base:16,md:28}} minHeight="100vh">
         {children}
       </Container>
 
