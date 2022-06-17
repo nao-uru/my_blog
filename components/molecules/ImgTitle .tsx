@@ -13,7 +13,7 @@ export const ImgTitle:VFC<Props> = ( props ) => {
     return (
       <>
       <Box position="relative">
-      <Box position="absolute" bottom="10%" left="20%" zIndex={10}>
+      <Box position="absolute" bottom="14%" left="20%" zIndex={10}>
       <Flex align="center" css={sRouteSp}>
       <Box css={sRouteSp}></Box>
       <Heading as="h2" size="xl" mr="2" ml="2">{props.title}</Heading>
@@ -58,7 +58,7 @@ const sBorder = css`
 `
 
 const sBorderSp = css`
-  width: 200px;
+  width: 160px;
   margin: 0 auto;
   border-bottom: 2px solid white;
 `
