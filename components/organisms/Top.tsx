@@ -42,7 +42,7 @@ export const Top = () => {
          実際に携わったお仕事に関しては非公開させていただいています。<br />
          ご興味をお持ちの方はお気軽にお問い合わせください☺︎
         </Text>
-        <ButtonSecond href="/Blog" color="#6BA791">Works</ButtonSecond>
+        <ButtonSecond href="/Work" color="#6BA791">Works</ButtonSecond>
       </Box>
       
       <Box mt={20} w="80%" borderTop='1px solid #222222'>
@@ -51,7 +51,7 @@ export const Top = () => {
           自己紹介のページです！
 
         </Text>
-        <ButtonSecond href="/Blog" color="#6BA791">About</ButtonSecond>
+        <ButtonSecond href="/About" color="#6BA791">About</ButtonSecond>
       </Box>
 
       </Box>
