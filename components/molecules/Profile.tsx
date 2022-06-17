@@ -24,8 +24,8 @@ export const Profile:VFC<Props> = (props) => {
       </Box>
     </Flex>
     <Text size="md" mt={0}>デザインとフロントエンドのプログラミングを勉強中〜<br />
-          仕事探し中のよわよわフリーランス<br />
-          2022年9月〜ブリスベンでワーホリ!<br />
+          仕事探し中のフリーランス<br />
+          2022年夏〜ワーホリに挑戦予定!<br />
     </Text>
     <ButtonSecond 
      href="/About"
