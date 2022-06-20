@@ -11,6 +11,7 @@ import { Title } from "../components/atoms/Title";
 import { LayoutWide } from "../components/pages/LayoutWide";
 import { Profile } from "../components/molecules/Profile";
 import { ButtonSecond } from "../components/atoms/button/ButtonSecond";
+import { DisqusComments } from "../libs/disqus";
 
 // パスの生成
 export const getStaticPaths = async () => {
@@ -107,6 +108,8 @@ export default function PostPage({blogPost,allPosts}) {
       </Box>
 
       </Flex>
+
+      <DisqusComments slug={blogPost.fields.slug} id={blogPost.sys.id} title={blogPost.fields.title} />
 
      </Flex>
 
