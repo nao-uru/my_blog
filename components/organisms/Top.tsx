@@ -1,6 +1,7 @@
-import { ChakraProvider,Text, Box, Image, Flex, keyframes, Heading,  } from "@chakra-ui/react";
+import { ChakraProvider,Text, Box, Image, Flex, Heading,  } from "@chakra-ui/react";
 import { ButtonSecond } from "../atoms/button/ButtonSecond";
 import { Title } from "../atoms/Title";
+import { css } from "@emotion/react";
 
 export const Top = () => {
 
@@ -9,9 +10,9 @@ export const Top = () => {
   return(
     <>
     <ChakraProvider>
-      <Flex justifyContent="end" w="100%">
-        <Image src={`${imgs[2]}`} h="auto" w={{base:"80%",md:"80%"}} fit="contain" alt="Main Image"/>
 
+      <Flex justifyContent="end" w="100%">
+          <Image src={`${imgs[2]}`}  h="auto" w={{base:"80%",md:"80%"}} fit="contain" alt="Main Image"/>
         <Box position="absolute" zIndex={10} top={{base:40,md:80}} left={{base:4, md:20}} >
         <Text fontSize={{base:"60px",md:"120px"}} fontWeight="bold">NAO&#39;S</Text>
         <Text fontSize={{base:"60px",md:"120px"}} fontWeight="bold">JOURNAL</Text>
@@ -60,3 +61,17 @@ export const Top = () => {
   )
 }
 
+const sample = css`
+  position: fixed;
+  width: 100%;
+  aspect-ratio: 1.5;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url('/img/top-img.png'), url('/img/top-img.png');
+`
+
+const sample2 = css`
+  margin-top: 100vh;
+`

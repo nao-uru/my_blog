@@ -1,5 +1,4 @@
 import { Top } from "../components/organisms/Top"
-import { Layout } from "../components/pages/Layout";
 import { HeadSetting } from "../components/pages/Head";
 import { LayoutWide } from "../components/pages/LayoutWide";
 
@@ -15,11 +14,9 @@ export default function Home() {
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 
-    {/* <Layout> */}
     <LayoutWide>
       <Top />
     </LayoutWide>
-    {/* </Layout> */}
     </>
   )
 }
