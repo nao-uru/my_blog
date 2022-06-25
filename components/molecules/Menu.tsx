@@ -19,6 +19,7 @@ const Navigation = () => {
   const path = location.pathname; 
 
   return (
+    <Box>
     <Stack as="nav" w="40%" ml={4} mt={8}>
       <Link href="/Blog" passHref>
       <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}>
@@ -68,6 +69,7 @@ const Navigation = () => {
 
 
     </Stack>
+    </Box>
   )
 }
 
