@@ -11,7 +11,7 @@ export const  ButtonSecond = ( props ) => {
     <>
     <ChakraProvider>
        <Link href={props.href}  passHref>
-         <Box mt={4} borderRadius={8} py={2} w="full" css={sHover} cursor="pointer" 
+         <Box mt={4} borderRadius={8} py={2} w="full" maxW={80} css={sHover} cursor="pointer" 
          _hover={{bg:`${props.color}`, border:`1px solid ${props.color}`}} >
           
          <Text fontWeight="bold" textAlign="center">{props.children}</Text>
