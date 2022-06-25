@@ -1,4 +1,4 @@
-import { Box, Grid } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
 
 import { Layout } from "../components/pages/Layout";
@@ -27,6 +27,7 @@ export default function  BlogPage ({ blogPosts }) {
   return (
     <>
     {console.log(blogPosts)}
+
     <HeadSetting 
     title={'Blog'}
     description={"なおのブログ"}
@@ -47,11 +48,25 @@ export default function  BlogPage ({ blogPosts }) {
 
       <Grid mt={8} templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} gap={8}>
       {blogPosts.map((blogPost:any) => {
+
+      const date = blogPost.fields.date;
+      const year = new Date(date).getFullYear();
+      const smonth = new Date(date).getMonth();
+      const month = smonth +1;
+      const day = new Date(date).getDate();
+
+      const tags = blogPost.fields.tags;
+      const tag = tags.map((tag) => {
+        return tag;
+      })
+
       return <BlogCard 
       key={blogPost.sys.id} 
       title={blogPost.fields.title}
       url={blogPost.fields.media.fields.file.url}
       slug={blogPost.fields.slug}
+      date ={`${year}.${month}.${day}`}
+      tag={tag}
       />
       })} 
       </Grid>
