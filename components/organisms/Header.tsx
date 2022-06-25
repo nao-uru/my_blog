@@ -3,11 +3,7 @@ import Image from "next/image";
 import { css } from "@emotion/react";
 import { Box, ChakraProvider,  Flex, useBreakpointValue, Heading, Link} from "@chakra-ui/react";
 
-
 import { Menu } from "../molecules/Menu";
-
-// const Icon = require('../../public/img/icon.png')
-
 
 export const Header:VFC = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
