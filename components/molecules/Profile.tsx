@@ -1,12 +1,11 @@
 import { Box, ChakraProvider, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import { Props } from "framer-motion/types/types";
 import Link from "next/link";
 import React, { VFC } from "react";
 import { ButtonSecond } from "../atoms/button/ButtonSecond";
 
 const Icon = require('../../public/img/icon.png')
 
-export const Profile:VFC<Props> = (props) => {
+export const Profile = (props) => {
 
   return(
     <>

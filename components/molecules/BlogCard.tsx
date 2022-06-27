@@ -1,10 +1,9 @@
 import { Box, ChakraProvider, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import { Props } from "framer-motion/types/types";
 import Link from "next/link";
 import React, { VFC } from "react";
 
-export const BlogCard:VFC<Props> = (props) => {
+export const BlogCard = (props) => {
 
   return(
     <>

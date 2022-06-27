@@ -1,4 +1,4 @@
-import { ChakraProvider,Text, Box, Image, Heading, Center, chakra, Img, } from "@chakra-ui/react";
+import { ChakraProvider,Text, Box, Heading, Center, chakra, Img, } from "@chakra-ui/react";
 import { Scroll, Keyframes } from "scrollex";
 import { ButtonSecond } from "../atoms/button/ButtonSecond";
 import { Title } from "../atoms/Title";

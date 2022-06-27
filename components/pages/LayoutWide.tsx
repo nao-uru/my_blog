@@ -1,5 +1,4 @@
 import React, { VFC } from "react";
-import { Props } from "framer-motion/types/types";
 import { ChakraProvider,Container, } from "@chakra-ui/react";
 import { motion } from 'framer-motion';
 
@@ -7,7 +6,7 @@ import { BackTop } from "../atoms/BackTop";
 import { Footer } from "../organisms/Footer";
 import { Header } from "../organisms/Header";
 
-export const LayoutWide:VFC<Props> = ( {children} ) => {
+export const LayoutWide = ( {children} ) => {
   
   return(
     <>
