@@ -1,11 +1,10 @@
 import { Box, ChakraProvider, Image, Heading, Flex, useBreakpointValue } from "@chakra-ui/react";
-import { Props } from "framer-motion/types/types";
 import React, { VFC } from "react";
 import { css } from "@emotion/react";
 
 
 
-export const ImgTitle:VFC<Props> = ( props ) => {
+export const ImgTitle = ( props ) => {
 
   const isMobile = useBreakpointValue({ base: true, md: false });
   

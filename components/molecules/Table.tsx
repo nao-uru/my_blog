@@ -1,9 +1,8 @@
-import { ChakraProvider,color,Table, Tbody, Td, Tr, } from "@chakra-ui/react";
+import { ChakraProvider,Table, Tbody, Td, Tr, } from "@chakra-ui/react";
 import Link from "next/link";
-import React, { VFC } from "react";
 
 
-export const TableContent:VFC = () => {
+export const TableContent = () => {
 
   return (
     <>

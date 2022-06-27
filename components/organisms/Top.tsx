@@ -1,23 +1,92 @@
-import { ChakraProvider,Text, Box, Image, Flex, Heading,  } from "@chakra-ui/react";
+import { ChakraProvider,Text, Box, Heading, Center, chakra, Img, } from "@chakra-ui/react";
+import { Scroll, Keyframes } from "scrollex";
 import { ButtonSecond } from "../atoms/button/ButtonSecond";
 import { Title } from "../atoms/Title";
 import { css } from "@emotion/react";
 
-export const Top = () => {
+const ScrollItem = chakra(Scroll.Item);
+const ScrollSection = chakra(Scroll.Section);
+const ScrollContainer = chakra(Scroll.Container);
 
-  const imgs = ["/img/top-img.png","/img/top-img2.png","/img/top-img3.png"];
-  
+const keyframes: Record<string, Keyframes> = {
+  imageContainer: ({ section }) => ({
+    [section.topAt("container-bottom")]: {
+      translateY: 125,
+      translateX: -250,
+      opacity: 0,
+      rotateX: -25,
+      rotateY: -50,
+      scale: 0.4
+    },
+    [section.topAt("container-top")]: {
+      translateY: 0,
+      translateX: 0,
+      opacity: 1,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1.4
+    },
+    [section.bottomAt("container-top")]: {
+      translateY: -125,
+      translateX: 250,
+      opacity: 0,
+      rotateX: 25,
+      rotateY: 50,
+      scale: 0.4
+    }
+  }),
+  image: ({ section }) => ({
+    [section.topAt("container-bottom")]: {
+      translateY: -62.5,
+      translateX: 125,
+      scale: 1.8
+    },
+    [section.topAt("container-top")]: {
+      translateY: 0,
+      translateX: 0,
+      scale: 1.5
+    },
+    [section.bottomAt("container-top")]: {
+      translateY: 62.5,
+      translateX: -125,
+      scale: 2
+    }
+  })
+};
+
+const images = [
+  "/img/top-img.png",
+  "/img/top-img2.png",
+  "/img/top-img3.png",
+];
+
+export const Top = () => {
   return(
     <>
     <ChakraProvider>
 
-      <Flex justifyContent="end" w="100%">
-          <Image src={`${imgs[2]}`}  h="auto" w={{base:"100%",md:"80%"}} fit="contain" alt="Main Image"/>
-        <Box position="absolute" zIndex={10} top={{base:32,md:80}} left={{base:6, md:20}} >
-        <Text fontSize={{base:"56px",md:"120px"}} fontWeight="bold">NAO&#39;S</Text>
-        <Text fontSize={{base:"56px",md:"120px"}} fontWeight="bold">JOURNAL</Text>
-        </Box>
-      </Flex>
+    <ScrollContainer scrollAxis="y" height="100vh" scrollSnapType="y mandatory">
+        {images.map((img) => {
+          return (
+          <>
+          <ScrollSection height="100vh" scrollSnapAlign="start">
+            <Center pos="fixed" inset={0} style={{ perspective: 600, transformStyle: "preserve-3d" }} >
+              <ScrollItem keyframes={keyframes.imageContainer} overflow="hidden">
+                <ScrollItem keyframes={keyframes.image}>
+                  <Img css={sImage} key={img} src={img} alt="top-image" />
+                </ScrollItem>
+              </ScrollItem>
+            </Center>
+          </ScrollSection>
+          </>
+          )
+        })}
+    </ScrollContainer>
+
+      <Box css={sShape} w={{base:'90%',md:'700px'}} h={{base:'400px',md:'600px'}} position="absolute" zIndex={20} top={{base:40,md:64}} left={{base:2, md:24}}>
+        <Text ml={{base:"8",md:"0"}} mt={{base:"16",md:"0"}} fontSize={{base:"56px",md:"120px"}} fontWeight="bold">NAO&#39;S</Text>
+        <Text ml={{base:"8",md:"0"}} fontSize={{base:"56px",md:"120px"}} fontWeight="bold">JOURNAL</Text>
+      </Box>
 
       <Box w={{base:"100%",md:"80%"}}  m="auto" mb={40}>
         
@@ -31,7 +100,6 @@ export const Top = () => {
       <Box mt={20} borderTop='1px solid #222222' >
         <Title>Blog</Title>
         <Text size="md" lineHeight="7" >勉強した知識を言語化するために、デザインや読書に関することを中心に発信しています！<br />
-        今後は旅行やワーキングホリデーなど、仕事以外のことも発信予定です。
         </Text>
 
         <ButtonSecond href="/Blog" color="#6BA791">Blog</ButtonSecond>
@@ -62,17 +130,15 @@ export const Top = () => {
   )
 }
 
-const sample = css`
-  position: fixed;
-  width: 100%;
-  aspect-ratio: 1.5;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  background-image: url('/img/top-img.png'), url('/img/top-img.png');
+const sImage = css`
+ border-radius: 100px;
+ width: 100%;
+ height: 500px;
+ object-fit: contain;
 `
 
-const sample2 = css`
-  margin-top: 100vh;
+const sShape = css`
+ background-image: url('/svg/main.svg');
+ background-size: cover;
+ background-position: center;
 `

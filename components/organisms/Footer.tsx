@@ -1,14 +1,9 @@
-import React, { VFC } from "react";
-import { Props } from "framer-motion/types/types";
 import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Heading, Link } from "@chakra-ui/react";
 
-import { BackTop } from "../atoms/BackTop";
 import { Menu } from "../molecules/Menu";
 import { css } from "@emotion/react";
 
-
-
-export const Footer:VFC<Props> = () => {
+export const Footer = () => {
 
   const returnTop = () => {
     window.scrollTo({
