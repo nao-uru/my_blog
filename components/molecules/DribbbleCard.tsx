@@ -1,20 +1,17 @@
 import { Box, ChakraProvider, Heading, Image, } from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import { Props } from "framer-motion/types/types";
-import React, { VFC } from "react";
 
-
-export const ViewCard:VFC<Props> = (props) => {
+export const ViewCard = (props) => {
 
   return(
     <>
     <ChakraProvider>
-        <a href={props.url} target="_blank" rel="noreferrer">
+      <a href={props.url} target="_blank" rel="noreferrer">
       <Box css={sCard} w="95%" m="auto" p={4}>
         <Image src={props.img} w="full" h="180px" fit="cover" alt="DribbbleにUPしているサンプル" />
         <Heading size="md" mt={2}>{props.title}</Heading>
       </Box>
-        </a>
+      </a>
     </ChakraProvider>
     </>
   )

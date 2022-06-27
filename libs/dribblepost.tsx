@@ -10,7 +10,7 @@ export const GetDribblePost = () => {
   const accessToken = "b767ae1d35d84ad93ba6958ccc548c3cc6c343bce13343f734abc9ab157a2f0d"
 
   useEffect(() => {
-    fetch('https://api.dribbble.com/v2/user/shots?access_token='+accessToken,)
+    fetch('https://api.dribbble.com/v2/user/shots?access_token='+accessToken)
       .then(res => res.json())
       .then(
         (result) => {
