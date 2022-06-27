@@ -1,5 +1,5 @@
 import React from "react";
-import { ChakraProvider, Box, Text, Flex, } from "@chakra-ui/react";
+import { ChakraProvider, Box, Text, } from "@chakra-ui/react";
 import Link from "next/link";
 import { css } from "@emotion/react";
 

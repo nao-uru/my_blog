@@ -1,10 +1,7 @@
-import React, { VFC } from "react";
 import { Box, ChakraProvider, Heading, useBreakpointValue} from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import { Props } from "framer-motion/types/types";
 
-
-export const HeaderLink:VFC<Props> = ({children}) => {
+export const HeaderLink = ({children}) => {
 
   const isMobile = useBreakpointValue({ base: true, md: false });
 

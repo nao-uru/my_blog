@@ -1,13 +1,12 @@
 import React, { VFC } from "react";
 import { ChakraProvider, Flex, Box, useBreakpointValue, Image } from "@chakra-ui/react";
-import { Props } from "framer-motion/types/types";
 
 import { ImgTitle } from "../molecules/ImgTitle ";
 import { Content } from "../molecules/Content";
 import { TableContent } from "../molecules/Table";
 
 
-export const About:VFC<Props> = () => {
+export const About = () => {
 
   const isMobile = useBreakpointValue({ base: true, md: false });
 
