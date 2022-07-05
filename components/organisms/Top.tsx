@@ -1,90 +1,15 @@
-import { ChakraProvider,Text, Box, Heading, Center, chakra, Img, } from "@chakra-ui/react";
-import { Scroll, Keyframes } from "scrollex";
+import { ChakraProvider,Text, Box, Heading, Img, } from "@chakra-ui/react";
 import { ButtonSecond } from "../atoms/button/ButtonSecond";
 import { Title } from "../atoms/Title";
 import { css } from "@emotion/react";
-
-const ScrollItem = chakra(Scroll.Item);
-const ScrollSection = chakra(Scroll.Section);
-const ScrollContainer = chakra(Scroll.Container);
-
-const keyframes: Record<string, Keyframes> = {
-  imageContainer: ({ section }) => ({
-    [section.topAt("container-bottom")]: {
-      translateY: 125,
-      translateX: -250,
-      opacity: 0,
-      rotateX: -25,
-      rotateY: -50,
-      scale: 0.4
-    },
-    [section.topAt("container-top")]: {
-      translateY: 0,
-      translateX: 0,
-      opacity: 1,
-      rotateX: 0,
-      rotateY: 0,
-      scale: 1.4
-    },
-    [section.bottomAt("container-top")]: {
-      translateY: -125,
-      translateX: 250,
-      opacity: 0,
-      rotateX: 25,
-      rotateY: 50,
-      scale: 0.4
-    }
-  }),
-  image: ({ section }) => ({
-    [section.topAt("container-bottom")]: {
-      translateY: -62.5,
-      translateX: 125,
-      scale: 1.8
-    },
-    [section.topAt("container-top")]: {
-      translateY: 0,
-      translateX: 0,
-      scale: 1.5
-    },
-    [section.bottomAt("container-top")]: {
-      translateY: 62.5,
-      translateX: -125,
-      scale: 2
-    }
-  })
-};
-
-const images = [
-  "/img/top-img.png",
-  "/img/top-img2.png",
-  "/img/top-img3.png",
-];
 
 export const Top = () => {
   return(
     <>
     <ChakraProvider>
 
-    <ScrollContainer scrollAxis="y" height="100vh" scrollSnapType="y mandatory">
-        {images.map((img) => {
-          return (
-          <>
-          <ScrollSection height="100vh" scrollSnapAlign="start">
-            <Center pos="fixed" inset={0} style={{ perspective: 600, transformStyle: "preserve-3d" }} >
-              <ScrollItem keyframes={keyframes.imageContainer} overflow="hidden">
-                <ScrollItem keyframes={keyframes.image}>
-                  <Img css={sImage} key={img} src={img} alt="top-image" />
-                </ScrollItem>
-              </ScrollItem>
-            </Center>
-          </ScrollSection>
-          </>
-          )
-        })}
-    </ScrollContainer>
-
-      <Box css={sShape} w={{base:'90%',md:'700px'}} h={{base:'400px',md:'600px'}} position="absolute" zIndex={20} top={{base:40,md:64}} left={{base:2, md:24}}>
-        <Text ml={{base:"8",md:"0"}} mt={{base:"16",md:"0"}} fontSize={{base:"56px",md:"120px"}} fontWeight="bold">NAO&#39;S</Text>
+      <Box  css={sShape} w={{base:'100%',md:'700px'}} h={{base:"400px",md:'100vh'}} zIndex={20} top={{base:40,md:80}} left={{base:2, md:24}}>
+        <Text ml={{base:"8",md:"0"}} mt={{base:"16",md:"0"}} pt={{base:"16",md:"0"}}  fontSize={{base:"56px",md:"120px"}} fontWeight="bold">NAO&#39;S</Text>
         <Text ml={{base:"8",md:"0"}} fontSize={{base:"56px",md:"120px"}} fontWeight="bold">JOURNAL</Text>
       </Box>
 
@@ -130,15 +55,9 @@ export const Top = () => {
   )
 }
 
-const sImage = css`
- border-radius: 100px;
- width: 100%;
- height: 500px;
- object-fit: contain;
-`
 
 const sShape = css`
  background-image: url('/svg/main.svg');
  background-size: cover;
- background-position: center;
+ background-position: top;
 `

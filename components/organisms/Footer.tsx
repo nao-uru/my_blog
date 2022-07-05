@@ -1,7 +1,8 @@
-import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Heading, Link } from "@chakra-ui/react";
+import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Heading, Link, border } from "@chakra-ui/react";
+import { css } from "@emotion/react";
+import { HeaderLink } from "../atoms/HeaderLink";
 
 import { Menu } from "../molecules/Menu";
-import { css } from "@emotion/react";
 
 export const Footer = () => {
 
@@ -19,6 +20,27 @@ export const Footer = () => {
       <>
       <ChakraProvider>
       <Box h="240px" css={Border} pt="4" mt="52">
+
+      <Box pl={16}>
+
+      <Link href="/">
+      <HeaderLink>Top</HeaderLink>
+      </Link>
+
+      <Link href="/Blog" >
+      <HeaderLink>Blog</HeaderLink>
+      </Link>
+
+      <Link href="/Work">
+      <HeaderLink>Work</HeaderLink>
+      </Link>
+
+      <Link href="/About">
+      <HeaderLink>About</HeaderLink>
+      </Link>
+
+      </Box>
+
       </Box>
       </ChakraProvider>
       </>
@@ -50,7 +72,7 @@ export const Footer = () => {
 }
 
 const Border = css`
- border-top:2px solid rgba(255, 255, 255, 0.1);
+ border-top: 1px solid #C6CEDA;
 `
 const sMainTitle = css`
 cursor: pointer;
@@ -59,3 +81,4 @@ cursor: pointer;
    opacity: 0.8;
  }
 `
+
