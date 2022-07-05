@@ -31,6 +31,7 @@ export const BackTop:VFC = () => {
 
 const sBack = css`
  cursor: pointer;
+ z-index: 50;
  display: flex;
  align-items: center;
  justify-content: center;

@@ -46,7 +46,7 @@ export default function  BlogPage ({ blogPosts }) {
       <TabLink>Life</TabLink>
     </Flex> */}
 
-      <Grid mt={8} templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} gap={8}>
+      <Grid mt={8} templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={8} >
       {blogPosts.map((blogPost:any) => {
 
       const date = blogPost.fields.date;
