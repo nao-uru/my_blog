@@ -18,19 +18,24 @@ export const Work = () => {
 
       <Box>
       <Title>Works</Title>
-      <Text>実績は非公開になっています。興味をお持ちの方はSNSやメールアドレスからご連絡ください!</Text>
+      <Text>実務実績は非公開になっています。興味をお持ちの方はSNSやメールアドレスからご連絡ください!</Text>
       </Box>
+
+      {/* <Box>
+      <Title>Sample</Title>
+      <Text>サンプルとして制作した作品を掲載予定です！</Text>
+      </Box> */}
 
       <Box>
       <Title>Output</Title>
-      <Text mb={4} >Daily UIなど日々のアウトプットをDribbbleにUPしています</Text>
+      <Text mb={4} >Daily UIなど日々のアウトプットをDribbbleにUPしています<br />Dribbbleに上げる作品は自分の作りたいもの中心です☺︎</Text>
       <ButtonPrime 
       href="https://dribbble.com/nao_uru" 
       border="2px #cb7cab solid" 
       color="#cb7cab"
       icon={<ImDribbble color="#cb7cab" size={20} />} >アカウントはこちら！</ButtonPrime>
       </Box>
-      <SimpleGrid columns={{base:1,md:3}} spacingY={{base:20,md:'80px'}} m='auto' w="100%" mt={12} >
+      <SimpleGrid columns={{base:1,md:3}} spacingY={{base:8,md:'80px'}} m='auto' w="100%" mt={12} >
         {items.map((item:any) => {
 
         return <ViewCard
