@@ -21,6 +21,13 @@ const Navigation = () => {
   return (
     <Box>
     <Stack as="nav" w="40%" ml={4} mt={8}>
+
+      <Link href="/" passHref>
+      <Box mr={8} css={path.endsWith('/') ? sBorderLink:''}>
+      <HeaderLink>Home</HeaderLink>
+      </Box>
+      </Link>
+
       <Link href="/Blog" passHref>
       <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}>
       <HeaderLink>Blog</HeaderLink>
@@ -95,7 +102,7 @@ export const Menu = () => {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay>
-          <DrawerContent>
+          <DrawerContent css={sOpen}>
             <DrawerCloseButton w={10} h={10} />
             <DrawerHeader>
               <Link href='/' passHref>
@@ -120,6 +127,12 @@ export const Menu = () => {
 
     <Flex align="baseline" alignItems="center">
 
+    <Link href="/" passHref>
+    <Box mr={12} css={path.endsWith('/') ? sBorder:''}>
+    <HeaderLink>Home</HeaderLink>
+    </Box>
+    </Link>
+    
     <Link href="/Blog" passHref>
     <Box mr={12} css={path.startsWith('/Blog') ? sBorder:''}>
     <HeaderLink>Blog</HeaderLink>
@@ -192,4 +205,8 @@ const sLink = css`
   :hover {
     color: #6BA791;
   }
+`
+
+const sOpen = css`
+ background-color: #E6E9EF;
 `
