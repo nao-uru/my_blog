@@ -32,6 +32,7 @@
     "@emotion/babel-plugin": "^11.7.2",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
+    "@types/gtag.js": "0.0.10",
     "@types/node": "^17.0.23",
     "@types/react": "^17.0.43",
     "contentful": "^9.1.18",
