@@ -1,4 +1,4 @@
-import { Grid } from "@chakra-ui/react";
+import { Grid, Flex } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
 
 import { Layout } from "../components/pages/Layout";
@@ -7,6 +7,7 @@ import { Title } from "../components/atoms/Title";
 import { HeadSetting } from "../components/pages/Head";
 import { TabLink } from "../components/atoms/TabLink";
 import dynamic from 'next/dynamic';
+import { BreadcrumbList } from "../components/atoms/Breadcrumb";
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
@@ -37,6 +38,14 @@ export default function  BlogPage ({ blogPosts }) {
      />
 
     <Layout>
+
+    <BreadcrumbList
+     tree1={'Blog'}
+     tree2={''}
+     tree1Link={'/Blog'}
+     tree2Link={''}
+     />
+     
     <Title>Blog</Title>
 
     {/* <Flex>

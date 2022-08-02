@@ -1,3 +1,5 @@
+// コメント機能（未実装）
+
 import {DiscussionEmbed} from "disqus-react"
 
 export const DisqusComments = ( props ) => {

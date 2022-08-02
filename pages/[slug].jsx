@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
 import { FaLine, FaTwitter } from "react-icons/fa";
 import { css } from "@emotion/react";
-import { getAllPosts, client } from "../libs/contentful";
+import { getAllPosts, client,  getTagBook } from "../libs/contentful";
 import { md } from '../libs/markdown';
 
 import { HeadSetting } from "../components/pages/Head";
@@ -11,7 +11,7 @@ import { Title } from "../components/atoms/Title";
 import { LayoutWide } from "../components/pages/LayoutWide";
 import { Profile } from "../components/molecules/Profile";
 import { ButtonSecond } from "../components/atoms/button/ButtonSecond";
-import { DisqusComments } from "../libs/disqus";
+import { BreadcrumbList } from "../components/atoms/Breadcrumb";
 
 // パスの生成
 export const getStaticPaths = async () => {
@@ -41,12 +41,12 @@ export async function getStaticProps({ params }) {
   const posts = await getAllPosts();
 
   return {
-    props:{ blogPost: items[0], allPosts: posts}
+    props:{ blogPost: items[0], allPosts: posts,}
   }
 }
 
 
-export default function PostPage({blogPost,allPosts}) {
+export default function PostPage({blogPost, allPosts }) {
 
   console.log(allPosts);
   console.log(blogPost);
@@ -72,6 +72,14 @@ export default function PostPage({blogPost,allPosts}) {
      />
     
    <LayoutWide>
+
+   <BreadcrumbList
+     tree1={'Blog'}
+     tree2={blogPost.fields.title}
+     tree1Link={'/Blog'}
+     tree2Link={'<https://www.naosjournal.com/>' + blogPost.fields.slug}
+     />
+
     <Flex flexDirection={{base:"column", lg:"row"}}>
 
     <Box m="auto" w="100%" mr={12}>
@@ -109,7 +117,6 @@ export default function PostPage({blogPost,allPosts}) {
 
       </Flex>
 
-      <DisqusComments slug={blogPost.fields.slug} id={blogPost.sys.id} title={blogPost.fields.title} />
 
      </Flex>
 
