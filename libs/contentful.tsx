@@ -27,3 +27,13 @@ export async function getPostBySlug(slug) {
   }
 }
 
+// タグ検索（未実装）
+// 値が取れない
+export async function getTagBook() {
+  const response = await client.getEntries({
+    content_type: "blogPost",
+    // order: "-sys.createdAt",
+    'metadata.tags.sys.id[all]':'Book',
+    limit: 50,
+  });
+}

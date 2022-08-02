@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
+import { GA_TRACKING_ID } from '../../libs/gtag';
 
 export const HeadSetting = ({ title, description, keyword, path ,card }) => {
 
@@ -7,6 +8,7 @@ export const HeadSetting = ({ title, description, keyword, path ,card }) => {
 
 
   return (
+    <>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -27,7 +29,26 @@ export const HeadSetting = ({ title, description, keyword, path ,card }) => {
       <link rel="canonical" href={url} />
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" href={"/favicon.ico"} />
+
+      {GA_TRACKING_ID && (
+            <>
+              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+        `,
+                }}
+              />
+            </>
+          )}
     </Head>
+    </>
   );
 };
 

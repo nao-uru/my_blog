@@ -32,10 +32,5 @@ const sCard = css`
     cursor: pointer;
     background: linear-gradient(180deg, #EEF0F5 0%, #E6E9EF 100%);
     box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
-    
-    /* .image {
-      transition: 0.2s;
-      transform: scale(1.2);
-    } */
   }
 `
