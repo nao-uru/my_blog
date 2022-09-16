@@ -1,20 +1,20 @@
 import React, { VFC } from "react";
-import Image from "next/image";
 import { css } from "@emotion/react";
-import { Box, ChakraProvider,  Flex, useBreakpointValue, Heading, Link} from "@chakra-ui/react";
+import { Box, ChakraProvider,  Flex, useBreakpointValue, Heading, Link, Img, Button} from "@chakra-ui/react";
 
 import { Menu } from "../molecules/Menu";
 
 export const Header:VFC = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
+
   if(isMobile){
     return(
       <>
       <Flex w="100%" justify="space-between" alignItems="center" py={2} px={4} zIndex={60} position="fixed" css={sBack} >
-      <Link href="/">
-      <Heading css={sMainTitle} size="sm">NAO&#39;S JOURNAL</Heading>
-      </Link>
+      <Button as="a" href="/" backgroundColor="transparent" fontSize="xl" fontWeight="bold" >
+       NAO&#39;S JOURNAL
+      </Button>
       <Menu />
       </Flex>
       </>
@@ -28,13 +28,13 @@ export const Header:VFC = () => {
         <Flex h="80px" w="80%" m="auto" align="flex-end" justify="space-between">
 
          <Flex align="flex-end">
-         <Image src="/img/icon.png" alt="icon" width="70%" height="70%" />
+         <Img src="/img/icon.png" alt="icon" width="10%" height="10%" />
 
-          <Link href="/" pb={4} ml={2}>
-          <Heading textDecoration="none" css={sMainTitle} size="md">NAO&#39;S JOURNAL</Heading>
-          </Link>
+          <Button as="a" href="/" backgroundColor="transparent" pb={2} fontSize="xl" fontWeight="bold" >
+            NAO&#39;S JOURNAL
+          </Button>
+
          </Flex>
-
 
          <Box pb={4}>
           <Menu />
@@ -57,10 +57,3 @@ const sBack = css`
  border: 1px solid rgba( 255, 255, 255, 0.1 );
 `
 
-const sMainTitle = css`
-cursor: pointer;
- 
- :hover {
-   opacity: 0.8;
- }
-`
