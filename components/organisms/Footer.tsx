@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Heading, Link, border } from "@chakra-ui/react";
+import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Heading, Link, border, Button } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import { HeaderLink } from "../atoms/HeaderLink";
 
@@ -54,11 +54,9 @@ export const Footer = () => {
         <Box w="90%" m="auto">
         <Flex align="baseline">
 
-          <Link href="/" textDecoration="none">
-           <a>
-           <Heading css={sMainTitle} size="md">NAO&#39;S JOURNAL</Heading>
-           </a>
-          </Link>
+          <Button as="a" href="/" fontSize="xl" fontWeight="bold" backgroundColor="transparent" >
+           NAO&#39;S JOURNAL
+          </Button>
 
           <Spacer />
 
@@ -76,9 +74,5 @@ const Border = css`
 `
 const sMainTitle = css`
 cursor: pointer;
- 
- :hover {
-   opacity: 0.8;
- }
 `
 

@@ -7,9 +7,3 @@ const nextConfig = {
   },
 }
 
-// module.exports = {
-//   experimental: {
-//     optimizeFonts: true,
-//   },
-// };
-
