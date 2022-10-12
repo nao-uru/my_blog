@@ -3,8 +3,8 @@ import { ChakraProvider,Container, } from "@chakra-ui/react";
 import { motion } from 'framer-motion';
 
 import { BackTop } from "../atoms/BackTop";
-import { Footer } from "../organisms/Footer";
-import { Header } from "../organisms/Header";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 export const Layout = ( {children} ) => {
   

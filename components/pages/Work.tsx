@@ -21,10 +21,15 @@ export const Work = () => {
       <Text>実務実績は非公開になっています。興味をお持ちの方はSNSやメールアドレスからご連絡ください!</Text>
       </Box>
 
-      {/* <Box>
+      <Box>
       <Title>Sample</Title>
-      <Text>サンプルとして制作した作品を掲載予定です！</Text>
-      </Box> */}
+      <Text>サンプルとして制作した作品を掲載しております！</Text>
+      <ButtonPrime 
+      href="/Sample" 
+      border="2px #cb7cab solid" 
+      color="#cb7cab"
+      icon={''} >サンプルはこちら</ButtonPrime>
+      </Box>
 
       <Box>
       <Title>Output</Title>

@@ -4,11 +4,11 @@ import { css } from "@emotion/react";
 import { getAllPosts, client,  getTagBook } from "../libs/contentful";
 import { md } from '../libs/markdown';
 
-import { HeadSetting } from "../components/pages/Head";
+import { HeadSetting } from "../components/organisms/Head";
 import { ButtonPrime } from "../components/atoms/button/ButtonPrime";
 import { LatestCard } from "../components/molecules/LatestCard";
 import { Title } from "../components/atoms/Title";
-import { LayoutWide } from "../components/pages/LayoutWide";
+import { LayoutWide } from "../components/organisms/LayoutWide";
 import { Profile } from "../components/molecules/Profile";
 import { ButtonSecond } from "../components/atoms/button/ButtonSecond";
 import { BreadcrumbList } from "../components/atoms/Breadcrumb";

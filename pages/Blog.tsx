@@ -1,12 +1,12 @@
-import { Grid, Flex } from "@chakra-ui/react";
+import { Grid , Flex } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
+import dynamic from 'next/dynamic';
 
-import { Layout } from "../components/pages/Layout";
+import { Layout } from "../components/organisms/Layout";
 import { BlogCard } from "../components/molecules/BlogCard"
 import { Title } from "../components/atoms/Title";
-import { HeadSetting } from "../components/pages/Head";
+import { HeadSetting } from "../components/organisms/Head";
 import { TabLink } from "../components/atoms/TabLink";
-import dynamic from 'next/dynamic';
 import { BreadcrumbList } from "../components/atoms/Breadcrumb";
 
 export async function getStaticProps() {
@@ -21,7 +21,7 @@ export async function getStaticProps() {
 export default function  BlogPage ({ blogPosts }) {
 
   const ScrollRevealContainer = dynamic(
-    import('../components/pages/Scroll'),
+    import('../components/organisms/Scroll'),
     {ssr: false,}
   );
 
