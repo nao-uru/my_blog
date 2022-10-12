@@ -27,6 +27,27 @@ export async function getPostBySlug(slug) {
   }
 }
 
+export async function getAllSamplePosts() {
+  const entries = await client.getEntries({
+    content_type:'samplePost',
+    // order:"-fields.title",
+  });
+  if(entries.items) {
+    return entries.items;
+  } 
+}
+
+export async function getSamplePostBySlug(slug) {
+  const entries = await client.getEntries({
+    content_type:'samplePost',
+    limit:1,
+    "fields.slug":slug,
+  });
+  if(entries.items) {
+    return entries.items[0];
+  }
+}
+
 // タグ検索（未実装）
 // 値が取れない
 export async function getTagBook() {

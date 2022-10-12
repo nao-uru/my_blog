@@ -2,19 +2,18 @@ import { Box, ChakraProvider, Heading, Image, Text } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import Link from "next/link";
 
-export const BlogCard = (props) => {
+export const SampleCard = (props) => {
 
   return(
     <>
     <ChakraProvider>
-      <Link href={props.slug} passHref>
+      {/* <Link href={props.slug} passHref> */}
       <Box css={sCard} w="320px" h="100%" m="auto" p={4}>
-        <Image className="image" src={'https:' + props.url} w="full" h="200px" py={2} fit="cover" alt="Blog thubmnail" />
+        {/* <Image className="image" src={'https:' + props.url} w="full" h="200px" py={2} fit="cover" alt="Blog thubmnail" /> */}
         <Heading size="md" mt={2}>{props.title}</Heading>
-        <Text size="xs" mt={3}>{props.date}</Text>
-        <Text size="xs">{props.tag}</Text>
+        <Text size="sm">{props.text}</Text>
       </Box>
-      </Link>
+      {/* </Link> */}
     </ChakraProvider>
     </>
   )

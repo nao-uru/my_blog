@@ -1,6 +1,6 @@
-import { Top } from "../components/organisms/Top"
-import { HeadSetting } from "../components/pages/Head";
-import { LayoutWide } from "../components/pages/LayoutWide";
+import { Top } from "../components/pages/Home"
+import { HeadSetting } from "../components/organisms/Head";
+import { LayoutWide } from "../components/organisms/LayoutWide";
 
 export default function Home() {
 
