@@ -1,5 +1,5 @@
-import { Layout } from "../components/pages/Layout"
-import { HeadSetting } from "../components/pages/Head";
+import { Layout } from "../components/organisms/Layout"
+import { HeadSetting } from "../components/organisms/Head";
 
 
 export default function Secret() {

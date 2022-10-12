@@ -1,6 +1,7 @@
-import { About } from "../components/organisms/About"
-import { Layout } from "../components/pages/Layout"
-import { HeadSetting } from "../components/pages/Head";
+import { About } from "../components/pages/About"
+import { Layout } from "../components/organisms/Layout"
+import { HeadSetting } from "../components/organisms/Head";
+import { BreadcrumbList } from "../components/atoms/Breadcrumb";
 
 export default function AboutPage() {
 
@@ -14,6 +15,12 @@ export default function AboutPage() {
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
     <Layout>
+
+    <BreadcrumbList
+     tree1={'About'}
+     tree1Link={'/About'}
+     />
+
       <About />
     </Layout>
     </>
