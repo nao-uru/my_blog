@@ -1,5 +1,6 @@
 import { Box, ChakraProvider, SimpleGrid, Text } from "@chakra-ui/react";
-import { ImDribbble } from "react-icons/im";
+import { ImDribbble, } from "react-icons/im";
+import { BsFillArrowRightCircleFill} from "react-icons/bs";
 
 import { Title } from "../atoms/Title";
 import { ButtonPrime } from "../atoms/button/ButtonPrime";
@@ -23,19 +24,21 @@ export const Work = () => {
 
       <Box>
       <Title>Sample</Title>
-      <Text>サンプルとして制作した作品を掲載しております！</Text>
+      <Text mb={2}>サンプルとして制作した作品を掲載しております！</Text>
       <ButtonPrime 
       href="/Sample" 
+      target="_self"
       border="2px #cb7cab solid" 
       color="#cb7cab"
-      icon={''} >サンプルはこちら</ButtonPrime>
+      icon={<BsFillArrowRightCircleFill color="#cb7cab" size={20} />} >サンプルはこちら</ButtonPrime>
       </Box>
 
       <Box>
       <Title>Output</Title>
-      <Text mb={4} >Daily UIなど日々のアウトプットをDribbbleにUPしています<br />Dribbbleに上げる作品は自分の作りたいもの中心です☺︎</Text>
+      <Text mb={2}>Daily UIなど日々のアウトプットをDribbbleにUPしています<br />Dribbbleに上げる作品は自分の作りたいもの中心です☺︎</Text>
       <ButtonPrime 
       href="https://dribbble.com/nao_uru" 
+      target="_blank"
       border="2px #cb7cab solid" 
       color="#cb7cab"
       icon={<ImDribbble color="#cb7cab" size={20} />} >アカウントはこちら！</ButtonPrime>
