@@ -30,7 +30,7 @@ export const ButtonPrime = ( props ) => {
     <ChakraProvider>
       
        <Link href={props.href}  passHref>
-         <a target="_blank">
+         <a target={props.target}>
          <Flex color={props.color} css={sHover} px={4} py={2} mr={4} align="center" cursor="pointer" border={props.border} _hover={{bg:`${props.color}`}}  w="fit-content">
          <Text>{props.children}</Text>
          <Box ml={2} >{props.icon}</Box>
