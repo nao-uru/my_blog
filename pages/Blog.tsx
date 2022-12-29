@@ -1,4 +1,4 @@
-import { Grid , Flex } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
 import dynamic from 'next/dynamic';
 
@@ -64,10 +64,10 @@ export default function  BlogPage ({ blogPosts }) {
       const month = smonth +1;
       const day = new Date(date).getDate();
 
-      const tags = blogPost.fields.tags;
-      const tag = tags.map((tag) => {
-        return tag;
-      })
+      // const tags = blogPost.fields.tags;
+      // const tag = tags.map((tag) => {
+      //   return tag;
+      // })
 
       return <BlogCard 
       key={blogPost.sys.id} 
@@ -75,7 +75,7 @@ export default function  BlogPage ({ blogPosts }) {
       url={blogPost.fields.media.fields.file.url}
       slug={blogPost.fields.slug}
       date ={`${year}.${month}.${day}`}
-      tag={tag}
+      // tag={tag}
       />
       })} 
       </Grid>

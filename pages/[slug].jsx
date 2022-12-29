@@ -58,7 +58,7 @@ export default function PostPage({blogPost, allPosts }) {
   const day = new Date(date).getDate();
 
   const image = `https:${blogPost.fields.media.fields.file.url}`;
-  const tags = blogPost.fields.tags;
+  // const tags = blogPost.fields.tags;
 
 
   return (
@@ -86,9 +86,9 @@ export default function PostPage({blogPost, allPosts }) {
      <Title>{blogPost.fields.title}</Title>
      <Flex mt={6} justify="start" align="baseline">
      <Text mt={6} mr={6}>Date:{`${year}.${month}.${day}`}</Text>
-     {tags.map((tagEl) => {
+     {/* {tags.map((tagEl) => {
        return <Text css={sTag} key={tagEl.length}>{tagEl}</Text>;
-       })}
+       })} */}
      </Flex>
      <Img src={image} mt={2} w="full" h={{base:"200px",md:"400px"}} objectFit="cover" />
 

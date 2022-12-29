@@ -1,8 +1,8 @@
 import { createClient } from "contentful";
 
 export const client = createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID='dd0roywjqx3t',
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN='Y5z0_h17-TMkiv95rCpicrYRh6aod94NfZrN0-N0Q5o',
 });
 
 export async function getAllPosts() {
