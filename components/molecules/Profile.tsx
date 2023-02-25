@@ -22,8 +22,8 @@ export const Profile = (props) => {
         <Heading size="sm">コードも書く</Heading>
       </Box>
     </Flex>
-    <Text size="md" mt={0}>デザインとフロントエンドのプログラミングを勉強中〜<br />
-          仕事探し中のフリーランス<br />
+    <Text size="md" mt={0}>アプリデザイナー<br />インハウス正社員×制作会社で副業中！<br />  
+     コードも書いてます!(Next,React...)
     </Text>
     <ButtonSecond 
      href="/About"
