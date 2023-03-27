@@ -21,7 +21,7 @@ export const Footer = () => {
       <ChakraProvider>
       <Box h="240px" css={Border} pt="4" mt="52">
 
-      <Box pl={16}>
+      <Box pl={8}>
 
       <Link href="/">
       <HeaderLink>Top</HeaderLink>
