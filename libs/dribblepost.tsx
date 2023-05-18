@@ -1,3 +1,5 @@
+// drribleのデータ取得
+
 import React,{useEffect, useState} from "react";
 
 

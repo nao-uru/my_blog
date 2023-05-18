@@ -31,7 +31,7 @@ export const ButtonLink = ( props ) => {
       
        <Link href={props.href} passHref>
          <a target={props.target}>
-         <Flex mt={2} color={props.color} css={sHover} cursor="pointer">
+         <Flex mt={2} color="#0da970" css={sHover} cursor="pointer">
          <Text fontWeight="bold" >{props.children}</Text>
          <Box>{props.icon}</Box>
          </Flex>
@@ -46,6 +46,6 @@ export const ButtonLink = ( props ) => {
 const sHover = css`
 :hover {
   transition: 0.5s;
-  color: #E8E5DE;
+  opacity: 60%;
 }
 `

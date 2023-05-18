@@ -187,11 +187,11 @@ export const Menu = () => {
 
 
 const sBorder = css`
- border-top: 2px solid #6BA791;
+ border-top: 2px solid #0da970;
 `
 
 const sBorderLink = css`
- border-bottom: 2px solid #6BA791;
+ border-bottom: 2px solid #0da970;
  padding-bottom: 8px;
 `
 const sMainTitle = css`
@@ -203,7 +203,7 @@ cursor: pointer;
 `
 const sLink = css`
   :hover {
-    color: #6BA791;
+    color: #0da970;
   }
 `
 
