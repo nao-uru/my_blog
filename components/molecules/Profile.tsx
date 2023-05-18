@@ -27,7 +27,7 @@ export const Profile = (props) => {
     </Text>
     <ButtonSecond 
      href="/About"
-     color="#6BA791"
+     color="#0da970"
     >About Me</ButtonSecond>
     </Box>
     </ChakraProvider>

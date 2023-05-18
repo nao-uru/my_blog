@@ -6,6 +6,7 @@ import { Title } from "../atoms/Title";
 import { ButtonPrime } from "../atoms/button/ButtonPrime";
 import { ViewCard } from "../molecules/DribbbleCard";
 import { GetDribblePost } from "../../libs/dribblepost";
+import { ButtonSecond } from "../atoms/button/ButtonSecond";
 
 export const Work = () => {
 
@@ -25,23 +26,18 @@ export const Work = () => {
       <Box>
       <Title>Sample</Title>
       <Text mb={2}>サンプルとして制作した作品を掲載しております！</Text>
-      <ButtonPrime 
-      href="/Sample" 
-      target="_self"
-      border="2px #cb7cab solid" 
-      color="#cb7cab"
-      icon={<BsFillArrowRightCircleFill color="#cb7cab" size={20} />} >サンプルはこちら</ButtonPrime>
+      <ButtonSecond 
+      href="/Sample"
+      color="#0da970" >サンプルはこちら</ButtonSecond>
       </Box>
 
       <Box>
       <Title>Output</Title>
       <Text mb={2}>Daily UIなど日々のアウトプットをDribbbleにUPしています<br />Dribbbleに上げる作品は自分の作りたいもの中心です☺︎</Text>
-      <ButtonPrime 
-      href="https://dribbble.com/nao_uru" 
+      <ButtonSecond 
+      href="https://dribbble.com/nao_uru"
       target="_blank"
-      border="2px #cb7cab solid" 
-      color="#cb7cab"
-      icon={<ImDribbble color="#cb7cab" size={20} />} >アカウントはこちら！</ButtonPrime>
+      color="#0da970" >アカウントはこちら！</ButtonSecond>
       </Box>
       <SimpleGrid columns={{base:1,md:3}} spacingY={{base:8,md:'80px'}} m='auto' w="100%" mt={12} >
         {items.map((item:any) => {
