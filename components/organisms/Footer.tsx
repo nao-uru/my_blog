@@ -52,7 +52,8 @@ export const Footer = () => {
     <ChakraProvider>
       <Box h="240px" css={Border} pt="4" mt="52">
         <Box w="90%" m="auto">
-        <Flex align="baseline">
+          
+        <Flex>
 
           <Button as="a" href="/" fontSize="xl" fontWeight="bold" backgroundColor="transparent" >
            NAO&#39;S JOURNAL
@@ -62,6 +63,7 @@ export const Footer = () => {
 
           <Menu />
         </Flex>
+
         </Box>
       </Box>
     </ChakraProvider>

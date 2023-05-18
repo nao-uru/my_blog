@@ -103,16 +103,16 @@ export default function PostPage({blogPost, allPosts }) {
        <Flex mt={8} flexDirection={{base:"column", md:"row"}} align="center">
       <ButtonPrime 
        href={`https://twitter.com/share?url=https://www.naosjournal.com/${blogPost.fields.slug}&text=sample&hashtags=sample`} 
-       icon={<FaTwitter size={28} color="#73a1c7" />}
-       color="#73a1c7"
-       border="2px #73a1c7 solid" >Twitterでシェア</ButtonPrime>
+       icon={<FaTwitter size={28} color="#53a1e1" />}
+       color="#53a1e1"
+       border="2px #53a1e1 solid" >Twitterでシェア</ButtonPrime>
       
       <Box mt={{base:4,md:0}}>
       <ButtonPrime       
        href={`https://social-plugins.line.me/lineit/share?url=https://www.naosjournal.com/${blogPost.fields.slug}`} 
-       icon={<FaLine size={28} color="#6BA791" />}
-       color="#6BA791"
-       border="2px #6BA791 solid">LINEで送る</ButtonPrime>
+       icon={<FaLine size={28} color="#0da970" />}
+       color="#0da970"
+       border="2px #0da970 solid">LINEで送る</ButtonPrime>
       </Box>
 
       </Flex>
@@ -135,7 +135,7 @@ export default function PostPage({blogPost, allPosts }) {
       slug={shinglePost.fields.slug}
       />
     }).slice(0,4)} 
-    <ButtonSecond href="/Blog" color="#6BA791">All Posts</ButtonSecond>
+    <ButtonSecond href="/Blog" color="#0da970">All Posts</ButtonSecond>
     </Box>
     </Box>
 
