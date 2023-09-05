@@ -23,6 +23,7 @@ export const ImgTitle = ( props ) => {
     </Box>
       </>
     )
+    
   }
 
   return (
