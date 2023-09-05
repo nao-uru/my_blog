@@ -1,34 +1,56 @@
 import { FC, useRef, useEffect } from "react";
-import scrollReveal from "scrollreveal";
+import ScrollReveal from "scrollreveal";
 
 interface ScrollRevealContainerProps {
   move?: string;
 }
 
-const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({
-  children,
-  move
-}) => {
-  const sectionRef = useRef<HTMLElement>(null);
+const Scroll = ({ children }) => {
 
+  const sectionRef = useRef();
   useEffect(() => {
-    if (sectionRef.current)
-      scrollReveal().reveal(sectionRef.current, {
+    if (sectionRef.current) {
+      ScrollReveal().reveal(sectionRef.current, {
         reset: true,
         delay: 400,
         opacity: 0,
-        origin:
-          move === "left"
-            ? "left"
-            : move === "right"
-            ? "right"
-            : move === "top"
-            ? "top"
-            : "bottom",
+
         distance: "40px"
       });
-  }, [sectionRef,move]);
+    }
+  },[]);
 
-  return <section ref={sectionRef}>{children}</section>;
-};
-export default ScrollRevealContainer;
+  return (<section ref={sectionRef}>{children}</section>)
+}
+
+export{ Scroll }
+
+
+
+// const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({
+//   children,
+//   move
+// }) => {
+//   const sectionRef = useRef<HTMLElement>(null);
+
+//   useEffect(() => {
+//     if (sectionRef.current)
+//       ScrollReveal().reveal(sectionRef.current, {
+//         reset: true,
+//         delay: 400,
+//         opacity: 0,
+//         origin:
+//           move === "left"
+//             ? "left"
+//             : move === "right"
+//             ? "right"
+//             : move === "top"
+//             ? "top"
+//             : "bottom",
+//         distance: "40px"
+//       });
+//   }, [sectionRef,move]);
+
+//   return <section ref={sectionRef}>{children}</section>;
+// };
+// export default ScrollRevealContainer;
