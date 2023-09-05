@@ -24,7 +24,7 @@ export const Footer = () => {
       <Box pl={8}>
 
       <Link href="/">
-      <HeaderLink>Top</HeaderLink>
+      <HeaderLink>Home</HeaderLink>
       </Link>
 
       <Link href="/Blog" >

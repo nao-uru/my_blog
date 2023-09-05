@@ -21,8 +21,9 @@ export const Top = () => {
       <Heading size="2xl" mt={{base:12,md:40}}>Wel Come!</Heading>
       <Text size="md" lineHeight="7" mt={2} >
         ご訪問いただきありがとうございます! NAO OSAWAのHPです。<br />
-        公開してから約3ヶ月、新たな機能をつけたり、デザインをブラッシュアップしたりと日々アップデートを図っています!<br />
-        ぜひ気になったページから見てみてください✨
+        公開してから約1年が経ちました！最近は更新ができていないので、まだアップデートしたいなと思っております。<br />
+        ぜひ気になったページから見てみてください✨<br />
+        2023/9/5 Update
       </Text>
 
       <Box mt={20} borderTop='1px solid #222222' >

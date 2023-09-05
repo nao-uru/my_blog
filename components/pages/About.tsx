@@ -17,10 +17,11 @@ export const About = () => {
       <Box>
 
        <Box w="full">
-       <ImgTitle url="/img/photo.png" title="About" />
+       <Image src="/img/icon.png" w={24} h={24} m={4} alt="Main Image" /> 
+       {/* <ImgTitle url="/img/photo.png" title="About" /> */}
        </Box>
        
-       <Box m="auto" mt={4} w="95%">
+       <Box m="auto" mt={0} w="95%">
        <Content title="Profile" />
        <TableContent />
        <TextContents />
@@ -38,9 +39,9 @@ export const About = () => {
 
     <Flex w="ful" mt={16}>
 
-    <Box w="full">
+    {/* <Box w="full">
     <ImgTitle url="/img/photo.png" title="About" />
-    </Box>
+    </Box> */}
     
     <Box ml={16}>
     <Content title="Profile" />
