@@ -6,7 +6,7 @@ export const LatestCard = (props) => {
   return(
     <>
     <ChakraProvider>
-      <Link  href={props.slug} passHref>
+      <Link  href={props.slug} passHref legacyBehavior>
       <Box border='1px solid #373737' m='auto' mb={6} borderRadius={8} cursor='pointer' _hover={{opacity:'0.7'}} >
         <Flex px={4} py={4} >
           <Image src={'https:' + props.url} borderRadius={4} w="120px" h="80px" fit="cover" alt="Blog thubmnail" />

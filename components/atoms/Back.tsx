@@ -16,7 +16,7 @@ export const Back = () => {
     return(
       <>
       <ChakraProvider>
-      <Link href="/Blog" passHref>
+      <Link href="/Blog" passHref legacyBehavior>
       <Flex css={sHover} mb={10}>
       <ChevronLeftIcon boxSize={8} />
       <Text fontSize="xl" fontWeight="bold">Back</Text>
