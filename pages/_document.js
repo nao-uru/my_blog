@@ -17,5 +17,6 @@ class MyDocument extends Document {
       </Html>
     );
   }
+  
 }
 export default MyDocument;
