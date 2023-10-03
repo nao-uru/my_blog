@@ -48,8 +48,6 @@ export async function getStaticProps({ params }) {
 }
 
 
-
-
 export default function PostPage({blogPost, allPosts }) {
 
   console.log(allPosts);
@@ -65,6 +63,7 @@ export default function PostPage({blogPost, allPosts }) {
   const tags = blogPost.fields.tags;
 
 
+  
   return (
    <>
     <HeadSetting 
