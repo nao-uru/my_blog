@@ -20,10 +20,10 @@ export async function getStaticProps() {
 
 export default function  BlogPage ({ blogPosts }) {
 
-  // const ScrollRevealContainer = dynamic(
-  //   import('../components/organisms/Scroll'),
-  //   {ssr: false,}
-  // );
+  const ScrollRevealContainer = dynamic(
+    import('../components/organisms/Scroll'),
+    {ssr: false,}
+  );
 
   return (
     <>
