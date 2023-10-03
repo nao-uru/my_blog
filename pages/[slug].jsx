@@ -48,6 +48,8 @@ export async function getStaticProps({ params }) {
 }
 
 
+
+
 export default function PostPage({blogPost, allPosts }) {
 
   console.log(allPosts);
