@@ -50,9 +50,9 @@ export const Work = () => {
         />
       })}
 
-      {items.map((item:any) => {
+      {/* {items.map((item) => {
         return console.log(item)
-      })}
+      })} */}
       </SimpleGrid>
 
     </ChakraProvider>
