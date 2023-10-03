@@ -10,7 +10,7 @@ export const client = createClient({
 export async function getAllPosts() {
   const entries = await client.getEntries({
     content_type:'blogPost',
-    order:"-fields.date",
+    order:["-fields.date"],
   });
   if(entries.items) {
     return entries.items;
@@ -56,7 +56,7 @@ export async function getTagBook() {
   const response = await client.getEntries({
     content_type: "blogPost",
     // order: "-sys.createdAt",
-    'metadata.tags.sys.id[all]':'Book',
+    // 'metadata.tags.sys.id[all]' :'Book',
     limit: 50,
   });
 }

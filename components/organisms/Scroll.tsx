@@ -32,3 +32,4 @@ const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({
   return <section ref={sectionRef}>{children}</section>;
 };
 export default ScrollRevealContainer;
+

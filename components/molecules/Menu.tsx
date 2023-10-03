@@ -49,7 +49,7 @@ const Navigation = () => {
       <Flex pt={8}>
 
       <Box css={sLink} mr={8}>
-      <Link href="https://twitter.com/naos_journal" passHref>
+      <Link href="https://twitter.com/naos_journal" passHref legacyBehavior>
       <a target="_blank">
       <AiOutlineTwitter size={40} />
       </a>
@@ -57,7 +57,7 @@ const Navigation = () => {
       </Box>
       
       <Box css={sLink} mr={8}>
-      <Link href="https://www.instagram.com/nao.journal__/" passHref>
+      <Link href="https://www.instagram.com/nao.journal__/" passHref legacyBehavior>
       <a target="_blank">
       <AiOutlineInstagram size={40} />
       </a>
@@ -65,7 +65,7 @@ const Navigation = () => {
       </Box>
   
       <Box css={sLink} mr={8}>
-      <Link href="https://www.youtube.com/channel/UCnBdJFjL13ySAZ0wLf7TrFg" passHref>
+      <Link href="https://www.youtube.com/channel/UCnBdJFjL13ySAZ0wLf7TrFg" passHref legacyBehavior>
       <a target="_blank">
       <AiOutlineYoutube size={40} />
       </a>
@@ -152,7 +152,7 @@ export const Menu = () => {
     </Link>
 
     <Box css={sLink} mr={4}>
-    <Link href="https://twitter.com/naos_journal" passHref>
+    <Link href="https://twitter.com/naos_journal" passHref legacyBehavior>
     <a target="_blank">
     <AiOutlineTwitter size={28} />
     </a>
@@ -160,7 +160,7 @@ export const Menu = () => {
     </Box>
     
     <Box css={sLink} mr={4}>
-    <Link href="https://www.instagram.com/nao.journal__/" passHref>
+    <Link href="https://www.instagram.com/nao.journal__/" passHref legacyBehavior>
     <a target="_blank">
     <AiOutlineInstagram size={28} />
     </a>
@@ -168,7 +168,7 @@ export const Menu = () => {
     </Box>
 
     <Box css={sLink}>
-    <Link href="https://www.youtube.com/channel/UCnBdJFjL13ySAZ0wLf7TrFg" passHref>
+    <Link href="https://www.youtube.com/channel/UCnBdJFjL13ySAZ0wLf7TrFg" passHref legacyBehavior>
     <a target="_blank">
     <AiOutlineYoutube size={28} />
     </a>

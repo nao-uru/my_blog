@@ -12,7 +12,7 @@ export const ButtonPrime = ( props ) => {
     return(
       <>
       <ChakraProvider>
-       <Link href={props.href}  passHref>
+       <Link href={props.href}  passHref legacyBehavior>
          <a target={props.target}>
          <Flex color={props.color} css={sHover} px={4} py={2} mr={4} align="center" cursor="pointer" border={props.border} _hover={{bg:`${props.color}`}}  w="fit-content">
          <Text>{props.children}</Text>
@@ -29,7 +29,7 @@ export const ButtonPrime = ( props ) => {
     <>
     <ChakraProvider>
       
-       <Link href={props.href}  passHref>
+       <Link href={props.href}  passHref legacyBehavior>
          <a target={props.target}>
          <Flex color={props.color} css={sHover} px={4} py={2} mr={4} align="center" cursor="pointer" border={props.border} _hover={{bg:`${props.color}`}}  w="fit-content">
          <Text>{props.children}</Text>
