@@ -32,3 +32,5 @@
 //   return <section ref={sectionRef}>{children}</section>;
 // };
 // export default ScrollRevealContainer;
+
+// 使えなくなった
