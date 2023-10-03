@@ -16,7 +16,7 @@ export const TableContent = () => {
 
           <Tr>
           <Td fontSize="md" fontWeight="bold">Age</Td>
-          <Td fontSize="md">26</Td>
+          <Td fontSize="md">27</Td>
           </Tr>
 
           <Tr>
