@@ -31,6 +31,8 @@ export const getStaticPaths = async () => {
   }
 }
 
+
+
 // データ取得（記事一覧と記事個別の内容）
 export async function getStaticProps({ params }) {
   const { items } = await client.getEntries({
