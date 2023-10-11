@@ -1,6 +1,7 @@
 import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Heading, Link, border, Button } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import { HeaderLink } from "../atoms/HeaderLink";
+import { AiOutlineInstagram,AiOutlineTwitter, AiOutlineYoutube } from "react-icons/ai";
 
 import { Menu } from "../molecules/Menu";
 
@@ -19,27 +20,29 @@ export const Footer = () => {
     return(
       <>
       <ChakraProvider>
-      <Box h="240px" css={Border} pt="4" mt="52">
+      <Box h="240px" w="100%" css={Border} pt="4" m='auto'>
 
-      <Box pl={8}>
+      <Flex w="100%" m='auto' pt={8} direction="column" justifyContent="center" alignItems="center" >
 
-      <Link href="/">
-      <HeaderLink>Top</HeaderLink>
+      <Link as="a" href="/" fontSize="xl" fontWeight="nomal" textAlign="center" >
+          NAO&#39;S JOURNAL
       </Link>
 
-      <Link href="/Blog" >
-      <HeaderLink>Blog</HeaderLink>
+      <Flex mt={2}>
+      <Box css={sLink} mr={8}>
+      <Link href="https://twitter.com/naos_journal" target='_blank' >
+      <AiOutlineTwitter size={40} />
       </Link>
-
-      <Link href="/Work">
-      <HeaderLink>Work</HeaderLink>
-      </Link>
-
-      <Link href="/About">
-      <HeaderLink>About</HeaderLink>
-      </Link>
-
       </Box>
+      
+      <Box css={sLink} mr={8}>
+      <Link href="https://www.instagram.com/nao___daily/" target='_blank'>
+      <AiOutlineInstagram size={40} />
+      </Link>
+      </Box>
+      </Flex>
+
+      </Flex>
 
       </Box>
       </ChakraProvider>
@@ -55,9 +58,10 @@ export const Footer = () => {
           
         <Flex>
 
-          <Button as="a" href="/" fontSize="xl" fontWeight="bold" backgroundColor="transparent" >
-           NAO&#39;S JOURNAL
-          </Button>
+
+          <Link as="a" href="/" backgroundColor="transparent" fontSize="xl" fontWeight="nomal" >
+          NAO&#39;S JOURNAL
+          </Link>
 
           <Spacer />
 
@@ -78,3 +82,8 @@ const sMainTitle = css`
 cursor: pointer;
 `
 
+const sLink = css`
+  :hover {
+    color: #0da970;
+  }
+`

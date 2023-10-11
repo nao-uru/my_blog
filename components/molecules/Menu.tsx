@@ -3,12 +3,12 @@ import { css } from "@emotion/react";
 import { useRouter } from "next/router"
 import Link from "next/link";
 
-import { HeaderLink } from "../atoms/HeaderLink";
+// import { HeaderLink } from "../atoms/HeaderLink";
 
 import { 
   Box, ChakraProvider,  Flex, useBreakpointValue, 
   useDisclosure, Stack,Drawer,DrawerOverlay,DrawerContent, 
-  DrawerCloseButton, DrawerHeader, DrawerBody, Heading
+  DrawerCloseButton, DrawerHeader, DrawerBody, Heading, Text
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { AiOutlineInstagram,AiOutlineTwitter, AiOutlineYoutube } from "react-icons/ai";
@@ -24,25 +24,33 @@ const Navigation = () => {
 
       <Link href="/" passHref>
       <Box mr={8} css={path.endsWith('/') ? sBorderLink:''}>
-      <HeaderLink>Home</HeaderLink>
+      <Box css={sHover}>
+      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Home</Text>
+      </Box>
       </Box>
       </Link>
 
       <Link href="/Blog" passHref>
       <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}>
-      <HeaderLink>Blog</HeaderLink>
+      <Box css={sHover}>
+      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Blog</Text>
+      </Box>
       </Box>
       </Link>
 
       <Link href="/Work" passHref>
-      <Box mr={8} css={path.startsWith('/Work') ? sBorderLink:''}>
-      <HeaderLink>Work</HeaderLink>
+      <Box mr={8} css={path.startsWith('/Work') ? sBorderLink :''}>
+      <Box css={sHover}>
+      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Work</Text>
+      </Box>
       </Box>
       </Link>
 
       <Link href="/About" passHref>
       <Box mr={8} css={path.startsWith('/About') ? sBorderLink:''}>
-      <HeaderLink>About</HeaderLink>
+      <Box css={sHover}>
+      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>About</Text>
+      </Box>
       </Box>
       </Link>
 
@@ -57,7 +65,7 @@ const Navigation = () => {
       </Box>
       
       <Box css={sLink} mr={8}>
-      <Link href="https://www.instagram.com/nao.journal__/" passHref legacyBehavior>
+      <Link href="https://www.instagram.com/nao___daily/" passHref legacyBehavior>
       <a target="_blank">
       <AiOutlineInstagram size={40} />
       </a>
@@ -128,26 +136,34 @@ export const Menu = () => {
     <Flex align="baseline" alignItems="center">
 
     <Link href="/" passHref>
+    <Box  css={sHover}>
     <Box mr={12} css={path.endsWith('/') ? sBorder:''}>
-    <HeaderLink>Home</HeaderLink>
+    <Text size="sm" pt="4px" h="100%" fontWeight="bold">Home</Text>
+    </Box>
     </Box>
     </Link>
     
     <Link href="/Blog" passHref>
+    <Box css={sHover}>
     <Box mr={12} css={path.startsWith('/Blog') ? sBorder:''}>
-    <HeaderLink>Blog</HeaderLink>
+    <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Blog</Text>
+    </Box>
     </Box>
     </Link>
     
     <Link href="/Work" passHref>
+    <Box css={sHover}>
     <Box mr={12} css={path.startsWith('/Work') ? sBorder:''}>
-    <HeaderLink>Work</HeaderLink>
+    <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Work</Text>
+    </Box>
     </Box>
     </Link>
 
     <Link href="/About" passHref>
-    <Box mr={8} css={path.startsWith('/About') ? sBorder:''}>
-    <HeaderLink>About</HeaderLink>
+    <Box mr={12} css={path.startsWith('/About') ? sBorder:''}>
+    <Box css={sHover}>
+    <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>About</Text>
+    </Box>
     </Box>
     </Link>
 
@@ -160,7 +176,7 @@ export const Menu = () => {
     </Box>
     
     <Box css={sLink} mr={4}>
-    <Link href="https://www.instagram.com/nao.journal__/" passHref legacyBehavior>
+    <Link href="https://www.instagram.com/nao___daily/" passHref legacyBehavior>
     <a target="_blank">
     <AiOutlineInstagram size={28} />
     </a>
@@ -209,4 +225,10 @@ const sLink = css`
 
 const sOpen = css`
  background-color: #E6E9EF;
+`
+const sHover = css`
+cursor: pointer;
+:hover {
+  opacity: 0.7;
+}
 `

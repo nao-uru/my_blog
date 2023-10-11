@@ -20,7 +20,7 @@ export const LayoutWide = ( {children} ) => {
       exit={{ opacity: 0 }} 
       >
 
-      <Container maxW={{base:"90%", md:"1200px"}} m="auto" p="0" pt={{base:16,md:28}} minHeight="100vh">
+      <Container maxW={{base:"92%", md:"1200px"}} m="auto" p="0" pt={{base:16,md:28}} minHeight="100vh">
         {children}
       </Container>
 

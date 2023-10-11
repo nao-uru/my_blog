@@ -1,12 +1,10 @@
-import { Grid , Flex } from "@chakra-ui/react";
+import { Grid , Text } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
 import dynamic from 'next/dynamic';
 
 import { Layout } from "../components/organisms/Layout";
 import { BlogCard } from "../components/molecules/BlogCard"
-import { Title } from "../components/atoms/Title";
 import { HeadSetting } from "../components/organisms/Head";
-import { TabLink } from "../components/atoms/TabLink";
 import { BreadcrumbList } from "../components/atoms/Breadcrumb";
 
 export async function getStaticProps() {
@@ -46,7 +44,7 @@ export default function  BlogPage ({ blogPosts }) {
      tree2Link={''}
      />
      
-    <Title>Blog</Title>
+     <Text fontSize={{base:"24px",md:"40px"}} mt={{base:8,md:24}} lineHeight="none">Blog</Text>
 
     {/* <Flex>
       <TabLink url="/Blog">All</TabLink>

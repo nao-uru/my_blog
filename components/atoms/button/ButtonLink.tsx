@@ -31,7 +31,7 @@ export const ButtonLink = ( props ) => {
       
        <Link href={props.href} passHref legacyBehavior>
          <a target={props.target}>
-         <Flex mt={2} color="#0da970" css={sHover} cursor="pointer">
+         <Flex mt={2} color="#25D088" css={sHover} cursor="pointer">
          <Text fontWeight="bold" >{props.children}</Text>
          <Box>{props.icon}</Box>
          </Flex>
