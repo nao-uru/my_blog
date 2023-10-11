@@ -25,23 +25,23 @@ a {
 }
 
 .is-subtitle   {
-  margin: 20px 0 0 0;
-  padding: 6px 10px;
+  margin:  8px 0 0;
+  padding: 4px 8px;
   font-weight: bold;
   font-size: 20px;
-  border-left: 3px #6BA791 solid;
+  border-left: 3px #25D088 solid;
 }
 
 .is-title {
-  margin: 16px 0;
+  margin: 8px 0 0;
   font-size: 24px;
   font-weight: bold;
 }
 
 .is-line {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto; 
   margin-top: 40px;
   margin-bottom: 120px;
-  border-top: 1px  #222222 solid;
+  border-top: 1px  #3e414a solid;
 }

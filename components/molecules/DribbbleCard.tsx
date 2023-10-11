@@ -2,14 +2,14 @@ import { Box, ChakraProvider, Heading, Image, } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import Link from "next/link";
 
-export const ViewCard = (props) => {
+export const DribbbleCard = (props) => {
 
   return(
     <>
     <ChakraProvider>
       <Link href={props.url} target="_blank" rel="noreferrer" passHref>
-      <Box css={sCard} w="95%" m="auto" p={4}>
-        <Image src={props.img} w="full" h="180px" fit="cover" alt="DribbbleにUPしているサンプル" />
+      <Box css={sCard} w="95%" m="auto" p={4} borderRadius="2xl">
+        <Image rounded={'lg'} src={props.img} w="full" h="180px" fit="cover" alt="DribbbleにUPしているサンプル" />
         <Heading size="md" mt={2}>{props.title}</Heading>
       </Box>
       </Link>
@@ -19,7 +19,9 @@ export const ViewCard = (props) => {
 }
 
 const sCard = css`
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.06);
+    box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    z-index: 10;
   
   :hover {
     transition: 0.2s;

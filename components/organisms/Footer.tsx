@@ -1,6 +1,5 @@
 import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Heading, Link, border, Button } from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import { HeaderLink } from "../atoms/HeaderLink";
 import { AiOutlineInstagram,AiOutlineTwitter, AiOutlineYoutube } from "react-icons/ai";
 
 import { Menu } from "../molecules/Menu";
@@ -20,7 +19,7 @@ export const Footer = () => {
     return(
       <>
       <ChakraProvider>
-      <Box h="240px" w="100%" css={Border} pt="4" m='auto'>
+      <Box h="240px" w="100%" css={Border} pt="4" m='auto' mt={16}>
 
       <Flex w="100%" m='auto' pt={8} direction="column" justifyContent="center" alignItems="center" >
 
@@ -38,6 +37,12 @@ export const Footer = () => {
       <Box css={sLink} mr={8}>
       <Link href="https://www.instagram.com/nao___daily/" target='_blank'>
       <AiOutlineInstagram size={40} />
+      </Link>
+      </Box>
+
+      <Box css={sLink} mr={8}>
+      <Link href="" target='_blank'>
+      <AiOutlineYoutube size={40} />
       </Link>
       </Box>
       </Flex>
