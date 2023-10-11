@@ -7,7 +7,7 @@ export const ViewCard = (props) => {
   return(
     <>
     <ChakraProvider>
-      <Link href={props.url} target="_blank" rel="noreferrer">
+      <Link href={props.url} target="_blank" rel="noreferrer" passHref>
       <Box css={sCard} w="95%" m="auto" p={4}>
         <Image src={props.img} w="full" h="180px" fit="cover" alt="DribbbleにUPしているサンプル" />
         <Heading size="md" mt={2}>{props.title}</Heading>

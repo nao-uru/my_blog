@@ -3,15 +3,17 @@ import { Button, ChakraProvider } from "@chakra-ui/react";
 
 import { css } from "@emotion/react";
 
+// 使ってない
+
 export const TabLink = (props) => {
 
-  return (
-    <>
-    <ChakraProvider>
-    <Button as="a" css={sTabLink} fontSize="sm">{props.children}</Button>
-    </ChakraProvider>
-    </>
-  )
+  // return (
+  //   <>
+  //   <ChakraProvider>
+  //   <Button as="a" css={sTabLink} fontSize="sm">{props.children}</Button>
+  //   </ChakraProvider>
+  //   </>
+  // )
 }
 
 const sTabLink = css`
