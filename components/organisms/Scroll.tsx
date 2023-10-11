@@ -1,8 +1,10 @@
+'use client'
 import { FC, useRef, useEffect } from "react";
 import scrollReveal from "scrollreveal";
 
 interface ScrollRevealContainerProps {
   move?: string;
+  children?: any;
 }
 
 const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({

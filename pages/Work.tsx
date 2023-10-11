@@ -3,17 +3,6 @@ import { Layout } from "../components/organisms/Layout"
 import { HeadSetting } from "../components/organisms/Head";
 import { BreadcrumbList } from "../components/atoms/Breadcrumb";
 
-import { getAllSamplePosts } from "../libs/contentful";
-export async function getStaticProps() {
-  const posts = await getAllSamplePosts();
-  return{
-    props: {
-      samplePosts: posts,
-    }
-  }
-}
-
-
 export default function WorkPage() {
   return (
     <>
@@ -30,7 +19,8 @@ export default function WorkPage() {
      tree1={'Work'}
      tree1Link={'/Work'}
      />
-      <Work />
+
+    <Work />
     </Layout>
     </>
   )

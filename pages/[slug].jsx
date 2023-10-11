@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
 import { FaLine, FaTwitter } from "react-icons/fa";
 import { css } from "@emotion/react";
-import { getAllPosts, client,  getTagBook } from "../libs/contentful";
+import { getAllPosts, client } from "../libs/contentful";
 import { md } from '../libs/markdown';
 
 import { HeadSetting } from "../components/organisms/Head";

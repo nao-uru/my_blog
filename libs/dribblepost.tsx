@@ -26,15 +26,6 @@ export const GetDribblePost = () => {
       )
   }, [])
 
-  
-  // if(error) {
-  //   return <p>ERROR</p>
-  // } else if(!isLoaded) {
-  //   return <p>LOADING...</p>
-  // } else {
-  //   return { items }
-  // }
-  
   return { items }
 }
 

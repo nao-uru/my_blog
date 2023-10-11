@@ -11,12 +11,14 @@ export const Header:VFC = () => {
   if(isMobile){
     return(
       <>
-      <Flex w="100%" justify="space-between" alignItems="center" py={2} px={4} zIndex={60} position="fixed" css={sBack} >
-      <Button as="a" href="/" backgroundColor="transparent" fontSize="xl" fontWeight="bold" >
+      <Box w='100%'  >
+      <Flex w="100%" justify="space-between" alignItems="center" py={2} px={4} zIndex={60} position="fixed" css={sBack} mt={0} >
+      <Link as="a" href="/" backgroundColor="transparent" fontSize="xl" fontWeight="bold" >
        NAO&#39;S JOURNAL
-      </Button>
+      </Link>
       <Menu />
       </Flex>
+      </Box>
       </>
     )
   }
@@ -40,7 +42,6 @@ export const Header:VFC = () => {
           <Menu />
          </Box>
         </Flex>
-
       </Box>
     </ChakraProvider>
 
@@ -53,7 +54,7 @@ const sBack = css`
  box-shadow: 0 8px 28px 0 rgba( 139, 142, 184, 0.1 );
  backdrop-filter: blur( 5px );
  -webkit-backdrop-filter: blur( 5px );
- border-radius: 0 0 10px 10px;
+ border-radius: 2px;
  border: 1px solid rgba( 255, 255, 255, 0.1 );
 `
 
