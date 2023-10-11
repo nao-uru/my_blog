@@ -22,6 +22,11 @@ export async function getStaticProps({ params }) {
   }
 }
 
+const imgs = ["img_1.png", "img_2.png", "img_3.png","img_4.png"];
+const num = -1;
+
+
+
 export default function Home({allPosts }) {
 
   return (
@@ -31,20 +36,21 @@ export default function Home({allPosts }) {
     title={'Home'}
     description={"ホーム"}
     path="/"
-    card="/img/spain.jpeg"
+    card="/img/portfolio.png"
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 
      <LayoutWide>
       
 
-      <Box>
-      <Image src={'/img/sample.png'} borderRadius={4} alt="Main Image" w="full" maxH='80vh' />
-      <Text position="absolute" right={{base:"-2",md:"24"}} top={{base:"11%",md:"400"}} fontSize={{base:"68px",md:"120px"}} fontWeight="nomal" zIndex={100}>OSAWA<br />NAO</Text>
-      <Image src={'/svg/main.svg'} position="absolute" right={{base:"-16",md:"-16"}} top={{base:"4%",md:"6%"}} w={{base:'440px',md:'900px'}} h={{base:"20%",md:'800px'}} opacity="0.6" alt="Main Image" />
-      <Box   />
+      {/* トップ */}
+      <Box  overflow="hidden" position="relative">
+      <Image src={`/img/${imgs[1]}`} borderRadius={4} alt="Main Image" w="full" maxH='80vh' minH="70vh"  />
+      <Text position="absolute" right={{base:"-2",md:"24"}} top={{base:"75%",md:"400"}} fontSize={{base:"68px",md:"120px"}} fontWeight="nomal" zIndex={100} lineHeight={{base:"60px",md:'120px'}} >OSAWA<br />NAO</Text>
+      <Image src={'/svg/main.svg'} position="absolute" right={{base:"-20%",md:"-12%"}} top={{base:"25%",md:"6%"}} w={{base:'600px',md:'1000px'}} h={{base:"500px",md:'800px'}} opacity="0.6" alt="Main Image"  />
       </Box>
 
+      {/* メイン */}
       <Flex flexDir="column" gap={8} w={{base:"100%",md:"60%"}}  m="auto" mb={40}>
         
       <Flex flexDir="column" gap={2} px={4}>
@@ -56,17 +62,19 @@ export default function Home({allPosts }) {
       </Flex>
 
       <Box css={sFull} backgroundColor="#ffffff">
-      <Flex p={{base:4,md:4}} flexDir="column" w={{base:"92%",md:"50%"}} gap={4} m="auto">
+      <Box maxW={{base:"92%", md:"1200px"}} m="auto" mt={''}>
+      <Flex py={{base:4,md:12}} flexDir="column" w={{base:"100%",md:"60%"}} gap={4} m="auto">
       <Text fontSize={{base:"40px",md:"64px"}} lineHeight="none">Works</Text>
       <Text size="md" lineHeight="7" mt={2} >
       サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
       </Text>
       <Flex direction={{base:"column",md:'row'}} justifyContent="flex-start" alignItems='center' gap={8}>
-        <WorkCard link={'/'} title={"IDEAL ME"} text={"2023/10 自主制作"} img={'/img/ideallMe.png'} />
-        <WorkCard link={'/'} title={"IDEAL ME"} text={"2022/9~ 制作実績"} img={'/img/portfolio.png'} />
+        <WorkCard link={'/Work'} title={"IDEAL ME"} text={"2023/10 自主制作"} img={'/img/ideallMe.png'} />
+        <WorkCard link={'/Work'} title={"IDEAL ME"} text={"2022/9~ 制作実績"} img={'/img/portfolio.png'} />
       </Flex>
       <ButtonPrime href="/Work" bgColor="#25D088" target="" color="#ffffff" icon={''}>READ MORE</ButtonPrime>
       </Flex>
+      </Box>
       </Box>
 
       <Flex flexDir="column" gap={2} px={4}>
@@ -75,7 +83,7 @@ export default function Home({allPosts }) {
       サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
       </Text>
 
-    <Box m='auto' mt={{base:0,lg:0}} w={{base:'100%',md:"35%"}} >
+    <Box m='' mt={{base:0,lg:0}} w={{base:'100%',md:"70%"}} >
     <Box mt={0}>
       {allPosts.map((shinglePost) => {
       return <LatestCard

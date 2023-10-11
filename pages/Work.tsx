@@ -1,4 +1,4 @@
-import { Work } from "../components/pages/Work"
+import { Work } from "../components/organisms/WorkTemplete"
 import { Layout } from "../components/organisms/Layout"
 import { HeadSetting } from "../components/organisms/Head";
 import { BreadcrumbList } from "../components/atoms/Breadcrumb";

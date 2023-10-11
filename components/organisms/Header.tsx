@@ -1,6 +1,6 @@
 import React, { VFC } from "react";
 import { css } from "@emotion/react";
-import { Box, ChakraProvider,  Flex, useBreakpointValue, Heading, Link, Img, Button} from "@chakra-ui/react";
+import { Box, ChakraProvider,  Flex, useBreakpointValue, Link, Img, Button} from "@chakra-ui/react";
 
 import { Menu } from "../molecules/Menu";
 
@@ -11,9 +11,9 @@ export const Header:VFC = () => {
   if(isMobile){
     return(
       <>
-      <Box w='100%'  >
+      <Box w='100%'>
       <Flex w="100%" justify="space-between" alignItems="center" py={2} px={4} zIndex={60} position="fixed" css={sBack} mt={0} >
-      <Link as="a" href="/" backgroundColor="transparent" fontSize="xl" fontWeight="bold" >
+      <Link as="a" href="/" backgroundColor="transparent" fontSize="xl" fontWeight="nomal" >
        NAO&#39;S JOURNAL
       </Link>
       <Menu />
@@ -32,7 +32,7 @@ export const Header:VFC = () => {
          <Flex align="flex-end">
          <Img src="/img/icon.png" alt="icon" width="10%" height="10%" />
 
-          <Button as="a" href="/" backgroundColor="transparent" pb={2} fontSize="xl" fontWeight="bold" >
+          <Button as="a" href="/" backgroundColor="transparent" pb={2} fontSize="xl" fontWeight="nomal" >
             NAO&#39;S JOURNAL
           </Button>
 

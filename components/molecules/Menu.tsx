@@ -3,8 +3,6 @@ import { css } from "@emotion/react";
 import { useRouter } from "next/router"
 import Link from "next/link";
 
-// import { HeaderLink } from "../atoms/HeaderLink";
-
 import { 
   Box, ChakraProvider,  Flex, useBreakpointValue, 
   useDisclosure, Stack,Drawer,DrawerOverlay,DrawerContent, 
@@ -30,10 +28,10 @@ const Navigation = () => {
       </Box>
       </Link>
 
-      <Link href="/Blog" passHref>
-      <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}>
+      <Link href="/About" passHref>
+      <Box mr={8} css={path.startsWith('/About') ? sBorderLink:''}>
       <Box css={sHover}>
-      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Blog</Text>
+      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>About</Text>
       </Box>
       </Box>
       </Link>
@@ -46,13 +44,15 @@ const Navigation = () => {
       </Box>
       </Link>
 
-      <Link href="/About" passHref>
-      <Box mr={8} css={path.startsWith('/About') ? sBorderLink:''}>
+      <Link href="/Blog" passHref>
+      <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}>
       <Box css={sHover}>
-      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>About</Text>
+      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Blog</Text>
       </Box>
       </Box>
       </Link>
+
+      
 
       <Flex pt={8}>
 
@@ -143,13 +143,14 @@ export const Menu = () => {
     </Box>
     </Link>
     
-    <Link href="/Blog" passHref>
+    <Link href="/About" passHref>
+    <Box mr={12} css={path.startsWith('/About') ? sBorder:''}>
     <Box css={sHover}>
-    <Box mr={12} css={path.startsWith('/Blog') ? sBorder:''}>
-    <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Blog</Text>
+    <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>About</Text>
     </Box>
     </Box>
     </Link>
+    
     
     <Link href="/Work" passHref>
     <Box css={sHover}>
@@ -159,10 +160,10 @@ export const Menu = () => {
     </Box>
     </Link>
 
-    <Link href="/About" passHref>
-    <Box mr={12} css={path.startsWith('/About') ? sBorder:''}>
+    <Link href="/Blog" passHref>
     <Box css={sHover}>
-    <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>About</Text>
+    <Box mr={12} css={path.startsWith('/Blog') ? sBorder:''}>
+    <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Blog</Text>
     </Box>
     </Box>
     </Link>

@@ -1,10 +1,18 @@
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, useBreakpointValue, } from '@chakra-ui/react'
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { css } from '@emotion/react';
 
 
 export const BreadcrumbList = ( props ) => {
 
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
+  if(isMobile) {
+    return (
+      <>
+      </>
+    )
+  }
   return(
     <>
     <Breadcrumb spacing='8px' separator={<ChevronRightIcon />}>

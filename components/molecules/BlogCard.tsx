@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, ChakraProvider, Image, Text } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import Link from "next/link";
 

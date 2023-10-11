@@ -1,16 +1,18 @@
-import { Box, ChakraProvider, Flex, Heading, Image } from "@chakra-ui/react";
+import { Box, ChakraProvider, Flex, Image, Text } from "@chakra-ui/react";
 import Link from "next/link";
+import { css } from "@emotion/react";
+
 
 export const LatestCard = (props) => {
 
   return(
     <>
     <ChakraProvider>
-      <Link  href={props.slug} passHref>
-      <Box border='1px solid #373737' m='auto' mb={6} borderRadius={8} cursor='pointer' _hover={{opacity:'0.7'}} >
-        <Flex px={4} py={4} >
-          <Image src={'https:' + props.url} borderRadius={4} w="120px" h="80px" fit="cover" alt="Blog thubmnail" />
-          <Heading size='sm' ml={2}>{props.title}</Heading>
+    <Link  href={props.slug} passHref>
+      <Box backgroundColor="#ffffff" m='auto' mb={6} borderRadius={8} cursor='pointer' overflow="hidden" css={sCard} >
+        <Flex w="full">
+          <Image src={'https:' + props.url} w="160px" h="120px" fit="cover" alt="Blog thubmnail" />
+          <Text fontSize="16px" fontWeight="bold" w="full"  p={3}>{props.title}</Text>
         </Flex>
       </Box>
       </Link>
@@ -19,4 +21,12 @@ export const LatestCard = (props) => {
   )
 }
 
+const sCard = css`
+box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.08);
 
+:hover {
+  transition: 0.5s;
+  box-shadow: none;
+  opacity:0.7;
+}
+`

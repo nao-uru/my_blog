@@ -4,7 +4,7 @@ import {ChevronUpIcon} from "@chakra-ui/icons"
 import { css } from "@emotion/react";
 
 
-export const BackTop:VFC = () => {
+export const BackTop = () => {
 
   const returnTop = () => {
     window.scrollTo({
@@ -42,7 +42,7 @@ const sBack = css`
  
  :hover {
    color:  linear-gradient(180deg, #EEF0F5 0%, #E6E9EF 100%);
-   background: #0da970;
+   background: #25D088;
    filter:none;
  }
 `
