@@ -8,7 +8,6 @@ import Link from "next/link";
 import { HeadSetting } from "../components/organisms/Head";
 import { ButtonPrime } from "../components/atoms/button/ButtonPrime";
 import { LatestCard } from "../components/molecules/LatestCard";
-import { Title } from "../components/atoms/Title";
 import { LayoutWide } from "../components/organisms/LayoutWide";
 import { ButtonSecond } from "../components/atoms/button/ButtonSecond";
 import { BreadcrumbList } from "../components/atoms/Breadcrumb";
@@ -84,7 +83,7 @@ export default function PostPage({blogPost, allPosts }) {
     <Flex flexDirection={{base:"column", lg:"row"}}>
 
     <Box m="auto" w="100%" mr={6}>
-     <Title>{blogPost.fields.title}</Title>
+     <Text>{blogPost.fields.title}</Text>
      <Flex mt={6} justify="start" align="baseline">
      <Text mt={6} mr={6}>Date:{`${year}.${month}.${day}`}</Text>
      {tags.map((tagEl) => {
