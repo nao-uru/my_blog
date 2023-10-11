@@ -1,4 +1,4 @@
-import { Grid , Text } from "@chakra-ui/react";
+import { Grid , Text, Box } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
 import dynamic from 'next/dynamic';
 
@@ -44,7 +44,9 @@ export default function  BlogPage ({ blogPosts }) {
      tree2Link={''}
      />
      
-     <Text fontSize={{base:"24px",md:"40px"}} mt={{base:8,md:24}} lineHeight="none">Blog</Text>
+     <Box  mt={{base:4, md:6}}>
+    <Text fontSize={{base:"40px",md:"64px"}} lineHeight="none">Blog</Text>
+    </Box>
 
     {/* <Flex>
       <TabLink url="/Blog">All</TabLink>

@@ -1,15 +1,14 @@
-import { Box, Flex, Heading, Img, Text, } from "@chakra-ui/react";
+import { Box, Flex, Heading, Img, Text, Image } from "@chakra-ui/react";
 import { FaLine, FaTwitter } from "react-icons/fa";
 import { css } from "@emotion/react";
 import { getAllPosts, client } from "../libs/contentful";
 import { md } from '../libs/markdown';
+import Link from "next/link";
 
 import { HeadSetting } from "../components/organisms/Head";
 import { ButtonPrime } from "../components/atoms/button/ButtonPrime";
 import { LatestCard } from "../components/molecules/LatestCard";
-import { Title } from "../components/atoms/Title";
 import { LayoutWide } from "../components/organisms/LayoutWide";
-import { Profile } from "../components/molecules/Profile";
 import { ButtonSecond } from "../components/atoms/button/ButtonSecond";
 import { BreadcrumbList } from "../components/atoms/Breadcrumb";
 
@@ -30,8 +29,6 @@ export const getStaticPaths = async () => {
     fallback:false
   }
 }
-
-
 
 // データ取得（記事一覧と記事個別の内容）
 export async function getStaticProps({ params }) {
@@ -85,8 +82,8 @@ export default function PostPage({blogPost, allPosts }) {
 
     <Flex flexDirection={{base:"column", lg:"row"}}>
 
-    <Box m="auto" w="100%" mr={12}>
-     <Title>{blogPost.fields.title}</Title>
+    <Box m="auto" w="100%" mr={6}>
+     <Text>{blogPost.fields.title}</Text>
      <Flex mt={6} justify="start" align="baseline">
      <Text mt={6} mr={6}>Date:{`${year}.${month}.${day}`}</Text>
      {tags.map((tagEl) => {
@@ -126,8 +123,31 @@ export default function PostPage({blogPost, allPosts }) {
     </Box>
 
     {/* Aside  */}
-    <Box m='auto' mt={{base:24,lg:"160px"}} w={{base:'100%',md:"35%"}} >
-    <Profile />
+    <Box m='auto' mt={{base:24,lg:"160px"}} w={{base:'100%',md:"40%"}} >
+
+    {/* Profile */}
+    <Box borderTop="1px solid #373737" width="100%">
+    <Heading size="md" mt={8} mb={12}>著者プロフィール</Heading>
+    <Flex justify="" my={6}>
+      <Link href='/About' passHref>
+      <Image src="/img/icon-circle.png" alt="icon" width="100px" height="100px" mr={4} cursor='pointer' _hover={{opacity:'0.7'}} />
+      </Link>
+      <Box>
+        <Heading size="lg">NAO</Heading>
+        <Heading size="sm" mt={2}>デザイナー</Heading>
+        <Heading size="sm">コードも書く</Heading>
+      </Box>
+    </Flex>
+    <Text size="md" mt={0}>アプリデザイナー<br />インハウス正社員×制作会社で副業中！<br />  
+     コードも書いてます!(Next,React...)
+    </Text>
+    <ButtonSecond 
+     href="/About"
+     color="#0da970"
+    >About Me</ButtonSecond>
+    </Box>
+
+    {/* Posts */}
     <Box borderTop="1px solid #373737" mt={24}>
     <Heading size="md" mt={8} mb={12}>最新の投稿</Heading>
       {allPosts.map((shinglePost) => {
@@ -158,11 +178,11 @@ const sBack = css`
   border-right: 1px #e7e7e7 solid;
 `
 const sBorder = css`
- border-top: 1px #222222 solid;
+ border-top: 1px #1C1E25 solid;
 `
 const sTag = css`
  margin: 0 10px 0 0;
  padding: 5px 10px;
  border-radius: 8px;
- border: 1px #222222 solid;
+ border: 1px #1C1E25 solid;
 `
