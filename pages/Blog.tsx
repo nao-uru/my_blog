@@ -48,13 +48,6 @@ export default function  BlogPage ({ blogPosts }) {
     <Text fontSize={{base:"40px",md:"64px"}} lineHeight="none">Blog</Text>
     </Box>
 
-    {/* <Flex>
-      <TabLink url="/Blog">All</TabLink>
-      <TabLink >Design</TabLink>
-      <TabLink url="/tagpages/Book">Book</TabLink>
-      <TabLink>Life</TabLink>
-    </Flex> */}
-
       <Grid mt={8} templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={8} >
       {blogPosts.map((blogPost:any) => {
 
@@ -64,18 +57,12 @@ export default function  BlogPage ({ blogPosts }) {
       const month = smonth +1;
       const day = new Date(date).getDate();
 
-      // const tags = blogPost.fields.tags;
-      // const tag = tags.map((tag) => {
-      //   return tag;
-      // })
-
       return <BlogCard 
       key={blogPost.sys.id} 
       title={blogPost.fields.title}
       url={blogPost.fields.media.fields.file.url}
       slug={blogPost.fields.slug}
-      date ={`${year}.${month}.${day}`}
-      // tag={tag}
+      date ={`${year}/${month}/${day}`}
       />
       })} 
       </Grid>

@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import { ChakraProvider, useBreakpointValue, Box, Flex, Text, } from "@chakra-ui/react";
+import { ChakraProvider, useBreakpointValue, Box, Flex, Text, Icon, } from "@chakra-ui/react";
 import Link from "next/link";
 import { css } from "@emotion/react";
 
@@ -14,7 +14,13 @@ export const ButtonPrime = ( props ) => {
       
        <Link href={props.href}  passHref legacyBehavior>
          <a target={props.target}>
-         <Flex css={sHover} backgroundColor={props.bgColor} color={props.color} borderRadius='full' px={6} py={3} mr={4} align="center" cursor="pointer" border={props.border}  w="fit-content">
+         <Flex css={sHover} alignItems="center" justifyContent="center" cursor="pointer" borderRadius='full' 
+         backgroundColor={props.bgColor} 
+         color={props.color} 
+         width={props.wide}
+         px={6} py={3} mr={4}  
+         border={`1px solid ${props.border}`}
+         >
          <Text>{props.children}</Text>
          <Box>{props.icon}</Box>
          </Flex>

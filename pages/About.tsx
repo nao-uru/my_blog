@@ -1,8 +1,8 @@
 import { Layout } from "../components/organisms/Layout"
 import { HeadSetting } from "../components/organisms/Head";
 import { BreadcrumbList } from "../components/atoms/Breadcrumb";
-import { ChakraProvider, Box,Text, Flex, Image, Stack } from "@chakra-ui/react";
-import { TableContent } from "../components/molecules/TableContents";
+import Link from "next/link";
+import { ChakraProvider, Box,Text, Flex, Image, Stack, Table, Tbody, Td, Tr } from "@chakra-ui/react";
 
 export default function AboutPage() {
 
@@ -31,13 +31,42 @@ export default function AboutPage() {
     {/* 自己紹介 */}
     <Stack lineHeight="180%" w={{base:"100%", md:"100%"}} ml="auto" m={{base:"auto"}}  mt={{base:6,md:8}}
       borderTop="1px solid #373737" width="100%">
-    <Text as="h3" size="md" mt={4}>Profile</Text>
+    <Text  fontWeight="bold" fontSize={{base:"24px",md:"32px"}} size="2xl" my={4} >Profile</Text>
     {/* <Text mt={0} w={{base:"100%",md:"100%"}} mr="auto">自己紹介</Text> */}
     </Stack>
 
     <Flex direction={{base:"column",md:"row"}} alignItems="center" justifyContent="space-around">
      <Image src="/img/icon.png" w={36} h={36} mr={4} alt="Main Image" /> 
-     <TableContent />
+     <Table w={{base:"100%", md:"80%"}} mr="auto" mt={4}>
+        <Tbody>
+          <Tr>
+          <Td fontSize="md" fontWeight="bold">Name</Td>
+          <Td fontSize="md">NAO OSAWA</Td>
+          </Tr>
+
+          <Tr>
+          <Td fontSize="md" fontWeight="bold">Age</Td>
+          <Td fontSize="md">27</Td>
+          </Tr>
+
+          <Tr>
+          <Td fontSize="md" fontWeight="bold">Work</Td>
+          <Td fontSize="md">デザイナー、コーダー</Td>
+          </Tr>
+
+          <Tr>
+          <Td fontSize="md" fontWeight="bold">Hobby</Td>
+          <Td fontSize="md">旅行、映画、漫画</Td>
+          </Tr>
+          <Tr>
+          <Td fontSize="md" fontWeight="bold">E-Mail</Td>
+          <Td fontSize="sm" _hover={{color:"#6BA791"}}>
+            <Link href="mailto:nao.uru0419@gmail.com">nao.uru0419@gmail.com</Link>
+            </Td>
+          </Tr>
+
+        </Tbody>
+      </Table>
     </Flex>
 
     <Stack lineHeight="180%" w={{base:"90%", md:"100%"}} ml="auto" m={{base:"auto"}}  mt={{base:6,md:8}}
