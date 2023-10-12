@@ -1,6 +1,6 @@
 
 const brand = {
-    "Primary": "#0da970",
+    "Primary": "#25D088",
     "100": "#11a8ff",
     "200": "#daf8a5",
     "300": "#baeC75",
