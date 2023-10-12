@@ -6,10 +6,9 @@ import { md } from '../libs/markdown';
 import Link from "next/link";
 
 import { HeadSetting } from "../components/organisms/Head";
-import { ButtonPrime } from "../components/atoms/button/ButtonPrime";
+import { ButtonPrime } from "../components/atoms/ButtonPrimary";
 import { LatestCard } from "../components/molecules/LatestCard";
 import { LayoutWide } from "../components/organisms/LayoutWide";
-import { ButtonSecond } from "../components/atoms/button/ButtonSecond";
 import { BreadcrumbList } from "../components/atoms/Breadcrumb";
 
 // パスの生成
@@ -80,12 +79,12 @@ export default function PostPage({blogPost, allPosts }) {
      tree2Link={'<https://www.naosjournal.com/>' + blogPost.fields.slug}
      />
 
-    <Flex flexDirection={{base:"column", lg:"row"}}>
+    <Flex  flexDirection={{base:"column", lg:"row"}}>
 
-    <Box m="auto" w="100%" mr={6}>
-     <Text>{blogPost.fields.title}</Text>
-     <Flex mt={6} justify="start" align="baseline">
-     <Text mt={6} mr={6}>Date:{`${year}.${month}.${day}`}</Text>
+    <Box m="auto" w="100%" mr={8}>
+     <Text mt={{base:6,md:12}} fontSize={{base:"24px",md:"32px"}} fontWeight="bold">{blogPost.fields.title}</Text>
+     <Flex mt={{base:0,md:0}}  justify="start" align="baseline">
+     <Text mt={{base:0,md:4}} mr={2}>Date: {`${year}/${month}/${day}`}</Text>
      {tags.map((tagEl) => {
        return <Text css={sTag} key={tagEl.length}>{tagEl}</Text>;
        })}
@@ -98,21 +97,22 @@ export default function PostPage({blogPost, allPosts }) {
 
      {/* 共有ボタン */}
      <Flex flexDirection="column" align="center" mt={24} css={sBorder} >
-       <Heading fontSize={24} pt={12}>Share</Heading>
+       <Text fontSize={24} fontWeight="bold" pt={12}>Share</Text>
 
        <Flex mt={8} flexDirection={{base:"column", md:"row"}} align="center">
       <ButtonPrime 
        href={`https://twitter.com/share?url=https://www.naosjournal.com/${blogPost.fields.slug}&text=sample&hashtags=sample`} 
        icon={<FaTwitter size={28} color="#53a1e1" />}
        color="#53a1e1"
-       border="2px #53a1e1 solid" >Twitterでシェア</ButtonPrime>
+       border="#53a1e1"
+       >Twitterでシェア</ButtonPrime>
       
       <Box mt={{base:4,md:0}}>
       <ButtonPrime       
        href={`https://social-plugins.line.me/lineit/share?url=https://www.naosjournal.com/${blogPost.fields.slug}`} 
-       icon={<FaLine size={28} color="#0da970" />}
-       color="#0da970"
-       border="2px #0da970 solid">LINEで送る</ButtonPrime>
+       icon={<FaLine size={28} color="#25D088" />}
+       color="#25D088"
+       border="#25D088">LINEで送る</ButtonPrime>
       </Box>
 
       </Flex>
@@ -123,12 +123,12 @@ export default function PostPage({blogPost, allPosts }) {
     </Box>
 
     {/* Aside  */}
-    <Box m='auto' mt={{base:24,lg:"160px"}} w={{base:'100%',md:"40%"}} >
+    <Box m='auto' mt={{base:24,lg:"120px"}} w={{base:'100%',md:"40%"}} >
 
     {/* Profile */}
-    <Box borderTop="1px solid #373737" width="100%">
-    <Heading size="md" mt={8} mb={12}>著者プロフィール</Heading>
-    <Flex justify="" my={6}>
+    <Box  width="100%">
+    {/* <Text fontWeight="bold" size="2xl" my={6} >著者プロフィール</Text> */}
+    <Flex my={6}>
       <Link href='/About' passHref>
       <Image src="/img/icon-circle.png" alt="icon" width="100px" height="100px" mr={4} cursor='pointer' _hover={{opacity:'0.7'}} />
       </Link>
@@ -138,18 +138,16 @@ export default function PostPage({blogPost, allPosts }) {
         <Heading size="sm">コードも書く</Heading>
       </Box>
     </Flex>
-    <Text size="md" mt={0}>アプリデザイナー<br />インハウス正社員×制作会社で副業中！<br />  
+    <Text size="md" mb={2}>アプリデザイナー<br />インハウス正社員×制作会社で副業中！<br />  
      コードも書いてます!(Next,React...)
     </Text>
-    <ButtonSecond 
-     href="/About"
-     color="#0da970"
-    >About Me</ButtonSecond>
+    <ButtonPrime href="/About" bgColor="#25D088"  wide="full" target="" color="#ffffff" icon={''}>About Me</ButtonPrime>
     </Box>
 
+
     {/* Posts */}
-    <Box borderTop="1px solid #373737" mt={24}>
-    <Heading size="md" mt={8} mb={12}>最新の投稿</Heading>
+    <Box borderTop="1px solid #C6CEDA" mt={12}>
+    <Text fontWeight="bold" size="2xl" my={6} >最新の投稿</Text>
       {allPosts.map((shinglePost) => {
       return <LatestCard
       key={shinglePost.sys.id} 
@@ -158,7 +156,7 @@ export default function PostPage({blogPost, allPosts }) {
       slug={shinglePost.fields.slug}
       />
     }).slice(0,4)} 
-    <ButtonSecond href="/Blog" color="#0da970">All Posts</ButtonSecond>
+    <ButtonPrime href="/Blog" bgColor="#25D088"  wide="full" target="" color="#ffffff" icon={''}>All Posts</ButtonPrime>
     </Box>
     </Box>
 
@@ -182,7 +180,8 @@ const sBorder = css`
 `
 const sTag = css`
  margin: 0 10px 0 0;
- padding: 5px 10px;
+ padding: 2px 8px;
  border-radius: 8px;
- border: 1px #1C1E25 solid;
+ border: 1px solid #25D088;
+ color: #25D088;
 `

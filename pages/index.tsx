@@ -3,7 +3,7 @@ import { LayoutWide } from "../components/organisms/LayoutWide";
 
 import { ChakraProvider,Text, Box, Flex, Image, } from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import { ButtonPrime } from "../components/atoms/button/ButtonPrime";
+import { ButtonPrime } from "../components/atoms/ButtonPrimary";
 import { WorkCard } from "../components/molecules/WorksCard";
 import { getAllPosts, client } from "../libs/contentful";
 import { LatestCard } from "../components/molecules/LatestCard";
@@ -22,12 +22,17 @@ export async function getStaticProps({ params }) {
   }
 }
 
-const imgs = ["img_1.png", "img_2.png", "img_3.png","img_4.png"];
-const num = -1;
-
-
 
 export default function Home({allPosts }) {
+
+  // const imgs = ["img_1.png", "img_2.png", "img_3.png","img_4.png"];
+  // let num = -1;
+  // slideShow();
+  
+  // function slideShow() {
+  //   if(num = imgs.length) num = 0 ;
+  //   setTimeout("slideShow()",4000) 
+  // }
 
   return (
     <>
@@ -40,14 +45,16 @@ export default function Home({allPosts }) {
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 
-     <LayoutWide>
       
+     <LayoutWide>
 
       {/* トップ */}
-      <Box  overflow="hidden" position="relative">
-      <Image src={`/img/${imgs[1]}`} borderRadius={4} alt="Main Image" w="full" maxH='80vh' minH="70vh"  />
+      <Box css={sFull}>
+      <Box  overflow="hidden" position="relative" width="90%" m='auto'>
+      <Image src={`/img/img_1.png`} borderRadius={4} alt="Main Image" w="full" maxH='80vh' minH="70vh"  />
       <Text position="absolute" right={{base:"-2",md:"24"}} top={{base:"75%",md:"400"}} fontSize={{base:"68px",md:"120px"}} fontWeight="nomal" zIndex={100} lineHeight={{base:"60px",md:'120px'}} >OSAWA<br />NAO</Text>
       <Image src={'/svg/main.svg'} position="absolute" right={{base:"-20%",md:"-12%"}} top={{base:"25%",md:"6%"}} w={{base:'600px',md:'1000px'}} h={{base:"500px",md:'800px'}} opacity="0.6" alt="Main Image"  />
+      </Box>
       </Box>
 
       {/* メイン */}
@@ -58,7 +65,7 @@ export default function Home({allPosts }) {
       <Text size="md" lineHeight="7" mt={2} >
       サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
       </Text>
-      <ButtonPrime href="/About" bgColor="#25D088" target="" color="#ffffff" icon={''}>READ MORE</ButtonPrime>
+      <ButtonPrime href="/About" bgColor="#25D088" target=""  wide="fit-content" color="#ffffff" icon={''}>READ MORE</ButtonPrime>
       </Flex>
 
       <Box css={sFull} backgroundColor="#ffffff">
@@ -72,7 +79,7 @@ export default function Home({allPosts }) {
         <WorkCard link={'/Work'} title={"IDEAL ME"} text={"2023/10 自主制作"} img={'/img/ideallMe.png'} />
         <WorkCard link={'/Work'} title={"IDEAL ME"} text={"2022/9~ 制作実績"} img={'/img/portfolio.png'} />
       </Flex>
-      <ButtonPrime href="/Work" bgColor="#25D088" target="" color="#ffffff" icon={''}>READ MORE</ButtonPrime>
+      <ButtonPrime href="/Work" bgColor="#25D088" target="" color="#ffffff" wide="fit-content" icon={''}>READ MORE</ButtonPrime>
       </Flex>
       </Box>
       </Box>
@@ -98,7 +105,7 @@ export default function Home({allPosts }) {
 
 
 
-      <ButtonPrime href="/Blog" bgColor="#25D088" target="" color="#ffffff" icon={''}>READ MORE</ButtonPrime>
+      <ButtonPrime href="/Blog" bgColor="#25D088" target="" color="#ffffff"  wide="fit-content" icon={''}>READ MORE</ButtonPrime>
       </Flex>
 
       </Flex>

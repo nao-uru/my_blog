@@ -1,10 +1,9 @@
-import React, { VFC } from "react";
 import { css } from "@emotion/react";
 import { Box, ChakraProvider,  Flex, useBreakpointValue, Link, Img, Button} from "@chakra-ui/react";
 
 import { Menu } from "../molecules/Menu";
 
-export const Header:VFC = () => {
+export const Header = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
 
@@ -12,7 +11,7 @@ export const Header:VFC = () => {
     return(
       <>
       <Box w='100%'>
-      <Flex w="100%" justify="space-between" alignItems="center" py={2} px={4} zIndex={60} position="fixed" css={sBack} mt={0} >
+      <Flex w="100%" justify="space-between" alignItems="center" py={2} px={3} zIndex={60} position="fixed" css={sBack} mt={0} >
       <Link as="a" href="/" backgroundColor="transparent" fontSize="xl" fontWeight="nomal" >
        NAO&#39;S JOURNAL
       </Link>
