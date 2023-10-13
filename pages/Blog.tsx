@@ -2,10 +2,10 @@ import { Grid , Text, Box } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
 import dynamic from 'next/dynamic';
 
-import { Layout } from "../components/organisms/Layout";
-import { BlogCard } from "../components/molecules/BlogCard"
-import { HeadSetting } from "../components/organisms/Head";
-import { BreadcrumbList } from "../components/atoms/Breadcrumb";
+import { Layout } from "../components/Templete/Layout";
+import { BlogCard } from "../components/Cards/BlogCard"
+import { HeadSetting } from "../components/Templete/Head";
+import { BreadcrumbList } from "../components/Parts/Breadcrumb";
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
@@ -19,7 +19,7 @@ export async function getStaticProps() {
 export default function  BlogPage ({ blogPosts }) {
 
   const ScrollRevealContainer = dynamic(
-    import('../components/organisms/Scroll'),
+    import('../components/Templete/Scroll'),
     {ssr: false,}
   );
 
@@ -48,7 +48,7 @@ export default function  BlogPage ({ blogPosts }) {
     <Text fontSize={{base:"40px",md:"64px"}} lineHeight="none">Blog</Text>
     </Box>
 
-      <Grid mt={8} templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={8} >
+      <Grid mt={4} templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={8} >
       {blogPosts.map((blogPost:any) => {
 
       const date = blogPost.fields.date;

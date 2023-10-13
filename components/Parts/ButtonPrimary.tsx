@@ -1,6 +1,5 @@
-'use client'
 import React from "react";
-import { ChakraProvider, useBreakpointValue, Box, Flex, Text, Icon, } from "@chakra-ui/react";
+import { ChakraProvider, useBreakpointValue, Box, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { css } from "@emotion/react";
 

@@ -23,31 +23,31 @@ const Navigation = () => {
       <Link href="/" passHref>
       <Box mr={8} css={path.endsWith('/') ? sBorderLink:''}>
       <Box css={sHover}>
-      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Home</Text>
+      <Text fontSize={20} pt="4px" h="100%" fontWeight="bold" css={sHover}>Home</Text>
       </Box>
       </Box>
       </Link>
 
       <Link href="/About" passHref>
-      <Box mr={8} css={path.startsWith('/About') ? sBorderLink:''}>
+      <Box mr={8} css={path.startsWith('/About') ? sBorderLink:''}  mt={2}>
       <Box css={sHover}>
-      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>About</Text>
+      <Text fontSize={20} pt="4px" h="100%" fontWeight="bold" css={sHover}>About</Text>
       </Box>
       </Box>
       </Link>
 
       <Link href="/Work" passHref>
-      <Box mr={8} css={path.startsWith('/Work') ? sBorderLink :''}>
+      <Box mr={8} css={path.startsWith('/Work') ? sBorderLink :''}  mt={2}>
       <Box css={sHover}>
-      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Work</Text>
+      <Text fontSize={20} pt="4px" h="100%" fontWeight="bold" css={sHover}>Work</Text>
       </Box>
       </Box>
       </Link>
 
       <Link href="/Blog" passHref>
-      <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}>
+      <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}  mt={2}>
       <Box css={sHover}>
-      <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Blog</Text>
+      <Text fontSize={20} pt="4px" h="100%" fontWeight="bold" css={sHover}>Blog</Text>
       </Box>
       </Box>
       </Link>
@@ -72,13 +72,13 @@ const Navigation = () => {
       </Link>
       </Box>
   
-      <Box css={sLink} mr={8}>
+      {/* <Box css={sLink} mr={8}>
       <Link href="https://www.youtube.com/channel/UCnBdJFjL13ySAZ0wLf7TrFg" passHref legacyBehavior>
       <a target="_blank">
       <AiOutlineYoutube size={40} />
       </a>
       </Link>
-      </Box>
+      </Box> */}
 
       </Flex>
 
@@ -106,7 +106,7 @@ export const Menu = () => {
       <Drawer
         isOpen={isOpen}
         onClose={onClose}
-        placement="left"
+        placement="right"
         finalFocusRef={btnRef}
       >
         <DrawerOverlay>
@@ -184,13 +184,13 @@ export const Menu = () => {
     </Link>
     </Box>
 
-    <Box css={sLink}>
+    {/* <Box css={sLink}>
     <Link href="https://www.youtube.com/channel/UCnBdJFjL13ySAZ0wLf7TrFg" passHref legacyBehavior>
     <a target="_blank">
     <AiOutlineYoutube size={28} />
     </a>
     </Link>
-    </Box>
+    </Box> */}
 
 
 
@@ -204,11 +204,11 @@ export const Menu = () => {
 
 
 const sBorder = css`
- border-top: 2px solid #0da970;
+ border-top: 2px solid #25D088;
 `
 
 const sBorderLink = css`
- border-bottom: 2px solid #0da970;
+ border-bottom: 2px solid #25D088;
  padding-bottom: 8px;
 `
 const sMainTitle = css`
@@ -220,7 +220,7 @@ cursor: pointer;
 `
 const sLink = css`
   :hover {
-    color: #0da970;
+    color: #25D088;
   }
 `
 

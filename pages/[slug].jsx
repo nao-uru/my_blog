@@ -5,11 +5,11 @@ import { getAllPosts, client } from "../libs/contentful";
 import { md } from '../libs/markdown';
 import Link from "next/link";
 
-import { HeadSetting } from "../components/organisms/Head";
-import { ButtonPrime } from "../components/atoms/ButtonPrimary";
-import { LatestCard } from "../components/molecules/LatestCard";
-import { LayoutWide } from "../components/organisms/LayoutWide";
-import { BreadcrumbList } from "../components/atoms/Breadcrumb";
+import { HeadSetting } from "../components/Templete/Head";
+import { ButtonPrime } from "../components/Parts/ButtonPrimary";
+import { BlogCardSmall } from "../components/Cards/BlogCardSmall";
+import { LayoutWide } from "../components/Templete/LayoutWide";
+import { BreadcrumbList } from "../components/Parts/Breadcrumb";
 
 // パスの生成
 export const getStaticPaths = async () => {
@@ -91,12 +91,12 @@ export default function PostPage({blogPost, allPosts }) {
      </Flex>
      <Img src={image} mt={2} w="full" h={{base:"200px",md:"400px"}} objectFit="cover" />
 
-     <Box css={sBack} pt={6} pb={24} lineHeight="180%">
+     <Box css={sBack} pt={{base:2, md:6}} pb={{base:4, md:16}} lineHeight="180%">
      <Box w={{base:"95%",md:"90%"}} m="auto" dangerouslySetInnerHTML={{__html:md.render(blogPost.fields.text)}} />
      </Box>
 
      {/* 共有ボタン */}
-     <Flex flexDirection="column" align="center" mt={24} css={sBorder} >
+     <Flex flexDirection="column" align="center" mt={{base:0, md:8}}>
        <Text fontSize={24} fontWeight="bold" pt={12}>Share</Text>
 
        <Flex mt={8} flexDirection={{base:"column", md:"row"}} align="center">
@@ -127,7 +127,6 @@ export default function PostPage({blogPost, allPosts }) {
 
     {/* Profile */}
     <Box  width="100%">
-    {/* <Text fontWeight="bold" size="2xl" my={6} >著者プロフィール</Text> */}
     <Flex my={6}>
       <Link href='/About' passHref>
       <Image src="/img/icon-circle.png" alt="icon" width="100px" height="100px" mr={4} cursor='pointer' _hover={{opacity:'0.7'}} />
@@ -149,7 +148,7 @@ export default function PostPage({blogPost, allPosts }) {
     <Box borderTop="1px solid #C6CEDA" mt={12}>
     <Text fontWeight="bold" size="2xl" my={6} >最新の投稿</Text>
       {allPosts.map((shinglePost) => {
-      return <LatestCard
+      return <BlogCardSmall
       key={shinglePost.sys.id} 
       title={shinglePost.fields.title}
       url={shinglePost.fields.media.fields.file.url}
@@ -175,9 +174,7 @@ const sBack = css`
   border-left: 1px #e7e7e7 solid;
   border-right: 1px #e7e7e7 solid;
 `
-const sBorder = css`
- border-top: 1px #1C1E25 solid;
-`
+
 const sTag = css`
  margin: 0 10px 0 0;
  padding: 2px 8px;

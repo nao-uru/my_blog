@@ -1,8 +1,9 @@
-import { Layout } from "../components/organisms/Layout"
-import { HeadSetting } from "../components/organisms/Head";
-import { BreadcrumbList } from "../components/atoms/Breadcrumb";
+import { Layout } from "../components/Templete/Layout"
+import { HeadSetting } from "../components/Templete/Head";
+import { BreadcrumbList } from "../components/Parts/Breadcrumb";
 import Link from "next/link";
-import { ChakraProvider, Box,Text, Flex, Image, Stack, Table, Tbody, Td, Tr } from "@chakra-ui/react";
+import { ChakraProvider, Box,Text, Flex, Image, Stack, Table, Tbody, Td, Tr, Grid } from "@chakra-ui/react";
+import { SkillCard } from "../components/Cards/SkillCard";
 
 export default function AboutPage() {
 
@@ -27,14 +28,7 @@ export default function AboutPage() {
     <Text fontSize={{base:"40px",md:"64px"}} lineHeight="none">About</Text>
     </Box>
 
-    <Box >
-    {/* 自己紹介 */}
-    <Stack lineHeight="180%" w={{base:"100%", md:"100%"}} ml="auto" m={{base:"auto"}}  mt={{base:6,md:8}}
-      borderTop="1px solid #373737" width="100%">
-    <Text  fontWeight="bold" fontSize={{base:"24px",md:"32px"}} size="2xl" my={4} >Profile</Text>
-    {/* <Text mt={0} w={{base:"100%",md:"100%"}} mr="auto">自己紹介</Text> */}
-    </Stack>
-
+    <Box mt={4}>
     <Flex direction={{base:"column",md:"row"}} alignItems="center" justifyContent="space-around">
      <Image src="/img/icon.png" w={36} h={36} mr={4} alt="Main Image" /> 
      <Table w={{base:"100%", md:"80%"}} mr="auto" mt={4}>
@@ -51,7 +45,7 @@ export default function AboutPage() {
 
           <Tr>
           <Td fontSize="md" fontWeight="bold">Work</Td>
-          <Td fontSize="md">デザイナー、コーダー</Td>
+          <Td fontSize="md">UI/UXデザイナー</Td>
           </Tr>
 
           <Tr>
@@ -60,7 +54,7 @@ export default function AboutPage() {
           </Tr>
           <Tr>
           <Td fontSize="md" fontWeight="bold">E-Mail</Td>
-          <Td fontSize="sm" _hover={{color:"#6BA791"}}>
+          <Td fontSize="sm" _hover={{color:"#25D088"}}>
             <Link href="mailto:nao.uru0419@gmail.com">nao.uru0419@gmail.com</Link>
             </Td>
           </Tr>
@@ -69,9 +63,8 @@ export default function AboutPage() {
       </Table>
     </Flex>
 
-    <Stack lineHeight="180%" w={{base:"90%", md:"100%"}} ml="auto" m={{base:"auto"}}  mt={{base:6,md:8}}
-      borderTop="1px solid #373737" width="100%">
-    <Text as="h3" size="md" mt={4}>Career</Text>
+    <Stack lineHeight="180%" w={{base:"90%", md:"100%"}} ml="auto" m={{base:"auto"}}  mt={{base:6,md:8}} width="100%">
+    <Text fontSize={24} fontWeight="bold" mt={6}>Career</Text>
     <Text mt={0} w={{base:"100%",md:"100%"}} mr="auto">
         法学部に在学中、就職に失敗し、ヨーロッパをバックパック。
         その後フリーターをしていました。
@@ -83,23 +76,54 @@ export default function AboutPage() {
     </Stack>
 
     <Stack lineHeight="180%" w={{base:"90%", md:"100%"}} ml="auto" m={{base:"auto"}}  mt={{base:6,md:8}}
-      borderTop="1px solid #373737" width="100%">
-    <Text as="h3" size="md" mt={4}>Work</Text>
+      borderTop="1px solid #C6CEDA" width="100%">
+    <Text fontSize={24} fontWeight="bold" mt={8}>Work</Text>
     <Text mt={0} w={{base:"100%",md:"100%"}} mr="auto">
-    会社では主にアプリ・WEBデザインをしていて、副業はアプリデザインがメインです。<br />
-        個人としてはデザインのお仕事はもちろん、Wordpressdの構築、小規模なWEBサイトのデザイン〜コーディングまでやらせていただいています！
-        どっちつかずは良くないなと思いながらも両方楽しくて常に情報をキャッチアップしています！<br />
-        このブログもデザインから自分で構築しました!（Next.js×contentful）<br />
+        会社では主にアプリ・WEBデザインをしていて、副業はアプリデザインがメインです。<br />
+        個人としてはデザインのお仕事はもちろん、Wordpressdの構築、小規模なWEBサイトのデザイン〜コーディングまでやっていました。
+        近年はデザインのお仕事に注力していて、そのキャリアを歩みたいと考えていますがプログラミングも好きなので趣味で学習しています。
+        このサイトもデザインから自分で構築しました!（Next.js×contentful）<br />
     </Text>
     </Stack>
 
     <Stack lineHeight="180%" w={{base:"90%", md:"100%"}} ml="auto" m={{base:"auto"}}  mt={{base:6,md:8}}
-      borderTop="1px solid #373737" width="100%">
-    <Text as="h3" size="md" mt={4}>Goal</Text>
+      borderTop="1px solid #C6CEDA" width="100%">
+    <Text fontSize={24} fontWeight="bold" mt={8}>Skills</Text>
+    <Text fontSize={20} mt={3}>Skill Sets</Text>
+    <Text w={{base:"100%",md:"100%"}} mr="auto">
+    基本的な使用ツールとスキルです。近年はデザインをメインで行なっているので実務でコードはほとんど書いていません。<br />
+    これらに加えNotion・Backlogを用いたタスク管理、GitHubを使ったコード管理の等経験があります。<br />
+    フルリモートの会社に属した経験もあるのでリモート下でも問題なくコミュニケーションをとることができます。
+    </Text>
+    <Grid templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={3} columnGap={3}>
+    <SkillCard src='/img/Skills/figma.png' title="figma" text="メインで使用しているツールです。オートレイアウトはもちろん、デザインシステムや管理の仕方も考えながら使用しています。" />
+    <SkillCard src='/img/Skills/sketch.png' title="Sketch" text="figmaを使う前に使用していたツールです。最近は使っていません。" />
+    <SkillCard src='/img/Skills/photoshop.png' title="Photoshop" text="仕事ではほとんど使わないため、練習やスキルアップのために学習中です。" />
+    <SkillCard src='/img/Skills/html.png' title="HTML CSS" text="特異に複雑でない限り問題なくコーディングができます。LPやHPのコーディング経験があります。" />
+    <SkillCard src='/img/Skills/js.png' title="JavaScript" text="実務で使ったことはあまりありません。複雑なコードを書くことは難しいですが、たいていの動きは調べながら作成できます。" />
+    <SkillCard src='/img/Skills/react.png' title="React" text="実務経験はありません。完全に独学で勉強をしています。記事や動画を調べて四苦八苦しています。このサイトもReat(Next.js)で構築しました。" />
+    </Grid>
+    <Flex mt={8} direction={{base:"column",md:"row"}}>
+    <Box w={{base:"100%",md:"50%"}}>
+    <Text fontSize={20} mt={3}>Skill Maps</Text>
+    <Text w={{base:"100%",md:"100%"}} mr="auto">
+    アプリのUI/UXデザインが一番得意で好きです。また、コンポーネントの管理方法やデザインのシステム化に興味があり、日頃から情報をキャッチアップしています。
+    最近参考にしているのは「デザイン庁 デザインシステム」と「iOS17(Apple Design Resources)」です。<br />
+    アプリケーションのデザインには、状態変化や画面遷移などグラフィックやWEBデザインとは少し違う部分があります。そこに関してプログラミングの経験を活かし、エンジニアさんと協力して取り組むとこができます。<br />
+
+    </Text>
+    </Box>
+    <Image p={4} className="image" src="/img/Skills/chart.png" w={{base:"100%",md:"50%"}} alt="Skill maps" />
+    </Flex>
+    </Stack>
+
+    <Stack lineHeight="180%" w={{base:"90%", md:"100%"}} ml="auto" m={{base:"auto"}}  mt={{base:6,md:8}}
+      borderTop="1px solid #C6CEDA" width="100%">
+    <Text fontSize={24} fontWeight="bold" mt={8}>Goal</Text>
     <Text mt={0} w={{base:"100%",md:"100%"}} mr="auto">
-      これからの目標は、趣味としてプログラミンやコーディングを勉強しつつ、デザインはプロとしてのクオリティを追求することです。<br />
-       UI/UXを極めるために心理学や行動経済学も勉強したいなと思っています!<br />
-       また、ブログやSNSでの発信も頑張っていきたいのでフォローしていただけると嬉しいです😊
+      将来的にはマネジメントや、ディレクションの業務に携わりたいと思っています。しかし、まだまだ手を動かしてデザインに携わりたいという気持ちが強いです。
+      最近は新人さんを教えながらリーダーとしての立場でデザイン制作に取り組んでいて、教えることが自分の成長にもつながっていると実感しています。<br />
+      進行係としてのマネジメントではなく、しっかりとデザイナーとしての実績を積み、経験を活かしたマネージャーやリーダーがになることが理想です。
     </Text>
     </Stack>
 

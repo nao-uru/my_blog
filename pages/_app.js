@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import React from 'react';
-import { HeadSetting } from '../components/organisms/Head';
+import { HeadSetting } from '../components/Templete/Head';
 import { AnimatePresence } from 'framer-motion';
 
 function MyApp({ Component, pageProps, router }) {

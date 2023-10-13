@@ -26,16 +26,16 @@ a {
 
 
 .is-title {
-  margin: 16px 0 8px 0;
-  font-size: 20px;
+  margin: 24px 0 8px 0;
+  font-size: 22px;
   font-weight: bold;
 }
 
 .is-subtitle   {
-  margin:  16px 0 8px 0 ;
+  margin:  24px 0 8px 0 ;
   padding: 0px 4px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   border-left: 2px #25D088 solid;
 }
 
@@ -45,4 +45,11 @@ a {
   margin-top: 32px;
   margin-bottom: 32px;
   border-top: 1px  #C6CEDA solid;
+}
+
+.is-highlight {
+  font-weight: bold;
+  padding: 1px 4px;
+  background-color: #f3ff0f;
+  width: fit-content;
 }
