@@ -42,7 +42,7 @@ export default function Home({allPosts }) {
       {/* トップ */}
       <Box css={sFull}>
       <Box  overflow="hidden" position="relative" width="90%" m='auto'>
-      <Image src={`/img/img_1.png`} borderRadius={4} alt="Main Image" w="full" maxH='80vh' minH="70vh"  />
+      <Image src={`/img/Top/img_1.png`} borderRadius={4} alt="Main Image" w="full" maxH='80vh' minH="70vh"  />
       <Text position="absolute" right={{base:"-2",md:"24"}} top={{base:"75%",md:"400"}} fontSize={{base:"68px",md:"120px"}} fontWeight="nomal" zIndex={10} lineHeight={{base:"60px",md:'120px'}} >OSAWA<br />NAO</Text>
       <Image src={'/svg/main.svg'} position="absolute" right={{base:"-20%",md:"-12%"}} top={{base:"25%",md:"6%"}} w={{base:'600px',md:'1000px'}} h={{base:"500px",md:'800px'}} opacity="0.6" alt="Main Image"  />
       </Box>
