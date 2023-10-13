@@ -1,7 +1,7 @@
-import { Work } from "../components/organisms/WorkTemplete"
-import { Layout } from "../components/organisms/Layout"
-import { HeadSetting } from "../components/organisms/Head";
-import { BreadcrumbList } from "../components/atoms/Breadcrumb";
+import { Work } from "../components/Templete/WorkTemplete"
+import { Layout } from "../components/Templete/Layout"
+import { HeadSetting } from "../components/Templete/Head";
+import { BreadcrumbList } from "../components/Parts/Breadcrumb";
 
 export default function WorkPage() {
   return (

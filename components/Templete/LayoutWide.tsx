@@ -2,7 +2,7 @@ import React, { VFC } from "react";
 import { ChakraProvider,Container, } from "@chakra-ui/react";
 import { motion } from 'framer-motion';
 
-import { BackTop } from "../atoms/BackTop";
+import { BackTop } from "../Parts/BackTop";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 

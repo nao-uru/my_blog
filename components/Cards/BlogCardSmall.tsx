@@ -3,13 +3,13 @@ import Link from "next/link";
 import { css } from "@emotion/react";
 
 
-export const LatestCard = (props) => {
+export const BlogCardSmall = (props) => {
 
   return(
     <>
     <ChakraProvider>
     <Link  href={props.slug} passHref>
-      <Box backgroundColor="#ffffff" m='auto' mb={6} borderRadius={8} cursor='pointer' overflow="hidden" css={sCard} >
+      <Box backgroundColor="#ffffff" m='auto' mb={4} borderRadius={8} cursor='pointer' overflow="hidden" css={sCard} >
         <Flex w="full">
           <Image src={'https:' + props.url} w="160px" h="120px" fit="cover" alt="Blog thubmnail" />
           <Text fontSize="16px" fontWeight="bold" w="full"  p={3}>{props.title}</Text>

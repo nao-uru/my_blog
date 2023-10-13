@@ -2,7 +2,7 @@ import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Heading, Link, b
 import { css } from "@emotion/react";
 import { AiOutlineInstagram,AiOutlineTwitter, AiOutlineYoutube } from "react-icons/ai";
 
-import { Menu } from "../molecules/Menu";
+import { Menu } from "../Cards/Menu";
 
 export const Footer = () => {
 
@@ -21,7 +21,7 @@ export const Footer = () => {
       <ChakraProvider>
       <Box h="240px" w="100%" css={Border} pt="4" m='auto' mt={16}>
 
-      <Flex w="100%" m='auto' pt={8} direction="column" justifyContent="center" alignItems="center" >
+      <Flex w="100%" m='auto' pt={4} direction="column" justifyContent="center" alignItems="center" >
 
       <Link as="a" href="/" fontSize="xl" fontWeight="nomal" textAlign="center" >
           NAO&#39;S JOURNAL
@@ -58,7 +58,7 @@ export const Footer = () => {
   return (
     <>
     <ChakraProvider>
-      <Box h="240px" css={Border} pt="4" mt="52">
+      <Box h="240px" css={Border} pt={8} mt="52">
         <Box w="90%" m="auto">
           
         <Flex>
@@ -89,6 +89,6 @@ cursor: pointer;
 
 const sLink = css`
   :hover {
-    color: #0da970;
+    color: #25D088;
   }
 `
