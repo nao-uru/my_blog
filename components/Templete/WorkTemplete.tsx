@@ -24,9 +24,9 @@ export const Work = () => {
       {/* IDEAL ME */}
       <Box mt={4}  maxW={{base:"100%", md:"1000px"}}  m="auto" p={{base:4, md:6}} backgroundColor="#ffffff" rounded="2xl">
       <Text fontWeight='bold' fontSize={{base:"24px",md:"32px"}}>IDEAL ME</Text>
-      <Text fontWeight='nomal' fontSize="md" mb={4} >オリジナルのアプリをデザインしました！要件定義〜デザインまですべて一人で制作しました。デザインのフローは下記の2つの記事にまとめました。<br />
-      睡眠時間を記録すると同時に昨日を振り返ることのできるアプリです。最初に登録した理想の生活を簡単に確認することができ、自分の理想や目標を常に意識して生活することができます。<br />
-      シンプルな構造で男女ともに使いやすいアプリを目指しました。拡張もしやすいデザインになっています。現在はデザインまでですが、いつか実装してみたいです！
+      <Text fontWeight='nomal' fontSize="md" mb={4} >オリジナルのアプリをデザインしました！要件定義〜デザインまですべて一人で制作しました。デザインのフローは下記の記事に記しました。また、figmaのファイルとPDFを公開しています。<br />
+      睡眠時間を記録すると同時に昨日を振り返ることのできるアプリです。最初に登録した理想の生活をいつでも確認でき、理想や目標を常に意識して生活することができます。<br />
+      シンプルな構造で男女ともに使いやすいアプリを目指しました。拡張もしやすいデザインになっています。いつか実装してみたいです！
       </Text>
 
       <Flex direction={{base:"column", md:"row"}} justifyContent="space-between" alignItems="flex-start" mt={2} gap={{base:4, md:0}}>
@@ -34,7 +34,7 @@ export const Work = () => {
       <Image src={"/img/ideallMe.png"} rounded="xl" alt="Work thubmnail" w="400px"  fit='cover' />
       <Flex direction={{base:'column', md:"row"}} my={{base:4, md:6}} gap={{base:3, md:0}}>
         <ButtonPrime href="https://www.figma.com/file/2r3Lm085yw0U6E9iVLi7Ta/IDEAL-ME?type=design&node-id=503%3A25036&mode=design&t=XTGedAxHjyVln4np-1"wide={{base:"full", md:"fit-content"}} bgColor="#25D088" target="_blank" color="#ffffff" icon={''}>figmaファイルはこちら</ButtonPrime>
-        <ButtonPrime href="/" bgColor="#ffffff" border="#25D088" target="_blank" color="#25D088"  wide={{base:"full", md:"fit-content"}} icon={''}>PDFで見る</ButtonPrime>
+        <ButtonPrime href="https://drive.google.com/file/d/1bsB8Z7Z9nRi8DopsTeS-0xSBzJne47Du/view?usp=sharing" bgColor="#ffffff" border="#25D088" target="_blank" color="#25D088"  wide={{base:"full", md:"fit-content"}} icon={''}>PDFで見る</ButtonPrime>
       </Flex>
       </Box>
       <Box w={{base:"full", md:"60%"}}> 

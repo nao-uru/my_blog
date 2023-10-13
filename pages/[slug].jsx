@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Img, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Img, Text, Image } from "@chakra-ui/react";
 import { FaLine, FaTwitter } from "react-icons/fa";
 import { css } from "@emotion/react";
 import { getAllPosts, client } from "../libs/contentful";
@@ -127,19 +127,16 @@ export default function PostPage({blogPost, allPosts }) {
 
     {/* Profile */}
     <Box  width="100%">
-    <Flex my={6}>
+    <Flex mt={6}>
       <Link href='/About' passHref>
       <Image src="/img/icon-circle.png" alt="icon" width="100px" height="100px" mr={4} cursor='pointer' _hover={{opacity:'0.7'}} />
       </Link>
       <Box>
-        <Heading size="lg">NAO</Heading>
-        <Heading size="sm" mt={2}>デザイナー</Heading>
-        <Heading size="sm">コードも書く</Heading>
+        <Text fontSize={32} fontWeight="bold">NAO</Text>
+        <Text fontSize={16} >UI/UXデザイナー<br />たまにコードも書く</Text>
       </Box>
     </Flex>
-    <Text size="md" mb={2}>アプリデザイナー<br />インハウス正社員×制作会社で副業中！<br />  
-     コードも書いてます!(Next,React...)
-    </Text>
+    <Text fontSize={16} my={4}>プログラミング学習経験を活かしたアプリケーションのデザインが得意</Text>
     <ButtonPrime href="/About" bgColor="#25D088"  wide="full" target="" color="#ffffff" icon={''}>About Me</ButtonPrime>
     </Box>
 
