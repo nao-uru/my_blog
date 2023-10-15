@@ -22,7 +22,7 @@ export const BlogCardSmall = (props) => {
 }
 
 const sCard = css`
-box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.08);
+box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.03);
 
 :hover {
   transition: 0.5s;
