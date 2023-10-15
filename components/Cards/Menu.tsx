@@ -18,7 +18,7 @@ const Navigation = () => {
 
   return (
     <Box>
-    <Stack as="nav" w="40%" ml={4} mt={8}>
+    <Stack as="nav" w="40%" ml={4} mt={4}>
 
       <Link href="/" passHref>
       <Box mr={8} css={path.endsWith('/') ? sBorderLink:''}>
@@ -54,9 +54,9 @@ const Navigation = () => {
 
       
 
-      <Flex pt={8}>
+      <Flex pt={8} gap={4 }>
 
-      <Box css={sLink} mr={8}>
+      <Box css={sLink}>
       <Link href="https://twitter.com/naos_journal" passHref legacyBehavior>
       <a target="_blank">
       <AiOutlineTwitter size={40} />
@@ -64,7 +64,7 @@ const Navigation = () => {
       </Link>
       </Box>
       
-      <Box css={sLink} mr={8}>
+      <Box css={sLink}>
       <Link href="https://www.instagram.com/nao___daily/" passHref legacyBehavior>
       <a target="_blank">
       <AiOutlineInstagram size={40} />
@@ -72,7 +72,7 @@ const Navigation = () => {
       </Link>
       </Box>
   
-      {/* <Box css={sLink} mr={8}>
+      {/* <Box css={sLink} >
       <Link href="https://www.youtube.com/channel/UCnBdJFjL13ySAZ0wLf7TrFg" passHref legacyBehavior>
       <a target="_blank">
       <AiOutlineYoutube size={40} />
@@ -113,9 +113,7 @@ export const Menu = () => {
           <DrawerContent css={sOpen}>
             <DrawerCloseButton w={10} h={10} />
             <DrawerHeader>
-              <Link href='/' passHref>
-              <Heading css={sMainTitle} size="md">NAO&#39;S JOURNAL</Heading>
-              </Link>
+              <Text>NAO&#39;S JOURNAL</Text>
             </DrawerHeader>
             <DrawerBody>
               <Navigation />
@@ -211,13 +209,7 @@ const sBorderLink = css`
  border-bottom: 2px solid #25D088;
  padding-bottom: 8px;
 `
-const sMainTitle = css`
-cursor: pointer;
- 
- :hover {
-   opacity: 0.8;
- }
-`
+
 const sLink = css`
   :hover {
     color: #25D088;

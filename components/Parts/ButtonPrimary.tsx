@@ -34,6 +34,6 @@ export const ButtonPrime = ( props ) => {
 const sHover = css`
 :hover {
   transition: 0.5s;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 `
