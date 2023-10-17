@@ -120,7 +120,7 @@ export default function AboutPage() {
 
     <Stack lineHeight="180%" w={{base:"90%", md:"100%"}} ml="auto" m={{base:"auto"}}  mt={{base:6,md:8}}
       borderTop="1px solid #C6CEDA" width="100%">
-    <Text fontSize={24} fontWeight="bold" mt={8}>Vsion</Text>
+    <Text fontSize={24} fontWeight="bold" mt={8}>Vison</Text>
     <Text>
       将来的にはマネジメントや、ディレクションの業務に携わりたいと思っています。しかし、まだまだ手を動かしてデザインに携わりたいという気持ちが強いです。
       最近は新人さんを教えながらリーダーとしてデザイン制作に取り組んでいて、教えることが自分の成長にもつながっていると実感しています。<br />
