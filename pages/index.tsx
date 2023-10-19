@@ -56,7 +56,7 @@ export default function Home({allPosts }) {
       <Text size="md" lineHeight="7" mt={{base:0,md:2}} >
       ご訪問いただきありがとうございます！
       NAO OSAWAのポートフォリオサイト兼ブログです。
-      今までの経歴やスキルはこちらのページからご覧いただけます。
+      今までの経歴やスキル、考え方などはこちらのページからご覧いただけます。
       </Text>
       <ButtonPrime href="/About" bgColor="#25D088" target=""  wide="fit-content" color="#ffffff" icon={''}>Read More</ButtonPrime>
       </Flex>
