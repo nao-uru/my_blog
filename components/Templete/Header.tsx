@@ -29,7 +29,7 @@ export const Header = () => {
         <Flex h="80px" w="80%" m="auto" align="flex-end" justify="space-between">
 
          <Flex align="flex-end">
-         <Img src="/img/icon.png" alt="icon" width="10%" height="10%" />
+         <Img src="/img/icon.png" alt="icon" width={20}  height="auto" />
 
           <Button as="a" href="/" backgroundColor="transparent" pb={2} fontSize="xl" fontWeight="nomal" >
             NAO&#39;S JOURNAL
