@@ -29,22 +29,23 @@ export const Work = () => {
       シンプルな構造で男女ともに使いやすいアプリを目指しました。拡張もしやすいデザインになっています。いつか実装してみたいです！
       </Text>
 
-      <Flex direction={{base:"column", md:"row"}} justifyContent="space-between" alignItems="flex-start" mt={2} gap={{base:4, md:0}}>
-      <Box w={{base:"full", md:"50%"}} mr={0}>
-      <Image src={"/img/ideallMe.png"} rounded="xl" alt="Work thubmnail" w="400px"  fit='cover' />
+      <Flex direction={{base:"column", md:"row"}} justifyContent="space-between" alignItems="flex-start" mt={2} gap={{base:4, md:4}}>
+      <Box w={{base:"full", md:"60%"}} mr={0}>
+      <iframe src="https://drive.google.com/file/d/192FfFPlX5wJIA3skCsDC3O2FGBgvc9LS/preview" width="100%" height="320px"></iframe>
+      {/* <Image src={"/img/ideallMe.png"} rounded="xl" alt="Work thubmnail" w="400px"  fit='cover' /> */}
       <Flex direction={{base:'column', md:"row"}} my={{base:4, md:6}} gap={{base:3, md:0}}>
         <ButtonPrime href="https://www.figma.com/file/2r3Lm085yw0U6E9iVLi7Ta/IDEAL-ME?type=design&node-id=503%3A25036&mode=design&t=XTGedAxHjyVln4np-1"wide={{base:"full", md:"fit-content"}} bgColor="#25D088" target="_blank" color="#ffffff" icon={''}>figmaファイルはこちら</ButtonPrime>
-        <ButtonPrime href="https://drive.google.com/file/d/1bsB8Z7Z9nRi8DopsTeS-0xSBzJne47Du/view?usp=sharing" bgColor="#ffffff" border="#25D088" target="_blank" color="#25D088"  wide={{base:"full", md:"fit-content"}} icon={''}>PDFで見る</ButtonPrime>
+        <ButtonPrime href="https://drive.google.com/file/d/1bsB8Z7Z9nRi8DopsTeS-0xSBzJne47Du/view?usp=sharing" bgColor="#ffffff" border="#25D088" target="_blank" color="#25D088"  wide={{base:"full", md:"fit-content"}} icon={''}>PDF(ファイルの書き出し)</ButtonPrime>
       </Flex>
       </Box>
-      <Box w={{base:"full", md:"60%"}}> 
+      <Box w={{base:"full", md:"40%"}}> 
         <Box>
         <BlogCardSmall
-        title="IDEAL ME 要件定義・価値定義" 
+        title="IDEAL ME ~情報設計~" 
         url="//images.ctfassets.net/dd0roywjqx3t/5OUZIh5kUUhO9YScnNHPm9/56517bfe23ccadd49908a5e11b46dc4b/Thubmneil.png" 
         slug="https://www.naosjournal.com/IdealMe_concept" />
         <BlogCardSmall 
-        title="IDEAL ME ワイヤーフレーム・デザイン制作" 
+        title="IDEAL ME ~ビジュアル編~" 
         url="//images.ctfassets.net/dd0roywjqx3t/4WmBoTIWroXZv5bvPraDvQ/1ba265402aece2f00c78d43ddf846600/Thubmneil-1.png" 
         slug="https://www.naosjournal.com/IdealMe_design" />
         </Box>
