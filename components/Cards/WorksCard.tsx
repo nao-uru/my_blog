@@ -2,12 +2,12 @@ import { Box, ChakraProvider, Flex, Text, Image } from "@chakra-ui/react";
 import Link from "next/link";
 import { css } from "@emotion/react";
 
-export const WorkCard = (props) => {
+export const WorksCard = (props) => {
 
   return(
     <>
     <ChakraProvider>
-      <Box borderRadius='2xl' backgroundColor='#ffffff' css={sCard} w="320px" h="full">
+      <Box borderRadius='2xl' backgroundColor='#ffffff' css={sCard} minW="320px" h="full">
       <Link href={props.link} passHref>
         <Flex px={0} py={0} flexDirection='column' >
           <Image src={props.img} borderRadius={4} alt="Work thubmnail" w="320px" h="240px" fit='cover' />
