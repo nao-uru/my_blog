@@ -4,7 +4,7 @@ import { LayoutWide } from "../components/Templete/LayoutWide";
 import { ChakraProvider,Text, Box, Flex, Image, } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import { ButtonPrime } from "../components/Parts/ButtonPrimary";
-import { WorkCard } from "../components/Cards/WorksCard";
+import { WorksCard } from "../components/Cards/WorksCard";
 import { getAllPosts, client } from "../libs/contentful";
 import { BlogCardSmall } from "../components/Cards/BlogCardSmall";
 
@@ -63,15 +63,16 @@ export default function Home({allPosts }) {
 
       <Box css={sFull} backgroundColor="#ffffff">
       <Box maxW={{base:"92%", md:"1200px"}} m="auto">
-      <Flex py={{base:4,md:12}} flexDir="column" w={{base:"94%",md:"60%"}} gap={4} m="auto">
+      <Flex py={{base:4,md:12}} flexDir="column" w={{base:"94%",md:"60%"}} gap={0} m="auto">
       <Text fontSize={{base:"40px",md:"64px"}} lineHeight="none">Work</Text>
       <Text size="md" lineHeight="7" mt={{base:0,md:2}} >
-      オリジナルのアプリをデザインしました！figmaファイルも公開しています！<br />
-      制作実績は非公開となっておりますので、ご興味をお持ちの方はお問い合わせください！
+      個人での制作はこのページにまとめています。<br />
+      法人として作成した実績は非公開です。ご興味をお持ちの方はお問い合わせください！
       </Text>
-      <Flex direction={{base:"column",md:'row'}} justifyContent="flex-start" alignItems='center' gap={8}>
-        <WorkCard link={'/Work'} title={"IDEAL ME"} text={"2023/10 自主制作"} img={'/img/ideallMe.png'} />
-        <WorkCard link={'/Work'} title={"Portfolio"} text={"2022/9~ 制作実績"} img={'/img/portfolio.png'} />
+      <Flex direction={{base:"column",md:'row'}} justifyContent="flex-start" alignItems='center' overflowX='scroll' gap={4} py={8} >
+        <WorksCard link={'/Work'} title={"IDEAL ME"} text={"2023/10 個人制作"} img={'/img/ideallMe.png'} />
+        <WorksCard link={'/Work'} title={"OOUI実践「営業支援アプリ」"} text={"2023/12 個人制作"} img={'/img/ooui_1.png'} />
+        <WorksCard link={'/Work'} title={"Portfolio"} text={"2022/9~ 制作実績"} img={'/img/portfolio.png'} />
       </Flex>
       <ButtonPrime href="/Work" bgColor="#25D088" target="" color="#ffffff" wide="fit-content" icon={''}>Read More</ButtonPrime>
       </Flex>
