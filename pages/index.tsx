@@ -72,6 +72,7 @@ export default function Home({allPosts }) {
       <Flex direction={{base:"column",md:'row'}} justifyContent="flex-start" alignItems='center' overflowX='scroll' gap={4} py={8} >
         <WorksCard link={'/Work'} title={"IDEAL ME"} text={"2023/10 個人制作"} img={'/img/ideallMe.png'} />
         <WorksCard link={'/Work'} title={"OOUI実践「営業支援アプリ」"} text={"2023/12 個人制作"} img={'/img/ooui_1.png'} />
+        <WorksCard link={'/Work'} title={"OOUI実践「イベント管理アプリ」"} text={"2024/02 個人制作"} img={'/img/ooui_2.png'} />
         <WorksCard link={'/Work'} title={"Portfolio"} text={"2022/9~ 制作実績"} img={'/img/portfolio.png'} />
       </Flex>
       <ButtonPrime href="/Work" bgColor="#25D088" target="" color="#ffffff" wide="fit-content" icon={''}>Read More</ButtonPrime>
