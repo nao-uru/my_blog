@@ -84,7 +84,7 @@ export default function Home({allPosts }) {
       <Text fontSize={{base:"40px",md:"64px"}} mt={{base:8,md:24}} lineHeight="none">Blog</Text>
       <Text size="md" lineHeight="7" mt={{base:0,md:2}}  >
       デザインに関するアウトプットを発信しています。<br />
-      現在は読んだ本や美術館の感想がメインになってしまっていますが、マテリアルデザインやHIGコンポーネントの深掘りをしてみたいと思っています！
+      OOUIの実践をまとめたり、アプリUIの考察をしたりしています！<br />noteにも同様の記事をアップしています。
       </Text>
 
     <Box w={{base:'100%',md:"70%"}} >

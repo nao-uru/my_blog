@@ -12,6 +12,7 @@
     "@material-ui/core": "^4.12.4",
     "@types/scrollreveal": "0.0.9",
     "disqus-react": "^1.1.5",
+    "dotenv": "^16.4.5",
     "js-base64": "^3.7.5",
     "markdown-it": "^13.0.2",
     "markdown-it-container": "^3.0.0",
