@@ -40,7 +40,7 @@ export default function AboutPage() {
 
           <Tr>
           <Td fontSize="md" fontWeight="bold">Age</Td>
-          <Td fontSize="md">27</Td>
+          <Td fontSize="md">28</Td>
           </Tr>
 
           <Tr>
