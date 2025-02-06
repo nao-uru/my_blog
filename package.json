@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.4",
     "@types/scrollreveal": "0.0.9",
     "disqus-react": "^1.1.5",
     "dotenv": "^16.4.5",
@@ -19,7 +18,6 @@
     "markdown-it-mark": "^3.0.1",
     "next": "^13.5.4",
     "node-fetch": "^3.3.2",
-    "pushin": "^6.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",

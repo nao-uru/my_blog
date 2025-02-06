@@ -35,16 +35,11 @@ export const Footer = () => {
       </Box>
       
       <Box css={sLink} mr={8}>
-      <Link href="https://www.instagram.com/nao___daily/" target='_blank'>
+      <Link href="" target='_blank'>
       <AiOutlineInstagram size={40} />
       </Link>
       </Box>
 
-      <Box css={sLink} mr={8}>
-      <Link href="" target='_blank'>
-      <AiOutlineYoutube size={40} />
-      </Link>
-      </Box>
       </Flex>
 
       </Flex>
