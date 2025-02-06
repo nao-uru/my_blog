@@ -65,7 +65,7 @@ const Navigation = () => {
       </Box>
       
       <Box css={sLink}>
-      <Link href="https://www.instagram.com/nao___daily/" passHref legacyBehavior>
+      <Link href="" passHref legacyBehavior>
       <a target="_blank">
       <AiOutlineInstagram size={40} />
       </a>
@@ -175,7 +175,7 @@ export const Menu = () => {
     </Box>
     
     <Box css={sLink} mr={4}>
-    <Link href="https://www.instagram.com/nao___daily/" passHref legacyBehavior>
+    <Link href="" passHref legacyBehavior>
     <a target="_blank">
     <AiOutlineInstagram size={28} />
     </a>
