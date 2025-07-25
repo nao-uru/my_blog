@@ -7,14 +7,14 @@ export const WorksCard = (props) => {
   return(
     <>
     <ChakraProvider>
-      <Box borderRadius='2xl' backgroundColor='#ffffff' css={sCard} minW="320px" h="full">
+      <Box rounded={4} backgroundColor='#ffffff' css={sCard} h="full" overflow={"hidden"}>
       <Link href={props.link} passHref>
         <Flex px={0} py={0} flexDirection='column' >
-          <Image src={props.img} borderRadius={4} alt="Work thubmnail" w="320px" h="240px" fit='cover' />
+          <Image src={props.img} borderRadius={4} alt="Work thubmnail" alignSelf={"stretch"} maxH={"100%"} maxW={"#100%"} objectFit={"cover"} />
 
         <Box p={4}>
-          <Text fontWeight='bold' fontSize='lg'>{props.title}</Text>
-          <Text fontWeight='nomal' fontSize="md" mt={1}>{props.text}</Text>
+          <Text fontWeight='nomal' fontSize='24px'>{props.title}</Text>
+          <Text fontWeight='nomal' fontSize="md" mt={1} textColor={"#5B5B5B"}>{props.text}</Text>
         </Box>
         </Flex>
       </Link>
@@ -26,7 +26,6 @@ export const WorksCard = (props) => {
 
 
 const sCard = css`
-box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.08);
 
 :hover {
   transition: 0.5s;

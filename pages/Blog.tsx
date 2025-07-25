@@ -1,11 +1,13 @@
-import { Grid , Text, Box } from "@chakra-ui/react";
+import { Grid, Flex } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
 import dynamic from 'next/dynamic';
 
-import { Layout } from "../components/Templete/Layout";
 import { BlogCard } from "../components/Cards/BlogCard"
 import { HeadSetting } from "../components/Templete/Head";
-import { BreadcrumbList } from "../components/Parts/Breadcrumb";
+import { Pagetitle } from "../components/Parts/Pagetitle";
+import { LayoutWide } from "../components/Templete/Layout";
+import { Subtitle } from "../components/Parts/Subtitle";
+
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
@@ -35,20 +37,15 @@ export default function  BlogPage ({ blogPosts }) {
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 
-    <Layout>
+    <LayoutWide>
 
-    <BreadcrumbList
-     tree1={'Blog'}
-     tree2={''}
-     tree1Link={'/Blog'}
-     tree2Link={''}
-     />
-     
-     <Box  mt={{base:4, md:6}}>
-    <Text fontSize={{base:"40px",md:"64px"}} lineHeight="none">Blog</Text>
-    </Box>
+    <Pagetitle>Article</Pagetitle>
 
-      <Grid mt={4} templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={8} >
+    <Flex flexDirection={"column"} my={16} >
+
+    <Flex flexDirection={"column"} gap={8}>
+      <Subtitle size="24">My Blog</Subtitle>
+      <Grid templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={8} columnGap={8}>
       {blogPosts.map((blogPost:any) => {
 
       const date = blogPost.fields.date;
@@ -65,8 +62,16 @@ export default function  BlogPage ({ blogPosts }) {
       date ={`${year}/${month}/${day}`}
       />
       })} 
+
       </Grid>
-    </Layout>
+    </Flex>
+
+
+    </Flex>
+
+
+
+    </LayoutWide>
     </>
   )
 }

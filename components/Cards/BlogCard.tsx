@@ -7,14 +7,19 @@ export const BlogCard = (props) => {
   return(
     <>
     <ChakraProvider>
+      <Box rounded={4} backgroundColor='#ffffff' css={sCard} h="full" w={"100%"} overflow={"hidden"}>
       <Link href={props.slug} passHref>
-      <Box css={sCard} w="320px" h="full" m="auto" p={4} borderRadius="xl">
-        <Image className="image" src={'https:' + props.url} w="full" h="200px" py={2} fit="cover" alt="Blog thubmnail" />
-        <Text size="2xl" fontWeight='bold' mt={2}>{props.title}</Text>
-        <Text size="xs" mt={2}>{props.date}</Text>
+      <Box css={sCard} >
+        <Image className="image" src={'https:' + props.url} w="full" h="200px" alt="Blog thubmnail" alignSelf={"stretch"} maxH={"100%"} maxW={"#100%"} objectFit={"cover"}  />
+
+        <Box p={4}>
+        <Text fontWeight='nomal' fontSize='16px'>{props.title}</Text>
+        <Text fontWeight='nomal' fontSize="md" mt={1} textColor={"#5B5B5B"}>{props.date}</Text>
         <Text size="xs">{props.tag}</Text>
+        </Box>
       </Box>
       </Link>
+      </Box>
     </ChakraProvider>
     </>
   )
@@ -22,12 +27,9 @@ export const BlogCard = (props) => {
 
 
 const sCard = css`
-    box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.08);
   
   :hover {
-    transition: 0.2s;
-    cursor: pointer;
-    background: linear-gradient(180deg, #EEF0F5 0%, #E6E9EF 100%);
-    box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8), 10px 10px 20px rgba(166, 180, 200, 0.7);
-  }
+  transition: 0.5s;
+  opacity:0.7;
+}
 `

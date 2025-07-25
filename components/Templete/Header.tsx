@@ -11,9 +11,9 @@ export const Header = () => {
     return(
       <>
       <Box w='100%'>
-      <Flex w="100%" justify="space-between" alignItems="center" py={2} px={3} zIndex={60} position="fixed" css={sBack} mt={0} >
+      <Flex w="100%" justify="space-between" alignItems="center" py={2} px={3} zIndex={60} position="fixed" mt={0} >
       <Link as="a" href="/" backgroundColor="transparent" fontSize="xl" fontWeight="nomal" >
-       NAO&#39;S JOURNAL
+       NAO OSAWA
       </Link>
       <Menu />
       </Flex>
@@ -25,14 +25,13 @@ export const Header = () => {
   return (
     <>
     <ChakraProvider>
-      <Box w="100%" position="fixed" zIndex={60} css={sBack} >
+      <Box w="100%" position="fixed" zIndex={60}>
         <Flex h="80px" w="80%" m="auto" align="flex-end" justify="space-between">
 
          <Flex align="flex-end">
-         <Img src="/img/icon.png" alt="icon" width={20}  height="auto" />
 
-          <Button as="a" href="/" backgroundColor="transparent" pb={2} fontSize="xl" fontWeight="nomal" >
-            NAO&#39;S JOURNAL
+          <Button as="a" href="/" backgroundColor="transparent" pb={4} fontSize="xl" fontWeight="nomal" >
+            NAO OSAWA
           </Button>
 
          </Flex>
@@ -48,12 +47,4 @@ export const Header = () => {
   )
 }
 
-const sBack = css`
- background: rgba(231, 231, 231, 0.25);
- box-shadow: 0 8px 28px 0 rgba( 139, 142, 184, 0.1 );
- backdrop-filter: blur( 5px );
- -webkit-backdrop-filter: blur( 5px );
- border-radius: 2px;
- border: 1px solid rgba( 255, 255, 255, 0.1 );
-`
 
