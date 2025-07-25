@@ -6,8 +6,7 @@ import { BackTop } from "../Parts/BackTop";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
-
-export const Layout = ( {children} ) => {
+export const LayoutWide = ( {children} ) => {
   
   return(
     <>
@@ -21,7 +20,7 @@ export const Layout = ( {children} ) => {
       exit={{ opacity: 0 }} 
       >
 
-      <Container maxW={{base:"90%", md:"1000px"}} m="auto" p="0" pt={{base:16,md:28}}>
+      <Container maxW={{base:"96%", md:"1200px"}} m="auto" minHeight="100vh">
         {children}
       </Container>
 
