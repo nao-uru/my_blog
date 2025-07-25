@@ -11,7 +11,7 @@ body {
 }
 
 #__next {
-  background: linear-gradient(180deg, #E9EDF0 0%, #E9EDF0 100%);
+  background: linear-gradient(180deg, #F5F5F5 100%, #E9EDF0 100%);
 }
 
 a {

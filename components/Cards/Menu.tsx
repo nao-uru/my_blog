@@ -6,10 +6,10 @@ import Link from "next/link";
 import { 
   Box, ChakraProvider,  Flex, useBreakpointValue, 
   useDisclosure, Stack,Drawer,DrawerOverlay,DrawerContent, 
-  DrawerCloseButton, DrawerHeader, DrawerBody, Heading, Text
+  DrawerCloseButton, DrawerHeader, DrawerBody, Text, 
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { AiOutlineInstagram,AiOutlineTwitter, AiOutlineYoutube } from "react-icons/ai";
+import { ButtonPrime } from "../Parts/ButtonPrimary";
 
 
 const Navigation = () => {
@@ -18,70 +18,47 @@ const Navigation = () => {
 
   return (
     <Box>
-    <Stack as="nav" w="40%" ml={4} mt={4}>
+    <Stack as="nav" w="40%" ml={2} mt={4}>
 
       <Link href="/" passHref>
-      <Box mr={8} css={path.endsWith('/') ? sBorderLink:''}>
+      <Box mr={8} css={path.endsWith('/') ? sBorderLink:''} w={"full"}>
       <Box css={sHover}>
-      <Text fontSize={20} pt="4px" h="100%" fontWeight="bold" css={sHover}>Home</Text>
+      <Text fontSize={20} pt="4px" h="100%" css={sHover}>Home</Text>
+      </Box>
+      </Box>
+      </Link>
+
+      <Link href="/What" passHref>
+      <Box mr={8} css={path.endsWith('/') ? sBorderLink:''} w={"full"}>
+      <Box css={sHover}>
+      <Text fontSize={20} pt="4px" h="100%" css={sHover} >What I Do</Text>
       </Box>
       </Box>
       </Link>
 
       <Link href="/About" passHref>
-      <Box mr={8} css={path.startsWith('/About') ? sBorderLink:''}  mt={2}>
+      <Box mr={8} css={path.startsWith('/About') ? sBorderLink:''}  mt={2} w={"full"}>
       <Box css={sHover}>
-      <Text fontSize={20} pt="4px" h="100%" fontWeight="bold" css={sHover}>About</Text>
+      <Text fontSize={20} pt="4px" h="100%"  css={sHover}>About</Text>
       </Box>
       </Box>
       </Link>
 
       <Link href="/Work" passHref>
-      <Box mr={8} css={path.startsWith('/Work') ? sBorderLink :''}  mt={2}>
+      <Box mr={8} css={path.startsWith('/Work') ? sBorderLink :''}  mt={2} w={"full"}>
       <Box css={sHover}>
-      <Text fontSize={20} pt="4px" h="100%" fontWeight="bold" css={sHover}>Work</Text>
+      <Text fontSize={20} pt="4px" h="100%"  css={sHover}>Work</Text>
       </Box>
       </Box>
       </Link>
 
       <Link href="/Blog" passHref>
-      <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}  mt={2}>
+      <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}  mt={2} w={"full"}>
       <Box css={sHover}>
-      <Text fontSize={20} pt="4px" h="100%" fontWeight="bold" css={sHover}>Blog</Text>
+      <Text fontSize={20} pt="4px" h="100%"  css={sHover}>Article</Text>
       </Box>
       </Box>
       </Link>
-
-      
-
-      <Flex pt={8} gap={4 }>
-
-      <Box css={sLink}>
-      <Link href="https://twitter.com/naos_journal" passHref legacyBehavior>
-      <a target="_blank">
-      <AiOutlineTwitter size={40} />
-      </a>
-      </Link>
-      </Box>
-      
-      <Box css={sLink}>
-      <Link href="" passHref legacyBehavior>
-      <a target="_blank">
-      <AiOutlineInstagram size={40} />
-      </a>
-      </Link>
-      </Box>
-  
-      {/* <Box css={sLink} >
-      <Link href="https://www.youtube.com/channel/UCnBdJFjL13ySAZ0wLf7TrFg" passHref legacyBehavior>
-      <a target="_blank">
-      <AiOutlineYoutube size={40} />
-      </a>
-      </Link>
-      </Box> */}
-
-      </Flex>
-
 
     </Stack>
     </Box>
@@ -136,7 +113,7 @@ export const Menu = () => {
     <Link href="/" passHref>
     <Box  css={sHover}>
     <Box mr={12} css={path.endsWith('/') ? sBorder:''}>
-    <Text size="sm" pt="4px" h="100%" fontWeight="bold">Home</Text>
+    <Text size="sm" pt="6px" h="100%" fontWeight="nomal">Home</Text>
     </Box>
     </Box>
     </Link>
@@ -144,7 +121,15 @@ export const Menu = () => {
     <Link href="/About" passHref>
     <Box mr={12} css={path.startsWith('/About') ? sBorder:''}>
     <Box css={sHover}>
-    <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>About</Text>
+    <Text size="sm" pt="6px" h="100%" fontWeight="nomal" css={sHover}>About</Text>
+    </Box>
+    </Box>
+    </Link>
+
+    <Link href="/What" passHref>
+    <Box mr={12} css={path.startsWith('/What') ? sBorder:''}>
+    <Box css={sHover}>
+    <Text size="sm" pt="6px" h="100%" fontWeight="nomal" css={sHover}>What I Do</Text>
     </Box>
     </Box>
     </Link>
@@ -153,7 +138,7 @@ export const Menu = () => {
     <Link href="/Work" passHref>
     <Box css={sHover}>
     <Box mr={12} css={path.startsWith('/Work') ? sBorder:''}>
-    <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Work</Text>
+    <Text size="sm" pt="6px" h="100%" fontWeight="nomal" css={sHover}>Work</Text>
     </Box>
     </Box>
     </Link>
@@ -161,37 +146,16 @@ export const Menu = () => {
     <Link href="/Blog" passHref>
     <Box css={sHover}>
     <Box mr={12} css={path.startsWith('/Blog') ? sBorder:''}>
-    <Text size="sm" pt="4px" h="100%" fontWeight="bold" css={sHover}>Blog</Text>
+    <Text size="sm" pt="6px" h="100%" fontWeight="nomal" css={sHover}>Article</Text>
     </Box>
     </Box>
     </Link>
 
-    <Box css={sLink} mr={4}>
-    <Link href="https://twitter.com/naos_journal" passHref legacyBehavior>
-    <a target="_blank">
-    <AiOutlineTwitter size={28} />
-    </a>
-    </Link>
-    </Box>
+    <Flex>
+       <ButtonPrime href="https://bento.me/naosawa" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
+       <ButtonPrime href="/" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>Contact</ButtonPrime>
+    </Flex>
     
-    <Box css={sLink} mr={4}>
-    <Link href="" passHref legacyBehavior>
-    <a target="_blank">
-    <AiOutlineInstagram size={28} />
-    </a>
-    </Link>
-    </Box>
-
-    {/* <Box css={sLink}>
-    <Link href="https://www.youtube.com/channel/UCnBdJFjL13ySAZ0wLf7TrFg" passHref legacyBehavior>
-    <a target="_blank">
-    <AiOutlineYoutube size={28} />
-    </a>
-    </Link>
-    </Box> */}
-
-
-
     </Flex>
 
     </ChakraProvider>
@@ -202,17 +166,17 @@ export const Menu = () => {
 
 
 const sBorder = css`
- border-top: 2px solid #25D088;
+ border-top: 2px solid #23BA78;
 `
 
 const sBorderLink = css`
- border-bottom: 2px solid #25D088;
+ border-bottom: 2px solid #23BA78;
  padding-bottom: 8px;
 `
 
 const sLink = css`
   :hover {
-    color: #25D088;
+    color: #23BA78;
   }
 `
 

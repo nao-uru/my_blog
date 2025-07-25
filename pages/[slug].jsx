@@ -7,9 +7,10 @@ import Link from "next/link";
 
 import { HeadSetting } from "../components/Templete/Head";
 import { ButtonPrime } from "../components/Parts/ButtonPrimary";
-import { BlogCardSmall } from "../components/Cards/BlogCardSmall";
-import { LayoutWide } from "../components/Templete/LayoutWide";
+import { BlogCard } from "../components/Cards/BlogCard";
+import { LayoutWide } from "../components/Templete/Layout";
 import { BreadcrumbList } from "../components/Parts/Breadcrumb";
+import { Subtitle } from "../components/Parts/Subtitle";
 
 // パスの生成
 export const getStaticPaths = async () => {
@@ -72,6 +73,8 @@ export default function PostPage({blogPost, allPosts }) {
     
    <LayoutWide>
 
+   <Box py={16}>
+
    <BreadcrumbList
      tree1={'Blog'}
      tree2={blogPost.fields.title}
@@ -97,22 +100,21 @@ export default function PostPage({blogPost, allPosts }) {
 
      {/* 共有ボタン */}
      <Flex flexDirection="column" align="center" mt={{base:0, md:8}}>
-       <Text fontSize={24} fontWeight="bold" pt={12}>Share</Text>
-
        <Flex mt={8} flexDirection={{base:"column", md:"row"}} align="center">
       <ButtonPrime 
        href={`https://twitter.com/share?url=https://www.naosjournal.com/${blogPost.fields.slug}&text=sample&hashtags=sample`} 
-       icon={<FaTwitter size={28} color="#53a1e1" />}
-       color="#53a1e1"
-       border="#53a1e1"
+       icon={<FaTwitter size={24} color="#151515" />}
+       color="#151515"
+       bgColor="#ffffff"
        >Twitterでシェア</ButtonPrime>
       
       <Box mt={{base:4,md:0}}>
       <ButtonPrime       
        href={`https://social-plugins.line.me/lineit/share?url=https://www.naosjournal.com/${blogPost.fields.slug}`} 
-       icon={<FaLine size={28} color="#25D088" />}
-       color="#25D088"
-       border="#25D088">LINEで送る</ButtonPrime>
+       icon={<FaLine size={24} color="#151515" />}
+       color="#2151515"
+       bgColor="#ffffff"
+       >LINEで送る</ButtonPrime>
       </Box>
 
       </Flex>
@@ -129,35 +131,44 @@ export default function PostPage({blogPost, allPosts }) {
     <Box  width="100%">
     <Flex mt={6}>
       <Link href='/About' passHref>
-      <Image src="/img/icon-circle.png" alt="icon" width="100px" height="100px" mr={4} cursor='pointer' _hover={{opacity:'0.7'}} />
+      <Image src="/img/icon.png" alt="icon" width="100px" height="100px" mr={4} cursor='pointer' _hover={{opacity:'0.7'}} />
       </Link>
       <Box>
-        <Text fontSize={32} fontWeight="bold">NAO</Text>
-        <Text fontSize={16} >UI/UXデザイナー<br />たまにコードも書く</Text>
+        <Text fontSize={32} >NAO OSAWA</Text>
+        <Text fontSize={16} >プロダクトデザイナー<br />たまにコードも書く</Text>
       </Box>
     </Flex>
     <Text fontSize={16} my={4}>プログラミング学習経験を活かしたアプリケーションのデザインが得意</Text>
-    <ButtonPrime href="/About" bgColor="#25D088"  wide="full" target="" color="#ffffff" icon={''}>About Me</ButtonPrime>
+    <ButtonPrime href="/About" bgColor="#23BA78"  wide="full" target="" color="#ffffff" icon={''}>About Me</ButtonPrime>
     </Box>
 
 
     {/* Posts */}
-    <Box borderTop="1px solid #C6CEDA" mt={12}>
-    <Text fontWeight="bold" size="2xl" my={6} >最新の投稿</Text>
+    <Flex flexDirection={"column"} borderTop="1px solid #C6CEDA" gap={6} py={6} mt={6} >
+    
+    <Subtitle size="24px" my={6} >New Post</Subtitle>
+
       {allPosts.map((shinglePost) => {
-      return <BlogCardSmall
-      key={shinglePost.sys.id} 
-      title={shinglePost.fields.title}
-      url={shinglePost.fields.media.fields.file.url}
-      slug={shinglePost.fields.slug}
-      />
+
+      return  <BlogCard
+          key={shinglePost.sys.id} 
+          title={shinglePost.fields.title}
+          url={shinglePost.fields.media.fields.file.url}
+          slug={shinglePost.fields.slug}
+            />
     }).slice(0,4)} 
-    <ButtonPrime href="/Blog" bgColor="#25D088"  wide="full" target="" color="#ffffff" icon={''}>All Posts</ButtonPrime>
-    </Box>
+
+    <ButtonPrime href="/Blog" bgColor="#23BA78"  wide="full" target="" color="#ffffff" icon={''}>All Posts</ButtonPrime>
+    </Flex>
     </Box>
 
     </Flex>
+   </Box>
+
+
    </LayoutWide>
+
+
    </>
   );
 } 
@@ -176,6 +187,6 @@ const sTag = css`
  margin: 0 10px 0 0;
  padding: 2px 8px;
  border-radius: 8px;
- border: 1px solid #25D088;
- color: #25D088;
+ border: 1px solid #23BA78;
+ color: #23BA78;
 `
