@@ -24,7 +24,7 @@ export const HeadSetting = ({ title, description, keyword, path ,card }) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={card} />
-      <meta name="description" content="NAO OSAWAのHPです!公開してから約3ヶ月、新たな機能をつけたり、デザインをブラッシュアップしたりと日々アップデートを図っています!ぜひ気になったページから見てみてください✨" />
+      <meta name="description" content="NAO OSAWAのHPです✨" />
       <link rel="canonical" href={url} />
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" href={"/favicon.ico"} />

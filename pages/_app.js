@@ -1,5 +1,4 @@
 import '../styles/globals.css';
-import React from 'react';
 import { HeadSetting } from '../components/Templete/Head';
 import { AnimatePresence } from 'framer-motion';
 
@@ -11,7 +10,7 @@ function MyApp({ Component, pageProps, router }) {
     title={'NAOs JOURNAL'}
     description={'NAOs JOURNAL'}
     url={'https://www.naosjournal.com/'}
-    card={'/public/img/spain.jpeg'}
+    card={'/public/img/Top/Portfolio.png'}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 

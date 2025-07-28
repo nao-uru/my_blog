@@ -3,7 +3,6 @@ import { HeadSetting } from "../components/Templete/Head";
 import { ChakraProvider, Flex, Box, Text, SimpleGrid, Image } from "@chakra-ui/react";
 import { Pagetitle } from "../components/Parts/Pagetitle";
 import { GetDribblePost } from "../libs/dribblepost";
-import { ButtonPrime } from "../components/Parts/ButtonPrimary";
 import { BlogCardSmall } from "../components/Cards/BlogCardSmall";
 import { AiOutlineDribbble, AiOutlineExport } from "react-icons/ai";
 import { DribbbleCard } from "../components/Cards/DribbbleCard";
@@ -23,7 +22,7 @@ export default function WorkPage() {
     title={'NAOs JOURNAL'}
     description={""}
     path={"/Work"}
-    card={'/public/img/spain.jpeg'}
+    card={'/public/img/FV.png'}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 
