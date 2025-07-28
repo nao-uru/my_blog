@@ -34,13 +34,12 @@ const sBack = css`
  display: flex;
  align-items: center;
  justify-content: center;
- border: #FEFEFF;
  border-radius: 50%;
- background: linear-gradient(180deg, #E9EDF0 0%, #E9EDF0 100%);
+ background: #F5F5F5;
  filter: drop-shadow(-8px -8px 8px rgba(255, 255, 255, 0.8)) drop-shadow(8px 8px 8px rgba(166, 180, 200, 0.7));
  
  :hover {
    color:  linear-gradient(180deg, #EEF0F5 0%, #E6E9EF 100%);
-   filter:drop-shadow(-8px -8px 8px rgba(255, 255, 255, 0.8));
+   filter:drop-shadow(-6px -6px 4px rgba(255, 255, 255, 0.8));
  }
 `

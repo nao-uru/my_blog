@@ -33,7 +33,7 @@ export default function  BlogPage ({ blogPosts }) {
     title={'Blog'}
     description={"なおのブログ"}
     path={"/Blog"}
-    card='/img/spain.jpeg'
+    card='/public/img/FV.png'
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 
