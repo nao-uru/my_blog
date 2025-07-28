@@ -7,7 +7,7 @@ export const Pagetitle = ( props ) => {
   return (
     <>
     <ChakraProvider>
-      <Flex backgroundImage={"/img/Title.png"} py={6} px={40}
+      <Flex backgroundImage={"/img/Title.png"} py={6} px={{base:8, md:40}}
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
       backgroundPosition="center"
@@ -19,7 +19,7 @@ export const Pagetitle = ( props ) => {
       sx={{
         marginLeft: "calc(-50vw + 50%)",
       }}>
-      <Box maxW={{base:"96%", md:"1200px"}} w={"full"}>
+      <Box maxW={{base:"100%", md:"1200px"}} w={"full"}>
       <Text fontSize={{base:"24px",md:"40px"}}>
                 {props.children}
       </Text>

@@ -14,7 +14,7 @@ export default function What() {
     title={'NAOs JOURNAL'}
     description={""}
     path={"/What"}
-    card={'/public/img/spain.jpeg'}
+    card={'/public/img/FV.png'}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 

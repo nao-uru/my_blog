@@ -1,5 +1,4 @@
-import { css } from "@emotion/react";
-import { Box, ChakraProvider,  Flex, useBreakpointValue, Link, Img, Button} from "@chakra-ui/react";
+import { Box, ChakraProvider,  Flex, useBreakpointValue, Link, Button} from "@chakra-ui/react";
 
 import { Menu } from "../Cards/Menu";
 

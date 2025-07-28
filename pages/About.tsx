@@ -17,13 +17,13 @@ export default function AboutPage() {
     title={'About'}
     description={""}
     path={"/About"}
-    card={'/img/portfolio.png'}
+    card={'/public/img/FV.png'}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
     <LayoutWide>
     <Pagetitle>About</Pagetitle>
 
-    <Box my={16} px={32}>
+    <Box my={16} px={{base:0, md:32}}>
     <Flex direction={{base:"column",md:"row"}} alignItems="center" justifyContent="space-around">
      <Image src="/img/icon.png" w={36} h={36} mr={4} alt="Main Image" /> 
      <Table w={{base:"100%", md:"60%"}} mr="auto" mt={4}>
@@ -93,7 +93,7 @@ export default function AboutPage() {
     </Text>
     </Stack>
 
-    <Flex py={8} px={10} gap={6} backgroundColor={"#3A3A3A"} rounded={4}>
+    <Flex py={8} px={10} gap={6} backgroundColor={"#3A3A3A"} rounded={4} direction={{base:"column",md:"row"}}>
           <Image src="/img/Fly.png" w={"300px"} alt="Main Image" rounded={4} /> 
           <Flex flexDirection={"column"} textColor={"#ffffff"} >
             <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"}>

@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { AiOutlineInstagram,AiOutlineTwitter, AiOutlineYoutube } from "react-icons/ai";
 
 import { Menu } from "../Cards/Menu";
+import { ButtonPrime } from "../Parts/ButtonPrimary";
 
 export const Footer = () => {
 
@@ -24,21 +25,12 @@ export const Footer = () => {
       <Flex w="100%" m='auto' pt={4} direction="column" justifyContent="center" alignItems="center" >
 
       <Link as="a" href="/" fontSize="xl" fontWeight="nomal" textAlign="center" >
-          NAO&#39;S JOURNAL
+          NAO OSAWA
       </Link>
 
-      <Flex mt={2}>
-      <Box css={sLink} mr={8}>
-      <Link href="https://twitter.com/naos_journal" target='_blank' >
-      <AiOutlineTwitter size={40} />
-      </Link>
-      </Box>
-      
-      <Box css={sLink} mr={8}>
-      <Link href="" target='_blank'>
-      <AiOutlineInstagram size={40} />
-      </Link>
-      </Box>
+      <Flex mt={4}>
+      <ButtonPrime href="https://bento.me/naosawa" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
+      <ButtonPrime href="/" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>Contact</ButtonPrime>
 
       </Flex>
 
@@ -60,7 +52,7 @@ export const Footer = () => {
 
 
           <Link as="a" href="/" backgroundColor="transparent" fontSize="xl" fontWeight="nomal" >
-          NAO&#39;S JOURNAL
+          NAO OSAWA
           </Link>
 
           <Spacer />

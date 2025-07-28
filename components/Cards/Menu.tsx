@@ -29,7 +29,7 @@ const Navigation = () => {
       </Link>
 
       <Link href="/What" passHref>
-      <Box mr={8} css={path.endsWith('/') ? sBorderLink:''} w={"full"}>
+      <Box mr={8} css={path.endsWith('/What') ? sBorderLink:''} w={"full"}>
       <Box css={sHover}>
       <Text fontSize={20} pt="4px" h="100%" css={sHover} >What I Do</Text>
       </Box>
@@ -90,7 +90,7 @@ export const Menu = () => {
           <DrawerContent css={sOpen}>
             <DrawerCloseButton w={10} h={10} />
             <DrawerHeader>
-              <Text>NAO&#39;S JOURNAL</Text>
+              <Text>NAO OSAWA</Text>
             </DrawerHeader>
             <DrawerBody>
               <Navigation />
@@ -181,7 +181,7 @@ const sLink = css`
 `
 
 const sOpen = css`
- background-color: #E6E9EF;
+ background-color: #F5F5F5;
 `
 const sHover = css`
 cursor: pointer;
