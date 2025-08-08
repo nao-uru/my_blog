@@ -22,11 +22,20 @@ const Equation = dynamic(() => import('react-notion-x/build/third-party/equation
 const Pdf = dynamic(() => import('react-notion-x/build/third-party/pdf').then(m => m.Pdf), { ssr: false });
 const NOTION_PAGE_ID = '13a2316f396e806fb9cede2fb2bb2a9e';
 
-export async function getStaticProps() {
-  const api = new NotionAPI();
-  const recordMap = await api.getPage(NOTION_PAGE_ID);
-  return { props: { recordMap }, revalidate: 3600 };
-}
+
+export async function getServerSideProps() {
+   const api = new NotionAPI();
+   let recordMap: any = null;
+   try {
+     const timeoutMs = 12_000;
+     recordMap = await Promise.race([
+       api.getPage(NOTION_PAGE_ID),
+       new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), timeoutMs)),
+     ]);
+   } catch (e) {
+     console.error('Notion fetch failed:', e);
+   }
+   return { props: { recordMap } };}
 
 
 // パスワードロック
@@ -105,6 +114,16 @@ export default function Portfolio({ recordMap }: any) {
       </Layout>
     );
   }
+  if (!recordMap) {
+  return (
+    <Layout>
+      <Pagetitle>Portfolio</Pagetitle>
+      <Box my={16}>
+        <Text>読み込みに失敗しました。時間をおいて再度お試しください。</Text>
+      </Box>
+    </Layout>
+  );
+}
 
   // すべてのリンクを別タブで開く aタグを差し替え
   const NotionLink: NotionComponents['Link'] = ({ href, children, ...props }) => (
@@ -141,16 +160,10 @@ export default function Portfolio({ recordMap }: any) {
 
         <Box my={16}>
           <NotionRenderer
-              recordMap={recordMap}
-              components={{
-                Code,
-                Collection,
-                Equation,
-                Pdf,
-                Link: NotionLink,
-                PageLink,}}
-                mapPageUrl={(id) => `https://www.notion.so/${id.replace(/-/g, '')}?pvs=4`}
-          />
+          recordMap={recordMap}
+          components={{ Code, Collection, Equation, Pdf, Link: NotionLink, PageLink }}
+          mapPageUrl={(id) => `https://www.notion.so/${id.replace(/-/g, '')}?pvs=4`}
+        />
         </Box>
       </Layout>
     </>
