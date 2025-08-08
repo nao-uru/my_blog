@@ -7,11 +7,11 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
     <HeadSetting 
-    title={'NAOs JOURNAL'}
-    description={'NAOs JOURNAL'}
+    title={'NAO OSAWA'}
+    description={'NAO OSAWA'}
     url={'https://www.naosjournal.com/'}
     card={'/public/img/Top/Portfolio.png'}
-    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
+    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ,プロダクトデザイン'}
      />
 
     <AnimatePresence>

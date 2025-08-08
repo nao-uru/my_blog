@@ -2,6 +2,9 @@
   "name": "my_blog",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,14 +16,20 @@
     "disqus-react": "^1.1.5",
     "dotenv": "^16.4.5",
     "js-base64": "^3.7.5",
+    "katex": "^0.16.22",
     "markdown-it": "^13.0.2",
     "markdown-it-container": "^3.0.0",
     "markdown-it-mark": "^3.0.1",
     "next": "^13.5.4",
     "node-fetch": "^3.3.2",
+    "notion-client": "^7.4.3",
+    "notion-utils": "^7.4.3",
+    "prismjs": "^1.30.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
+    "react-notion-x": "^7.4.3",
+    "rss-parser": "^3.13.0",
     "scrollex": "^2.0.1",
     "scrollreveal": "^4.0.9",
     "toc": "^0.4.0"
