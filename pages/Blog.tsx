@@ -68,9 +68,9 @@ const handleMorePosts = () =>
     <Flex flexDirection={"column"} gap={8}>
       <Subtitle size="24">note</Subtitle>
       <Grid templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={8} columnGap={8}>
-        {notes.slice(0, visibleCountNotes).map((note) => (
+        {notes.slice(0, visibleCountNotes).map((note, index) => (
 
-          <Box rounded={4} backgroundColor='#ffffff' css={sCard} h="full" w={"100%"} overflow={"hidden"}>
+          <Box key={note.link || index} rounded={4} backgroundColor='#ffffff' css={sCard} h="full" w={"100%"} overflow={"hidden"}>
           <Link href={note.link} passHref target="_blank">
             <Box>
               {note.thumbnail && (
