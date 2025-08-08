@@ -1,14 +1,14 @@
 import { HeadSetting } from "../components/Templete/Head";
-import { LayoutWide } from "../components/Templete/Layout";
+import { Layout } from "../components/Templete/Layout";
 import { ChakraProvider,Text, Box, Flex, Image, } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import { ButtonPrime } from "../components/Parts/ButtonPrimary";
-import { WorksCard } from "../components/Cards/WorksCard";
 import { getAllPosts, client } from "../libs/contentful";
-import { BlogCard } from "../components/Cards/BlogCard";
+import { Card } from "../components/Cards/Card";
 import { Subtitle } from "../components/Parts/Subtitle";
 import Link from "next/link";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import RotatingImage from "../components/Parts/RotatingImage";
 
 
 // データ取得（記事一覧と記事個別の内容）
@@ -34,12 +34,12 @@ export default function Home({allPosts }) {
     title={'Home'}
     description={"ホーム"}
     path="/"
-    card="/public/img/FV.png"
+    card={"/public/img/Portfolio.png"}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 
       
-     <LayoutWide>
+     <Layout>
 
       {/* トップ */}
       <Box css={sFull} backgroundImage={"/img/Top/FV.png"} backgroundSize={"cover"} >
@@ -64,7 +64,17 @@ export default function Home({allPosts }) {
       <ButtonPrime href="/About" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>About Me</ButtonPrime>
       </Flex>
 
-      <Image src="/img/Top/top_about.png" w={{base:"100%",md:'50%'}} alt="Main Image" rounded={4} /> 
+      {/* <Image src="/img/Top/top_about.png" w={{base:"100%",md:'50%'}} alt="Main Image" rounded={4} />  */}
+      <RotatingImage
+      images={[
+    "/img/Top/top_about.png",
+    "/img/Fly.png",
+    "/img/icon.png",]}
+    minMs={3000}   // 3秒〜
+    maxMs={8000}   // 8秒の間でランダム
+    width="100%"
+    height={320}
+    rounded="2xl" />
       </Flex>
 
       {/* What I Do */}
@@ -130,11 +140,9 @@ export default function Home({allPosts }) {
             <Text fontSize={{base:"18px",md:"24px"}} lineHeight="150%">制作実績</Text>
             <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">実務の詳細は制作実績にてご確認いただけます。閲覧をご希望の方は、お手数ですがパスワードをお問い合わせください！</Text>
             </Flex>
-            <Link href="/Work" passHref>
+            <Link href="/Portfolio" passHref>
             <Box css={sHover} p={5} border={"1px solid #CACACA"} rounded={4} w="fit-content" ml={"auto"}>
-              <Link href="/" passHref legacyBehavior>
               <AiOutlineArrowRight size={40} color="#ffffff" />
-              </Link>
             </Box>
             </Link>
           </Flex>
@@ -148,13 +156,14 @@ export default function Home({allPosts }) {
         <Text fontSize={{base:"18px",md:"24px"}} lineHeight="150%">自主制作</Text>
         </Box>
 
-        {/* Card */}
       <Flex direction={{base:"column",md:'row'}} justifyContent="flex-start" alignItems='center' overflowX='scroll' gap={4} py={8} >
-        <WorksCard link={'/Work'} title={"IDEAL ME"} text={"2023/10 個人制作"} img={'/img/Top/Work_3.png'} />
-        <WorksCard link={'/Work'} title={"OOUI実践 Vol1"} text={"2023/12 個人制作"} img={'/img/Top/Work_2.png'} />
-        <WorksCard link={'/Work'} title={"OOUI実践 Vol2"} text={"2024/02 個人制作"} img={'/img/Top/Work_1.png'} />
+        <Card key={"/"} title={"IDEAL ME"} url={'//www.naosjournal.com/img/Top/Work_3.png'} slug={'/Work'} date ={"2023/10 個人制作"}></Card>
+        <Card key={"/"} title={"OOUI実践 Vol1"} url={'//www.naosjournal.com/img/Top/Work_2.png'} slug={'/Work'} date ={"2023/12 個人制作"}></Card>
+        <Card key={"/"} title={"OOUI実践 Vol2"} url={'//www.naosjournal.com/img/Top/Work_1.png'} slug={'/Work'} date ={"2024/02 個人制作"}></Card>
+
+
       </Flex>
-      <ButtonPrime href="/Work" bgColor="#23BA78" target="" color="#ffffff" wide="fit-content" icon={''}>Detail</ButtonPrime>
+      <ButtonPrime href="/Work" bgColor="#23BA78" target="" color="#ffffff" wide="fit-content" icon={''}>Read More</ButtonPrime>
     
 
       </Flex>
@@ -173,7 +182,7 @@ export default function Home({allPosts }) {
       const month = smonth +1;
       const day = new Date(date).getDate();
 
-      return  <BlogCard 
+      return  <Card 
       key={BlogPost.sys.id} 
       title={BlogPost.fields.title}
       url={BlogPost.fields.media.fields.file.url}
@@ -184,13 +193,13 @@ export default function Home({allPosts }) {
      </Flex>
 
 
-      <ButtonPrime href="/Blog" bgColor="#23BA78" target="" color="#ffffff" wide="fit-content" icon={''}>Detail</ButtonPrime>
+      <ButtonPrime href="/Blog" bgColor="#23BA78" target="" color="#ffffff" wide="fit-content" icon={''}>Read More</ButtonPrime>
 
       </Flex>
 
       </Flex>
 
-     </LayoutWide>
+     </Layout>
 
 
     </ChakraProvider>

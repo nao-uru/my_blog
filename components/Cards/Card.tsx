@@ -2,7 +2,7 @@ import { Box, ChakraProvider, Image, Text } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import Link from "next/link";
 
-export const BlogCard = (props) => {
+export const Card = (props) => {
 
   return(
     <>

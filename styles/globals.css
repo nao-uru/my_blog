@@ -53,3 +53,16 @@ a {
   background-color: #f3ff0f;
   width: fit-content;
 }
+
+/* Notionのカードのスタイル */
+.notion-collection-card {
+  overflow: hidden;
+  border-radius: 4px;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.notion-collection-card .notion-page-title {
+  font-size: 16px;
+  font-weight: 600;
+}

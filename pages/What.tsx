@@ -1,4 +1,4 @@
-import { LayoutWide } from "../components/Templete/Layout";
+import { Layout } from "../components/Templete/Layout";
 import { HeadSetting } from "../components/Templete/Head";
 import { ChakraProvider, Flex, Image, Text, Box } from "@chakra-ui/react";
 import { Pagetitle } from "../components/Parts/Pagetitle";
@@ -14,17 +14,18 @@ export default function What() {
     title={'NAOs JOURNAL'}
     description={""}
     path={"/What"}
-    card={'/public/img/FV.png'}
+    card={"/public/img/Portfolio.png"}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
 
 
      <ChakraProvider>
-    <LayoutWide>
+    <Layout>
       <Pagetitle>What I Do</Pagetitle>
 
-      <Flex my={20} flexDirection={"column"} gap={16}>
+      <Flex my={{base:12, md:20}} flexDirection={"column"} gap={16}>
 
+        {/* SaaSプロダクトの設計・改善 */}
         <Flex flexDirection={{ base: "column-reverse" , md: 'row' }} rounded={8} overflow={"hidden"} id="About_1">
           <Flex flexDirection={"column"} p={{ base: 6 , md: 12 }}  gap={{ base: 6 , md: 10 }} backgroundColor={"#ffffff"} flex={1} >
             <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"} gap={4}>
@@ -56,6 +57,7 @@ export default function What() {
           <Image src="/img/Top/WID_1.png" w={"400px"} alt="Main Image" h={"auto"} objectFit={"cover"} /> 
         </Flex>
 
+        {/* 新規プロダクトの0→1立ち上げ */}
         <Flex flexDirection={{ base: "column-reverse" , md: 'row' }} rounded={8} overflow={"hidden"} id="About_2">
           <Flex flexDirection={"column"} p={{ base: 6 , md: 12 }} gap={{ base: 6 , md: 10 }} backgroundColor={"#ffffff"} flex={1}>
             <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"} gap={4}>
@@ -88,6 +90,7 @@ export default function What() {
           <Image src="/img/Top/WID_2.png" w={"400px"} alt="Main Image" h={"auto"} objectFit={"cover"} /> 
         </Flex>
 
+        {/* デザインシステム構築 */}
         <Flex flexDirection={{ base: "column-reverse" , md: 'row' }} rounded={8} overflow={"hidden"} id="About_3">
           <Flex flexDirection={"column"} p={{ base: 6 , md: 12 }}  gap={{ base: 6 , md: 10 }} backgroundColor={"#ffffff"} flex={1}>
             <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"} gap={4}>
@@ -122,14 +125,15 @@ export default function What() {
           <Image src="/img/Top/WID_3.png" w={"400px"} alt="Main Image" h={"auto"} objectFit={"cover"} /> 
         </Flex>
 
+        {/* 制作実績 */}
         <Flex flexDirection={{ base: "column" , md: 'row' }}  p={{ base: 6 , md: 12 }}  gap={{ base: 6 , md: 10 }} backgroundColor={"#3A3A3A"} rounded={4}>
-          <Image src="/img/Top/WID_3.png" w={"300px"} alt="Main Image" rounded={4} /> 
+          <Image src="/img/Top/Portfolio.png" w={"300px"} alt="Main Image" rounded={4} /> 
           <Flex flexDirection={"column"} textColor={"#ffffff"} >
             <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"}>
             <Text fontSize={{base:"18px",md:"24px"}} lineHeight="150%">制作実績</Text>
-            <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">実務の詳細は制作実績でご確認いただけます。パスワードはお問い合わせください！</Text>
+            <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">実務の詳細は制作実績にてご確認いただけます。閲覧をご希望の方は、お手数ですがパスワードをお問い合わせください！</Text>
             </Flex>
-            <Link href="/Work" passHref>
+            <Link href="/Portfolio" passHref>
             <Box css={sHover} p={5} border={"1px solid #CACACA"} rounded={4} w="fit-content" ml={"auto"}>
               <AiOutlineArrowRight size={40} color="#ffffff" />
             </Box>
@@ -142,7 +146,7 @@ export default function What() {
       </Flex>
 
       
-    </LayoutWide>
+    </Layout>
      </ChakraProvider>
 
     </>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ChakraProvider, Box,Text, Flex, Image, Stack, Table, Tbody, Td, Tr, Grid } from "@chakra-ui/react";
 import { SkillCard } from "../components/Cards/SkillCard";
 import { Pagetitle } from "../components/Parts/Pagetitle";
-import { LayoutWide } from "../components/Templete/Layout";
+import { Layout } from "../components/Templete/Layout";
 import { Subtitle } from "../components/Parts/Subtitle";
 import { css } from "@emotion/react";
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
     card={'/public/img/FV.png'}
     keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
      />
-    <LayoutWide>
+    <Layout>
     <Pagetitle>About</Pagetitle>
 
     <Box my={16} px={{base:0, md:32}}>
@@ -35,7 +35,7 @@ export default function AboutPage() {
 
           <Tr>
           <Td fontSize="md" fontWeight="bold">Age</Td>
-          <Td fontSize="md">28</Td>
+          <Td fontSize="md">29</Td>
           </Tr>
 
           <Tr>
@@ -97,7 +97,7 @@ export default function AboutPage() {
           <Image src="/img/Fly.png" w={"300px"} alt="Main Image" rounded={4} /> 
           <Flex flexDirection={"column"} textColor={"#ffffff"} >
             <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"}>
-            <Text fontSize={{base:"18px",md:"24px"}} lineHeight="150%">その他の個人活動</Text>
+            <Text fontSize={{base:"18px",md:"24px"}} lineHeight="150%">個人活動も含めたいろいろ</Text>
             <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">個人での活動やSNSのリンクなどをまとめています。ご興味のある方はご覧ください★</Text>
             </Flex>
             <Link href="https://bento.me/naosawa" passHref target="brank">
@@ -114,7 +114,7 @@ export default function AboutPage() {
 
 
     </Box>
-    </LayoutWide>
+    </Layout>
     </ChakraProvider>
     </>
   )
