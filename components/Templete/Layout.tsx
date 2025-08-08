@@ -1,4 +1,3 @@
-import React, { VFC } from "react";
 import { ChakraProvider,Container, } from "@chakra-ui/react";
 import { motion } from 'framer-motion';
 
@@ -6,7 +5,7 @@ import { BackTop } from "../Parts/BackTop";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
-export const LayoutWide = ( {children} ) => {
+export const Layout = ( {children} ) => {
   
   return(
     <>
@@ -20,7 +19,7 @@ export const LayoutWide = ( {children} ) => {
       exit={{ opacity: 0 }} 
       >
 
-      <Container maxW={{base:"96%", md:"1200px"}} m="auto" minHeight="100vh">
+      <Container maxW={{base:"96%", md:"1200px"}} m="auto">
         {children}
       </Container>
 

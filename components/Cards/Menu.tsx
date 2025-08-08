@@ -94,6 +94,10 @@ export const Menu = () => {
             </DrawerHeader>
             <DrawerBody>
               <Navigation />
+              <Flex my={8}>
+                <ButtonPrime href="https://bento.me/naosawa" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
+                <ButtonPrime passHref href="/Portfolio" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>Portfolio</ButtonPrime>
+                </Flex>
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>
@@ -153,7 +157,7 @@ export const Menu = () => {
 
     <Flex>
        <ButtonPrime href="https://bento.me/naosawa" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
-       <ButtonPrime href="/" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>Contact</ButtonPrime>
+       <ButtonPrime href="/Portfolio" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>Portfolio</ButtonPrime>
     </Flex>
     
     </Flex>

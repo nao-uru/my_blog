@@ -1,6 +1,5 @@
-import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Heading, Link, border, Button } from "@chakra-ui/react";
+import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Link, } from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import { AiOutlineInstagram,AiOutlineTwitter, AiOutlineYoutube } from "react-icons/ai";
 
 import { Menu } from "../Cards/Menu";
 import { ButtonPrime } from "../Parts/ButtonPrimary";
@@ -30,7 +29,7 @@ export const Footer = () => {
 
       <Flex mt={4}>
       <ButtonPrime href="https://bento.me/naosawa" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
-      <ButtonPrime href="/" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>Contact</ButtonPrime>
+      <ButtonPrime href="mailto:nao.uru0419@gmail.com" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>Contact</ButtonPrime>
 
       </Flex>
 
