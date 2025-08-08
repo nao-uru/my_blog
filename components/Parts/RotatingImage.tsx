@@ -14,7 +14,7 @@ type Props = {
 export default function RotatingImage({
   images,
   minMs = 3000,
-  maxMs = 7000,
+  maxMs = 8000,
   width = "100%",
   height = 320,
   rounded = "xl",
@@ -37,7 +37,7 @@ export default function RotatingImage({
         setTimeout(() => {
           setIdx((i) => (i + 1) % images.length);
           setFade(true);
-        }, 200);
+        }, 400);
       } else {
         setIdx((i) => (i + 1) % images.length);
       }
@@ -66,7 +66,7 @@ export default function RotatingImage({
         h="100%"
         objectFit="cover"
         transition={enableFade ? "opacity .2s ease" : undefined}
-        opacity={enableFade ? (fade ? 1 : 0) : 1}
+        opacity={enableFade ? (fade ? 1 : 0.6) : 1}
         draggable={false}
       />
     </Box>

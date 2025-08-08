@@ -64,14 +64,15 @@ export default function Home({allPosts }) {
       <ButtonPrime href="/About" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>About Me</ButtonPrime>
       </Flex>
 
-      {/* <Image src="/img/Top/top_about.png" w={{base:"100%",md:'50%'}} alt="Main Image" rounded={4} />  */}
       <RotatingImage
       images={[
-    "/img/Top/top_about.png",
-    "/img/Fly.png",
-    "/img/icon.png",]}
+    "/img/About/Slide_1.png",
+    "/img/About/Slide_2.png",
+    "/img/About/Slide_3.png",
+    "/img/About/Slide_4.png",
+  ]}
     minMs={3000}   // 3秒〜
-    maxMs={8000}   // 8秒の間でランダム
+    maxMs={4000}   // 4秒の間でランダム
     width="100%"
     height={320}
     rounded="2xl" />

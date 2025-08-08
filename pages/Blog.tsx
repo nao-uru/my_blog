@@ -1,4 +1,4 @@
-import { Grid, Flex, Box, Text, Image, Button } from "@chakra-ui/react";
+import { Grid, Flex, Box, Text, Image } from "@chakra-ui/react";
 import { getAllPosts } from "../libs/contentful";
 import { getNoteFeed, NoteItem } from "../libs/getNoteFeed";
 import dynamic from 'next/dynamic';
