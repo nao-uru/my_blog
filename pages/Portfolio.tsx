@@ -157,7 +157,6 @@ export default function Portfolio({ recordMap }: any) {
 
       <Layout>
         <Pagetitle>Portfolio</Pagetitle>
-
         <Box my={16}>
           <NotionRenderer
           recordMap={recordMap}

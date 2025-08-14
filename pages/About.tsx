@@ -26,7 +26,7 @@ export default function AboutPage() {
 
     <Box my={16} px={{base:0, md:32}}>
     <Flex direction={{base:"column",md:"row"}} alignItems="center" justifyContent="space-around">
-     <Image src="/img/icon.png" w={36} h={36} mr={4} alt="Main Image" /> 
+     <Image src="/img/About/icon.png" w={36} h={36} mr={4} alt="Main Image" /> 
      <Table w={{base:"100%", md:"60%"}} mr="auto" mt={4}>
         <Tbody>
           <Tr>

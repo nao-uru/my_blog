@@ -1,6 +1,6 @@
 import { HeadSetting } from "../components/Templete/Head";
 import { Layout } from "../components/Templete/Layout";
-import { ChakraProvider,Text, Box, Flex, Image, } from "@chakra-ui/react";
+import { ChakraProvider,Text, Box, Flex, Image, Icon } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import { ButtonPrime } from "../components/Parts/ButtonPrimary";
 import { getAllPosts, client } from "../libs/contentful";
@@ -9,6 +9,7 @@ import { Subtitle } from "../components/Parts/Subtitle";
 import Link from "next/link";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import RotatingImage from "../components/Parts/RotatingImage";
+import AnimatedRibbon from "../components/Parts/AnimatedRibbon";
 
 
 // データ取得（記事一覧と記事個別の内容）
@@ -25,7 +26,7 @@ export async function getStaticProps({ params }) {
 }
 
 
-export default function Home({allPosts }) {
+export default function Home({ allPosts }) {
 
   return (
     <>
@@ -42,7 +43,8 @@ export default function Home({allPosts }) {
      <Layout>
 
       {/* トップ */}
-      <Box css={sFull} backgroundImage={"/img/Top/FV.png"} backgroundSize={"cover"} >
+      <Box css={sFull} h={{ base: "400px", md: "720px"}} backgroundSize={"cover"} >
+      <AnimatedRibbon/>
       </Box>
 
       {/* メイン */}
@@ -52,7 +54,9 @@ export default function Home({allPosts }) {
       <Flex direction={{base:"column",md:'row'}}  my={16} gap={4}>
       <Flex flexDir="column" gap={8}>
         <Subtitle size="16px" >About Me</Subtitle>
-      <Text fontSize={{base:"20px",md:"32px"}} lineHeight="150%">ユーザー視点とビジネス視点をつなぐ<br/>プロダクトデザイナーです</Text>
+      <Text fontSize={{base:"28px",md:"32px"}} lineHeight="150%">ユーザー視点とビジネス視点をつなぐ、
+        <Box as="br" display={{ base: "none", md: "block" }} />
+        プロダクトデザイナーです</Text>
       <Text size="md" lineHeight="7">
       アプリ制作会社・旅行系サービス・SaaS事業会社にて、
         プロダクトの0→1立ち上げから既存機能の改善まで幅広く担当。
@@ -95,9 +99,9 @@ export default function Home({allPosts }) {
               初期設計から参加し、関係者との要件整理をし、業務フロー全体を見渡したUIに落とし込みました。</Text>
             </Flex>
             <Link href="/What" passHref>
-            <Box css={sHover} p={5} border={"1px solid #CACACA"} rounded={4} w="fit-content" ml={"auto"}>
-              <AiOutlineArrowRight size={40} color="#3A3A3A" />
-            </Box>
+            <Flex css={sHover} h={{base:14 ,md:20 }} w={{base:14 ,md:20 }} border={"1px solid #CACACA"} rounded={4} ml={"auto"} justifyContent={"center"} alignItems={"center"}>
+              <Icon as={AiOutlineArrowRight} boxSize={{ base: 8, md: 10 }} />
+            </Flex>
             </Link>
           </Flex>
         </Flex>
@@ -111,9 +115,9 @@ export default function Home({allPosts }) {
               競合調査、体験設計、UIデザインまで一貫して担当し、開発チームとの連携も重視しています。</Text>
             </Flex>
             <Link href="/What" passHref>
-            <Box css={sHover} p={5} border={"1px solid #CACACA"} rounded={4} w="fit-content" ml={"auto"}>
-              <AiOutlineArrowRight size={40} color="#3A3A3A" />
-            </Box>
+            <Flex css={sHover} h={{base:14 ,md:20 }} w={{base:14 ,md:20 }} border={"1px solid #CACACA"} rounded={4} ml={"auto"} justifyContent={"center"} alignItems={"center"}>
+              <Icon as={AiOutlineArrowRight} boxSize={{ base: 8, md: 10 }} />
+            </Flex>
             </Link>
           </Flex>
         </Flex>
@@ -127,9 +131,9 @@ export default function Home({allPosts }) {
               複数人での効率的なデザイン制作や、エンジニアとの共通言語として機能するシステムを目指して構築を進めています。</Text>
             </Flex>
             <Link href="/What" passHref>
-            <Box css={sHover} p={5} border={"1px solid #CACACA"} rounded={4} w="fit-content" ml={"auto"}>
-              <AiOutlineArrowRight size={40} color="#3A3A3A" />
-            </Box>
+            <Flex css={sHover} h={{base:14 ,md:20 }} w={{base:14 ,md:20 }} border={"1px solid #CACACA"} rounded={4} ml={"auto"} justifyContent={"center"} alignItems={"center"}>
+              <Icon as={AiOutlineArrowRight} boxSize={{ base: 8, md: 10 }} />
+            </Flex>
             </Link>
           </Flex>
         </Flex>
@@ -142,9 +146,9 @@ export default function Home({allPosts }) {
             <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">実務の詳細は制作実績にてご確認いただけます。閲覧をご希望の方は、お手数ですがパスワードをお問い合わせください！</Text>
             </Flex>
             <Link href="/Portfolio" passHref>
-            <Box css={sHover} p={5} border={"1px solid #CACACA"} rounded={4} w="fit-content" ml={"auto"}>
-              <AiOutlineArrowRight size={40} color="#ffffff" />
-            </Box>
+            <Flex css={sHover} h={{base:14 ,md:20 }} w={{base:14 ,md:20 }} border={"1px solid #CACACA"} rounded={4} ml={"auto"} justifyContent={"center"} alignItems={"center"}>
+              <Icon as={AiOutlineArrowRight} boxSize={{ base: 8, md: 10 }} />
+            </Flex>
             </Link>
           </Flex>
         </Flex>
@@ -212,7 +216,6 @@ export default function Home({allPosts }) {
 const sFull = css`
 margin-right: calc(50% - 50vw);
 margin-left: calc(50% - 50vw);
-height:720px;
 `
 
 const sHover = css`

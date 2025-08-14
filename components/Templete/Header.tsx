@@ -1,6 +1,6 @@
 import { Box, ChakraProvider,  Flex, useBreakpointValue, Link, Button} from "@chakra-ui/react";
 
-import { Menu } from "../Cards/Menu";
+import { Menu } from "../Parts/Menu";
 
 export const Header = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });

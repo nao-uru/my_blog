@@ -36,7 +36,7 @@ const sBack = css`
  justify-content: center;
  border-radius: 50%;
  background: #F5F5F5;
- filter: drop-shadow(-8px -8px 8px rgba(255, 255, 255, 0.8)) drop-shadow(8px 8px 8px rgba(166, 180, 200, 0.7));
+ filter: drop-shadow(-8px -8px 8px rgba(255, 255, 255, 0.8)) drop-shadow(6px 6px 6px rgba(181, 189, 199, 0.4));
  
  :hover {
    color:  linear-gradient(180deg, #EEF0F5 0%, #E6E9EF 100%);

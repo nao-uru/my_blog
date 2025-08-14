@@ -1,10 +1,11 @@
 import { Layout } from "../components/Templete/Layout";
 import { HeadSetting } from "../components/Templete/Head";
-import { ChakraProvider, Flex, Image, Text, Box } from "@chakra-ui/react";
+import { ChakraProvider, Flex, Image, Text, Box, Icon } from "@chakra-ui/react";
 import { Pagetitle } from "../components/Parts/Pagetitle";
 import Link from "next/link";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { css } from "@emotion/react";
+
 
 
 export default function What() {
@@ -54,7 +55,7 @@ export default function What() {
 
 
           </Flex>
-          <Image src="/img/Top/WID_1.png" w={"400px"} alt="Main Image" h={"auto"} objectFit={"cover"} /> 
+          <Image src="/img/WID/WID_1.png" w={{base:"full",md:"400px"}} alt="Main Image" h={{base:"280px",md:"auto"}} objectFit={"cover"} /> 
         </Flex>
 
         {/* 新規プロダクトの0→1立ち上げ */}
@@ -87,7 +88,7 @@ export default function What() {
 
 
           </Flex>
-          <Image src="/img/Top/WID_2.png" w={"400px"} alt="Main Image" h={"auto"} objectFit={"cover"} /> 
+          <Image src="/img/WID/WID_2.png" w={{base:"",md:"400px"}} h={{base:"240px",md:"auto"}} alt="Main Image" objectFit={"cover"} /> 
         </Flex>
 
         {/* デザインシステム構築 */}
@@ -122,7 +123,7 @@ export default function What() {
 
 
           </Flex>
-          <Image src="/img/Top/WID_3.png" w={"400px"} alt="Main Image" h={"auto"} objectFit={"cover"} /> 
+          <Image src="/img/WID/WID_3.png" w={{base:"full",md:"400px"}} h={{base:"240px",md:"auto"}} alt="Main Image" objectFit={"cover"} /> 
         </Flex>
 
         {/* 制作実績 */}
@@ -134,9 +135,9 @@ export default function What() {
             <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">実務の詳細は制作実績にてご確認いただけます。閲覧をご希望の方は、お手数ですがパスワードをお問い合わせください！</Text>
             </Flex>
             <Link href="/Portfolio" passHref>
-            <Box css={sHover} p={5} border={"1px solid #CACACA"} rounded={4} w="fit-content" ml={"auto"}>
-              <AiOutlineArrowRight size={40} color="#ffffff" />
-            </Box>
+            <Flex css={sHover} h={{base:14 ,md:20 }} w={{base:14 ,md:20 }} border={"1px solid #CACACA"} rounded={4} ml={"auto"} justifyContent={"center"} alignItems={"center"}>
+              <Icon as={AiOutlineArrowRight} boxSize={{ base: 8, md: 10 }} />
+            </Flex>
             </Link>
           </Flex>
         </Flex>

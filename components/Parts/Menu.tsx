@@ -8,8 +8,8 @@ import {
   useDisclosure, Stack,Drawer,DrawerOverlay,DrawerContent, 
   DrawerCloseButton, DrawerHeader, DrawerBody, Text, 
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import { ButtonPrime } from "../Parts/ButtonPrimary";
+import { ButtonPrime } from "./ButtonPrimary";
+import { AiOutlineMenu } from "react-icons/ai";
 
 
 const Navigation = () => {
@@ -52,8 +52,8 @@ const Navigation = () => {
       </Box>
       </Link>
 
-      <Link href="/Blog" passHref>
-      <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}  mt={2} w={"full"}>
+      <Link href="/Article" passHref>
+      <Box mr={8} css={path.startsWith('/Article') ? sBorderLink:''}  mt={2} w={"full"}>
       <Box css={sHover}>
       <Text fontSize={20} pt="4px" h="100%"  css={sHover}>Article</Text>
       </Box>
@@ -78,7 +78,7 @@ export const Menu = () => {
     return (
       <>
       <ChakraProvider>
-      <HamburgerIcon w={10} h={10} onClick={onOpen} />
+      <Box  w={10} h={10} onClick={onOpen}><AiOutlineMenu size={32} color="#151515" /></Box>
 
       <Drawer
         isOpen={isOpen}
@@ -90,7 +90,7 @@ export const Menu = () => {
           <DrawerContent css={sOpen}>
             <DrawerCloseButton w={10} h={10} />
             <DrawerHeader>
-              <Text>NAO OSAWA</Text>
+              <Text fontWeight={"normal"}>NAO OSAWA</Text>
             </DrawerHeader>
             <DrawerBody>
               <Navigation />
@@ -147,9 +147,9 @@ export const Menu = () => {
     </Box>
     </Link>
 
-    <Link href="/Blog" passHref>
+    <Link href="/Article" passHref>
     <Box css={sHover}>
-    <Box mr={12} css={path.startsWith('/Blog') ? sBorder:''}>
+    <Box mr={12} css={path.startsWith('/Article') ? sBorder:''}>
     <Text size="sm" pt="6px" h="100%" fontWeight="nomal" css={sHover}>Article</Text>
     </Box>
     </Box>
