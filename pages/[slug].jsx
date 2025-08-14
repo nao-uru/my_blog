@@ -89,7 +89,7 @@ export default function PostPage({blogPost, allPosts }) {
     <Box m="auto" w="100%" mr={8}>
      <Text mt={{base:6,md:12}} fontSize={{base:"24px",md:"34px"}} >{blogPost.fields.title}</Text>
      <Flex justify="start" align="baseline">
-     <Text mt={{base:2,md:4}} mr={2} fontSize={{base:16, md:20}}>Date: {`${year}/${month}/${day}`}</Text>
+     <Text mt={{base:2,md:4}} mr={2} fontSize={{base:16, md:20}}>Date {`${year} / ${month} / ${day}`}</Text>
      {tags.map((tagEl) => {
        return <Text fontSize={{base:14, md:18}} px={{base:3, md: 4}} py={{base:1, md:2}} rounded={1000} backgroundColor={"#ffffff"} key={tagEl.length}>{tagEl}</Text>;
        })}
@@ -133,14 +133,14 @@ export default function PostPage({blogPost, allPosts }) {
     <Box  width="100%">
     <Flex mt={6}>
       <Link href='/About' passHref>
-      <Image src="/img/icon.png" alt="icon" width="100px" height="100px" mr={4} cursor='pointer' _hover={{opacity:'0.7'}} />
+      <Image src="/img/About/icon.png" alt="icon" width="100px" height="100px" mr={4} cursor='pointer' _hover={{opacity:'0.7'}} />
       </Link>
       <Box>
         <Text fontSize={28} >NAO OSAWA</Text>
         <Text fontSize={16} >プロダクトデザイナー<br />たまにコードも書く</Text>
       </Box>
     </Flex>
-    <Text fontSize={16} my={4}>プログラミング学習経験を活かしたアプリケーションのデザインが得意</Text>
+    <Text fontSize={16} my={4}>プロダクトデザイナー5年目。<br/>SaaSプロダクトデザイナー×アプリ制作会社で副業中。元バックパッカーの旅行好き！</Text>
     <ButtonPrime href="/About" bgColor="#23BA78"  wide="full" target="" color="#ffffff" icon={''}>About Me</ButtonPrime>
     </Box>
 

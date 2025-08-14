@@ -1,7 +1,7 @@
 import { Box, ChakraProvider, Flex, Spacer, useBreakpointValue, Link, } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 
-import { Menu } from "../Cards/Menu";
+import { Menu } from "../Parts/Menu";
 import { ButtonPrime } from "../Parts/ButtonPrimary";
 
 export const Footer = () => {
