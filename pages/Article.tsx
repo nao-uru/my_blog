@@ -30,7 +30,7 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function  BlogPage ({ blogPosts, notes }: Props) {
+export default function  Article ({ blogPosts, notes }: Props) {
 
   const ScrollRevealContainer = dynamic(
     import('../components/Templete/Scroll'),
@@ -66,7 +66,10 @@ const handleMorePosts = () =>
     <Flex flexDirection={"column"} my={16} >
 
     <Flex flexDirection={"column"} gap={8}>
-      <Subtitle size="24">note</Subtitle>
+      <Box>
+      <Subtitle size="24">Design Blog</Subtitle>
+      <Text pt={{base:2,md:4}}>noteで書いているブログ。デザインのことを中心に書いています。</Text>
+      </Box>
       <Grid templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={8} columnGap={8}>
         {notes.slice(0, visibleCountNotes).map((note, index) => (
 
@@ -111,8 +114,10 @@ const handleMorePosts = () =>
     <Flex flexDirection={"column"} my={16} >
 
     <Flex flexDirection={"column"} gap={8}>
+      <Box>
       <Subtitle size="24">My Blog</Subtitle>
-      <Text>このサイト上で構築しているブログ</Text>
+      <Text pt={{base:2,md:4}}>このサイト上で構築しているブログ。プライベートのことを中心に書いています。</Text>
+      </Box>
       <Grid templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={8} columnGap={8}>
       {blogPosts.slice(0, visibleCountPosts).map((blogPost:any) => {
 
