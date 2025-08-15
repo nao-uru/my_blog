@@ -50,13 +50,12 @@ const handleMorePosts = () =>
     <>
     {console.log(blogPosts)}
 
-    <HeadSetting 
-    title={'Blog'}
-    description={"なおのブログ"}
-    path={"/Blog"}
-    card={"/public/img/Portfolio.png"}
-    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
-     />
+     <HeadSetting
+      title="NAO's Article"
+      description="ブログ記事"
+      path="/Article"
+      ogImage="https://www.naosjournal.com/img/Top/Portfolio.png"
+      />
 
     <Layout>
 
