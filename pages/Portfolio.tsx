@@ -84,7 +84,7 @@ export default function Portfolio({ recordMap }: any) {
     // ログイン画面
     return (
       <Layout>
-        <Pagetitle>Login</Pagetitle>
+        <Pagetitle>Authentication</Pagetitle>
         <Box my={16} w={{ base: "320px", md: '400px'}}>
           <Text mb={8}>この先のページを閲覧するにはパスワードが必要です。</Text>
           <form onSubmit={handleSubmit}>
@@ -101,8 +101,8 @@ export default function Portfolio({ recordMap }: any) {
                 borderColor="gray.300"
                 _focus={{ borderColor: "teal.400", boxShadow: "0 0 0 1px teal.400" }}
               />
-              <Button width="fit-content" type="submit" bgColor="#23BA78" color="#fff" borderRadius="full" _hover={{ bgColor: "#1da566" }}>
-                ログイン
+              <Button py={6} width="fit-content" type="submit" bgColor="#23BA78" color="#fff" fontWeight={"normal"} borderRadius="full" _hover={{ bgColor: "#23ba78b6" }}>
+                認証する
               </Button>
             </Flex>
           </form>
@@ -148,11 +148,10 @@ export default function Portfolio({ recordMap }: any) {
   return (
     <>
       <HeadSetting
-        title={'Portfolio'}
-        description={"なおのブログ"}
-        path={"/Blog"}
-        card={"/public/img/Portfolio.png"}
-        keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
+      title="NAO's Portfolio"
+      description="制作実績"
+      path="/Portfolio"
+      ogImage="https://www.naosjournal.com/img/Top/Portfolio.png"
       />
 
       <Layout>

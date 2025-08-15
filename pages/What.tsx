@@ -11,13 +11,12 @@ import { css } from "@emotion/react";
 export default function What() {
   return (
     <>
-    <HeadSetting 
-    title={'NAOs JOURNAL'}
-    description={""}
-    path={"/What"}
-    card={"/public/img/Portfolio.png"}
-    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
-     />
+     <HeadSetting
+      title="What I Do"
+      description="得意なこと"
+      path="/What"
+      ogImage="https://www.naosjournal.com/img/Top/Portfolio.png"
+      />
 
 
      <ChakraProvider>
@@ -132,7 +131,7 @@ export default function What() {
           <Flex flexDirection={"column"} textColor={"#ffffff"} >
             <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"}>
             <Text fontSize={{base:"18px",md:"24px"}} lineHeight="150%">制作実績</Text>
-            <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">実務の詳細は制作実績にてご確認いただけます。閲覧をご希望の方は、お手数ですがパスワードをお問い合わせください！</Text>
+            <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">実務の詳細は制作実績にてご確認いただけます。普段の仕事でどんなデザインをしているのか気になる方は、ぜひ制作実績ページをご覧ください！</Text>
             </Flex>
             <Link href="/Portfolio" passHref>
             <Flex css={sHover} h={{base:14 ,md:20 }} w={{base:14 ,md:20 }} border={"1px solid #CACACA"} rounded={4} ml={"auto"} justifyContent={"center"} alignItems={"center"}>

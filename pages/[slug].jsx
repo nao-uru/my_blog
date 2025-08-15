@@ -63,22 +63,21 @@ export default function PostPage({blogPost, allPosts }) {
   
   return (
    <>
-    <HeadSetting 
-    title={blogPost.fields.title}
-    description={blogPost.fields.subtitle}
-    path={'<https://www.naosjournal.com/>' + blogPost.fields.slug}
-    card={image}
-    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
-     />
+  <HeadSetting
+   title={blogPost.fields.title}
+   description={blogPost.fields.title}
+   path={blogPost.fields.slug}
+   ogImage={image}
+  />
     
    <Layout>
 
    <Box py={16}>
 
    <BreadcrumbList
-     tree1={'Blog'}
+     tree1={'Article'}
      tree2={blogPost.fields.title}
-     tree1Link={'/Blog'}
+     tree1Link={'/Article'}
      tree2Link={'<https://www.naosjournal.com/>' + blogPost.fields.slug}
      />
 
@@ -91,7 +90,7 @@ export default function PostPage({blogPost, allPosts }) {
      <Flex justify="start" align="baseline">
      <Text mt={{base:2,md:4}} mr={2} fontSize={{base:16, md:20}}>Date {`${year} / ${month} / ${day}`}</Text>
      {tags.map((tagEl) => {
-       return <Text fontSize={{base:14, md:18}} px={{base:3, md: 4}} py={{base:1, md:2}} rounded={1000} backgroundColor={"#ffffff"} key={tagEl.length}>{tagEl}</Text>;
+       return <Text fontSize={{base:14, md:18}} px={{base:3, md: 4}} py={1} rounded={1000} backgroundColor={"#E3E3E3"} key={tagEl.length}>{tagEl}</Text>;
        })}
      </Flex>
      <Img src={image} mt={{base:2,md:4}}  w="full" h={{base:"200px",md:"400px"}} objectFit="cover" />
@@ -127,7 +126,7 @@ export default function PostPage({blogPost, allPosts }) {
     </Box>
 
     {/* Aside  */}
-    <Box m='auto' mt={{base:24,lg:"120px"}} w={{base:'100%',md:"40%"}} >
+    <Box m='auto' mt={{base:24,lg:"140px"}} w={{base:'100%',md:"40%"}} >
 
     {/* Profile */}
     <Box  width="100%">
@@ -160,7 +159,7 @@ export default function PostPage({blogPost, allPosts }) {
             />
     }).slice(0,4)} 
 
-    <ButtonPrime href="/Blog" bgColor="#23BA78"  wide="full" target="" color="#ffffff" icon={''}>All Posts</ButtonPrime>
+    <ButtonPrime href="/Article" bgColor="#23BA78"  wide="full" target="" color="#ffffff" icon={''}>All Posts</ButtonPrime>
     </Flex>
     </Box>
 
