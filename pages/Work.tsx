@@ -17,13 +17,12 @@ export default function WorkPage() {
 
   return (
     <>
-    <HeadSetting 
-    title={'NAOs JOURNAL'}
-    description={""}
-    path={"/Work"}
-    card={"/public/img/Portfolio.png"}
-    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
-     />
+     <HeadSetting
+      title="NAO's Work"
+      description="個人制作紹介"
+      path="/Work"
+      ogImage="https://www.naosjournal.com/img/Top/Portfolio.png"
+      />
 
 
     <ChakraProvider>
@@ -31,7 +30,17 @@ export default function WorkPage() {
       <Layout>
       <Pagetitle>Work</Pagetitle>
 
+      {/* Personal Project */}
       <Flex py={{base:12, md:20}} flexDirection={"column"} gap={12}  >
+
+        <Box>
+        <Subtitle size={{base:"24px",md:"32px"}}>Personal Project</Subtitle>
+        <Text my={2}>実務とは別にUI/UXスキル向上のために個人で制作したプロジェクトです。要件定義〜UI設計〜検証までを一貫して行いました。<br/>※実務のプロジェクト詳細には、
+        <Box display={"inline-block"}>
+        <LinkButton href="/Portfolio"  border="#151515" >制作実績</LinkButton>
+        </Box>
+        をご覧ください。</Text>      
+        </Box>
 
       {/* IDEAL ME */}
       <Flex flexDirection={{ base: "column" , md: 'row' }} gap={8} >

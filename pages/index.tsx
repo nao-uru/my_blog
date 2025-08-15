@@ -31,13 +31,13 @@ export default function Home({ allPosts }) {
   return (
     <>
     <ChakraProvider>
-    <HeadSetting 
-    title={'Home'}
-    description={"ホーム"}
-    path="/"
-    card={"/public/img/Portfolio.png"}
-    keyword={'ブログ,デザイナー,デザイン,ポートフォリオ'}
-     />
+
+     <HeadSetting
+      title="NAO's Home"
+      description="ホーム"
+      path="/index"
+      ogImage="https://www.naosjournal.com/img/Top/Portfolio.png"
+      />
 
       
      <Layout>
@@ -143,7 +143,7 @@ export default function Home({ allPosts }) {
           <Flex flexDirection={"column"} textColor={"#ffffff"} >
             <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"}>
             <Text fontSize={{base:"18px",md:"24px"}} lineHeight="150%">制作実績</Text>
-            <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">実務の詳細は制作実績にてご確認いただけます。閲覧をご希望の方は、お手数ですがパスワードをお問い合わせください！</Text>
+            <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">実務の詳細は制作実績にてご確認いただけます。普段の仕事でどんなデザインをしているのか気になる方は、ぜひ制作実績ページをご覧ください！</Text>
             </Flex>
             <Link href="/Portfolio" passHref>
             <Flex css={sHover} h={{base:14 ,md:20 }} w={{base:14 ,md:20 }} border={"1px solid #CACACA"} rounded={4} ml={"auto"} justifyContent={"center"} alignItems={"center"}>
@@ -198,7 +198,7 @@ export default function Home({ allPosts }) {
      </Flex>
 
 
-      <ButtonPrime href="/Blog" bgColor="#23BA78" target="" color="#ffffff" wide="fit-content" icon={''}>Read More</ButtonPrime>
+      <ButtonPrime href="/Article" bgColor="#23BA78" target="" color="#ffffff" wide="fit-content" icon={''}>Read More</ButtonPrime>
 
       </Flex>
 
