@@ -27,7 +27,7 @@ export default function WorkPage() {
 
     <ChakraProvider>
 
-      <Layout>
+    <Layout>
       <Pagetitle>Work</Pagetitle>
 
       {/* Personal Project */}

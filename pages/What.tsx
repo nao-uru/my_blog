@@ -1,10 +1,9 @@
 import { Layout } from "../components/Templete/Layout";
 import { HeadSetting } from "../components/Templete/Head";
-import { ChakraProvider, Flex, Image, Text, Box, Icon } from "@chakra-ui/react";
+import { ChakraProvider, Flex, Image, Text } from "@chakra-ui/react";
 import { Pagetitle } from "../components/Parts/Pagetitle";
-import Link from "next/link";
-import { AiOutlineArrowRight } from "react-icons/ai";
 import { css } from "@emotion/react";
+import { RowCard } from "../components/Cards/RowCard";
 
 
 
@@ -26,7 +25,7 @@ export default function What() {
       <Flex my={{base:12, md:20}} flexDirection={"column"} gap={16}>
 
         {/* SaaSプロダクトの設計・改善 */}
-        <Flex flexDirection={{ base: "column-reverse" , md: 'row' }} rounded={8} overflow={"hidden"} id="About_1">
+        <Flex flexDirection={{ base: "column-reverse" , md: 'row' }} rounded={12} overflow={"hidden"} id="About_1">
           <Flex flexDirection={"column"} p={{ base: 6 , md: 12 }}  gap={{ base: 6 , md: 10 }} backgroundColor={"#ffffff"} flex={1} >
             <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"} gap={4}>
             <Text fontSize={{base:"18px",md:"32px"}} lineHeight="160%">SaaSプロダクトの設計・改善</Text>
@@ -58,7 +57,7 @@ export default function What() {
         </Flex>
 
         {/* 新規プロダクトの0→1立ち上げ */}
-        <Flex flexDirection={{ base: "column-reverse" , md: 'row' }} rounded={8} overflow={"hidden"} id="About_2">
+        <Flex flexDirection={{ base: "column-reverse" , md: 'row' }} rounded={12} overflow={"hidden"} id="About_2">
           <Flex flexDirection={"column"} p={{ base: 6 , md: 12 }} gap={{ base: 6 , md: 10 }} backgroundColor={"#ffffff"} flex={1}>
             <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"} gap={4}>
             <Text fontSize={{base:"18px",md:"32px"}} lineHeight="160%">新規プロダクトの0→1立ち上げ</Text>
@@ -91,7 +90,7 @@ export default function What() {
         </Flex>
 
         {/* デザインシステム構築 */}
-        <Flex flexDirection={{ base: "column-reverse" , md: 'row' }} rounded={8} overflow={"hidden"} id="About_3">
+        <Flex flexDirection={{ base: "column-reverse" , md: 'row' }} rounded={12} overflow={"hidden"} id="About_3">
           <Flex flexDirection={"column"} p={{ base: 6 , md: 12 }}  gap={{ base: 6 , md: 10 }} backgroundColor={"#ffffff"} flex={1}>
             <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"} gap={4}>
             <Text fontSize={{base:"18px",md:"32px"}} lineHeight="160%">デザインシステム構築</Text>
@@ -126,20 +125,14 @@ export default function What() {
         </Flex>
 
         {/* 制作実績 */}
-        <Flex flexDirection={{ base: "column" , md: 'row' }}  p={{ base: 6 , md: 12 }}  gap={{ base: 6 , md: 10 }} backgroundColor={"#3A3A3A"} rounded={4}>
-          <Image src="/img/Top/Portfolio.png" w={"300px"} alt="Main Image" rounded={4} /> 
-          <Flex flexDirection={"column"} textColor={"#ffffff"} >
-            <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"}>
-            <Text fontSize={{base:"18px",md:"24px"}} lineHeight="150%">制作実績</Text>
-            <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">実務の詳細は制作実績にてご確認いただけます。普段の仕事でどんなデザインをしているのか気になる方は、ぜひ制作実績ページをご覧ください！</Text>
-            </Flex>
-            <Link href="/Portfolio" passHref>
-            <Flex css={sHover} h={{base:14 ,md:20 }} w={{base:14 ,md:20 }} border={"1px solid #CACACA"} rounded={4} ml={"auto"} justifyContent={"center"} alignItems={"center"}>
-              <Icon as={AiOutlineArrowRight} boxSize={{ base: 8, md: 10 }} />
-            </Flex>
-            </Link>
-          </Flex>
-        </Flex>
+        <RowCard
+        title={"制作実績"}
+        text={"実務の詳細は制作実績にてご確認いただけます。普段の仕事でどんなデザインをしているのか気になる方は、ぜひ制作実績ページをご覧ください！"}
+        img={"/img/Top/Portfolio.png"}
+        link={"/Portfolio"}
+        bgColor={"linear-gradient(87.37deg, #91a59c, #3a5d4e)"}
+        textColor={"#ffffff"}
+         />
 
         
 

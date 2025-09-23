@@ -30,14 +30,14 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function  Article ({ blogPosts, notes }: Props) {
+export default function  BlogPage ({ blogPosts, notes }: Props) {
 
   const ScrollRevealContainer = dynamic(
     import('../components/Templete/Scroll'),
     {ssr: false,}
   );
 
-  const STEP = 6;
+const STEP = 6;
 const [visibleCountNotes, setVisibleCountNotes] = useState(6);
 const [visibleCountPosts, setVisibleCountPosts] = useState(6);
 
@@ -50,12 +50,13 @@ const handleMorePosts = () =>
     <>
     {console.log(blogPosts)}
 
-     <HeadSetting
+    <HeadSetting
       title="NAO's Article"
       description="ブログ記事"
       path="/Article"
       ogImage="https://www.naosjournal.com/img/Top/Portfolio.png"
-      />
+    />
+
 
     <Layout>
 
@@ -65,14 +66,11 @@ const handleMorePosts = () =>
     <Flex flexDirection={"column"} my={16} >
 
     <Flex flexDirection={"column"} gap={8}>
-      <Box>
-      <Subtitle size="24">Design Blog</Subtitle>
-      <Text pt={{base:2,md:4}}>noteで書いているブログ。デザインのことを中心に書いています。</Text>
-      </Box>
+      <Subtitle size="24">note</Subtitle>
       <Grid templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={8} columnGap={8}>
         {notes.slice(0, visibleCountNotes).map((note, index) => (
 
-          <Box key={note.link || index} rounded={8} backgroundColor='#ffffff' css={sCard} h="full" w={"100%"} overflow={"hidden"}>
+          <Box key={note.link || index} rounded={4} backgroundColor='#ffffff' css={sCard} h="full" w={"100%"} overflow={"hidden"}>
           <Link href={note.link} passHref target="_blank">
             <Box>
               {note.thumbnail && (
@@ -113,10 +111,8 @@ const handleMorePosts = () =>
     <Flex flexDirection={"column"} my={16} >
 
     <Flex flexDirection={"column"} gap={8}>
-      <Box>
       <Subtitle size="24">My Blog</Subtitle>
-      <Text pt={{base:2,md:4}}>このサイト上で構築しているブログ。プライベートのことを中心に書いています。</Text>
-      </Box>
+      <Text>このサイト上で構築しているブログ</Text>
       <Grid templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={8} columnGap={8}>
       {blogPosts.slice(0, visibleCountPosts).map((blogPost:any) => {
 
