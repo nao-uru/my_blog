@@ -8,8 +8,8 @@ import {
   useDisclosure, Stack,Drawer,DrawerOverlay,DrawerContent, 
   DrawerCloseButton, DrawerHeader, DrawerBody, Text, 
 } from "@chakra-ui/react";
-import { ButtonPrime } from "./ButtonPrimary";
-import { AiOutlineMenu } from "react-icons/ai";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import { ButtonPrime } from "../Parts/ButtonPrimary";
 
 
 const Navigation = () => {
@@ -52,8 +52,8 @@ const Navigation = () => {
       </Box>
       </Link>
 
-      <Link href="/Article" passHref>
-      <Box mr={8} css={path.startsWith('/Article') ? sBorderLink:''}  mt={2} w={"full"}>
+      <Link href="/Blog" passHref>
+      <Box mr={8} css={path.startsWith('/Blog') ? sBorderLink:''}  mt={2} w={"full"}>
       <Box css={sHover}>
       <Text fontSize={20} pt="4px" h="100%"  css={sHover}>Article</Text>
       </Box>
@@ -78,7 +78,7 @@ export const Menu = () => {
     return (
       <>
       <ChakraProvider>
-      <Box  w={10} h={10} onClick={onOpen}><AiOutlineMenu size={32} color="#151515" /></Box>
+      <HamburgerIcon w={10} h={10} onClick={onOpen} />
 
       <Drawer
         isOpen={isOpen}
@@ -90,7 +90,7 @@ export const Menu = () => {
           <DrawerContent css={sOpen}>
             <DrawerCloseButton w={10} h={10} />
             <DrawerHeader>
-              <Text fontWeight={"normal"}>NAO OSAWA</Text>
+              <Text>NAO OSAWA</Text>
             </DrawerHeader>
             <DrawerBody>
               <Navigation />
@@ -125,7 +125,7 @@ export const Menu = () => {
     <Link href="/About" passHref>
     <Box mr={12} css={path.startsWith('/About') ? sBorder:''}>
     <Box css={sHover}>
-    <Text size="sm" pt="6px" h="100%" fontWeight="nomal" css={sHover}>About Me</Text>
+    <Text size="sm" pt="6px" h="100%" fontWeight="nomal" css={sHover}>About</Text>
     </Box>
     </Box>
     </Link>
@@ -147,9 +147,9 @@ export const Menu = () => {
     </Box>
     </Link>
 
-    <Link href="/Article" passHref>
+    <Link href="/Blog" passHref>
     <Box css={sHover}>
-    <Box mr={12} css={path.startsWith('/Article') ? sBorder:''}>
+    <Box mr={12} css={path.startsWith('/Blog') ? sBorder:''}>
     <Text size="sm" pt="6px" h="100%" fontWeight="nomal" css={sHover}>Article</Text>
     </Box>
     </Box>

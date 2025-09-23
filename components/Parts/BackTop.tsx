@@ -21,7 +21,7 @@ export const BackTop = () => {
       position="fixed" 
       right={{base:"40px",md:"80px"}}
       bottom={{base:"40px",md:"80px"}}>
-      <ChevronUpIcon w={{base:8,md:12}} h={{base:8,md:12}} alignSelf="top" />
+      <ChevronUpIcon color={"#ffffff"} w={{base:8,md:12}} h={{base:8,md:12}} alignSelf="top" />
       </Box>
     </ChakraProvider>
     </>
@@ -35,8 +35,8 @@ const sBack = css`
  align-items: center;
  justify-content: center;
  border-radius: 50%;
- background: #F5F5F5;
- filter: drop-shadow(-8px -8px 8px rgba(255, 255, 255, 0.8)) drop-shadow(6px 6px 6px rgba(181, 189, 199, 0.4));
+ background: linear-gradient(207.28deg, #bdd2c9, #d6ded4 62.5%, #f3f3f3);
+ filter: drop-shadow(-8px -8px 8px rgba(255, 255, 255, 0.76)) drop-shadow(6px 6px 6px #bdd2c9);
  
  :hover {
    color:  linear-gradient(180deg, #EEF0F5 0%, #E6E9EF 100%);

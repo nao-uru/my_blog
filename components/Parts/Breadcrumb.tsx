@@ -40,6 +40,7 @@ const sBread = css`
 
  :hover {
   opacity: 0.7;
+  background: #151515:
   text-decoration: none;
  }
 `
