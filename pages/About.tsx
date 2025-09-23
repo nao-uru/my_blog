@@ -7,9 +7,10 @@ import { Layout } from "../components/Templete/Layout";
 import { Subtitle } from "../components/Parts/Subtitle";
 import { css } from "@emotion/react";
 import RotatingImage from "../components/Parts/RotatingImage";
+import { RowCard } from "../components/Cards/RowCard";
 
 
-export default function AboutPage() {
+export default function About() {
 
   return (
     <>
@@ -86,38 +87,21 @@ export default function AboutPage() {
     </Text>
     </Stack>
 
-    <Stack lineHeight="180%" w={{base:"90%", md:"100%"}} ml="auto" m={{base:"auto"}}  width="100%">
+    <Stack lineHeight="180%" w={{base:"90%", md:"100%"}} ml="auto" m={{base:"auto"}} mb={24}  width="100%">
     <Subtitle size="24px">Vision</Subtitle>
     <Text mt={0} w={{base:"100%",md:"100%"}} mr="auto" fontSize={{base:"14px", md:"16px"}} >
       手を動かしながらチームを導けるプロダクトデザイナーを目指しています。マネジメントも進行管理にとどまらず、デザイン力を活かした貢献を理想とし、心理学や行動経済学を学びながらユーザー理解を深めています。
     </Text>
     </Stack>
 
-    <Flex py={8} px={10} gap={6} backgroundColor={"#3A3A3A"} rounded={4} direction={{base:"column",md:"row"}} mt={{base:6,md:12}} >
-          <RotatingImage
-          images={[
-            "/img/About/Slide_1.png",
-            "/img/About/Slide_2.png",
-            "/img/About/Slide_3.png",
-            "/img/About/Slide_4.png",
-          ]}minMs={3000} 
-          maxMs={4000}
-          width="300px"
-          height="auto"
-          rounded="4px"
-           />
-          <Flex flexDirection={"column"} textColor={"#ffffff"} >
-            <Flex alignSelf="stretch" h={"100%"} flexDirection={"column"}>
-            <Text fontSize={{base:"18px",md:"24px"}} lineHeight="150%">プライベートも含めたいろいろ</Text>
-            <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%">個人での活動やSNSのリンクなどをまとめています。ご興味のある方はご覧ください★</Text>
-            </Flex>
-            <Link href="https://bento.me/naosawa" passHref target="brank">
-            <Box css={sHover} p={{base:3,md:4}}  border={"1px solid #CACACA"} rounded={4} w="fit-content" ml={"auto"} mt={2}  >
-              Bento Linkはこちら
-            </Box>
-            </Link>
-          </Flex>
-        </Flex>
+    <RowCard
+        title={"プライベートも含めたいろいろ"}
+        text={"個人での活動やSNSのリンクなどをまとめています。ご興味のある方はご覧ください★"}
+        img={"/img/About/Slide_1.png"}
+        link={"https://bento.me/naosawa"}
+        bgColor={"linear-gradient(87.37deg, #91a59c, #3a5d4e)"}
+        textColor={"#ffffff"}
+         />
 
 
 

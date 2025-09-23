@@ -44,7 +44,7 @@ export const Footer = () => {
   return (
     <>
     <ChakraProvider>
-      <Box h="240px" css={Border} pt={8} mt="52">
+      <Box h="280px" css={Border} pt={8} mt={32}>
         <Box w="90%" m="auto">
           
         <Flex>
@@ -67,7 +67,7 @@ export const Footer = () => {
 }
 
 const Border = css`
- border-top: 1px solid #C6CEDA;
+ border-top: 1px solid #ffffffff;
 `
 const sMainTitle = css`
 cursor: pointer;
