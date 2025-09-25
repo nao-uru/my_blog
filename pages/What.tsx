@@ -18,7 +18,6 @@ export default function What() {
       />
 
 
-     <ChakraProvider>
     <Layout>
       <Pagetitle>What I Do</Pagetitle>
 
@@ -34,7 +33,7 @@ export default function What() {
             </Flex>
 
             <Flex flexDirection={"column"} gap={5}>
-            <Text color={"#23BA78"} fontSize={{base:"18px",md:"20px"}}>Project</Text>
+            <Text color={"#1B756C"} fontSize={{base:"18px",md:"20px"}}>Project</Text>
 
             <Flex gap={6} flexDirection={"column"}>
             <Flex flexDirection={"column"} pb={5} borderBottom={"1px solid #C6CEDA"} gap={3}>
@@ -66,7 +65,7 @@ export default function What() {
             </Flex>
 
             <Flex flexDirection={"column"} gap={5}>
-            <Text color={"#23BA78"} fontSize={{base:"18px",md:"20px"}}>Project</Text>
+            <Text color={"#1B756C"} fontSize={{base:"18px",md:"20px"}}>Project</Text>
 
             <Flex gap={6} flexDirection={"column"}>
             <Flex flexDirection={"column"} pb={5} borderBottom={"1px solid #C6CEDA"} gap={3}>
@@ -98,7 +97,7 @@ export default function What() {
             </Flex>
 
             <Flex flexDirection={"column"} gap={5}>
-            <Text color={"#23BA78"} fontSize={{base:"18px",md:"20px"}}>Project</Text>
+            <Text color={"#1B756C"} fontSize={{base:"18px",md:"20px"}}>Project</Text>
 
             <Flex gap={6} flexDirection={"column"}>
             <Flex flexDirection={"column"} pb={5} borderBottom={"1px solid #C6CEDA"} gap={3}>
@@ -130,7 +129,7 @@ export default function What() {
         text={"実務の詳細は制作実績にてご確認いただけます。普段の仕事でどんなデザインをしているのか気になる方は、ぜひ制作実績ページをご覧ください！"}
         img={"/img/Top/Portfolio.png"}
         link={"/Portfolio"}
-        bgColor={"linear-gradient(87.37deg, #91a59c, #3a5d4e)"}
+        bgColor={"linear-gradient(87.37deg, #1b756c, #279c90 66.83%, #68a8a2)"}
         textColor={"#ffffff"}
          />
 
@@ -140,7 +139,6 @@ export default function What() {
 
       
     </Layout>
-     </ChakraProvider>
 
     </>
   )

@@ -35,7 +35,7 @@ const sBack = css`
  align-items: center;
  justify-content: center;
  border-radius: 50%;
- background: linear-gradient(207.28deg, #bdd2c9, #d6ded4 62.5%, #f3f3f3);
+ background: linear-gradient(207.28deg, #a2c8c2, #bcdad6 30.29%, #f3f3f3);
  filter: drop-shadow(-8px -8px 8px rgba(255, 255, 255, 0.76)) drop-shadow(6px 6px 6px #bdd2c9);
  
  :hover {

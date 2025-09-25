@@ -25,8 +25,6 @@ export default function WorkPage() {
       />
 
 
-    <ChakraProvider>
-
     <Layout>
       <Pagetitle>Work</Pagetitle>
 
@@ -133,9 +131,6 @@ export default function WorkPage() {
       </Box>
         
       </Layout>
-
-
-    </ChakraProvider>
 
     </>
   )

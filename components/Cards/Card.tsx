@@ -7,7 +7,7 @@ export const Card = (props) => {
   return(
     <>
     <ChakraProvider>
-      <Box rounded={8} backgroundColor='#ffffff50' css={sCard} h="full" w={"100%"} overflow={"hidden"}>
+      <Box rounded={8} backgroundColor='#ffffff' css={sCard} h="full" w={"100%"} overflow={"hidden"}>
       <Link href={props.slug} passHref>
       <Box css={sCard} >
         <Image className="image" src={'https:' + props.url} w="full" h="200px" alt="Blog thubmnail" alignSelf={"stretch"} maxH={"100%"} maxW={"#100%"} objectFit={"cover"}  />
