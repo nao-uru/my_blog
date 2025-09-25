@@ -101,7 +101,7 @@ export default function Portfolio({ recordMap }: any) {
                 borderColor="gray.300"
                 _focus={{ borderColor: "teal.400", boxShadow: "0 0 0 1px teal.400" }}
               />
-              <Button py={6} width="fit-content" type="submit" bgColor="#23BA78" color="#fff" fontWeight={"normal"} borderRadius="full" _hover={{ bgColor: "#23ba78b6" }}>
+              <Button py={6} width="fit-content" type="submit" background="linear-gradient(87.37deg, #1b756c, #279c90 66.83%, #68a8a2)" color="#fff" fontWeight={"normal"} borderRadius="full" _hover={{ bgColor: "#23ba78b6" }}>
                 認証する
               </Button>
             </Flex>

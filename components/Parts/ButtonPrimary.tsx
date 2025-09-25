@@ -14,8 +14,8 @@ export const ButtonPrime = ( props ) => {
        <Link href={props.href}  passHref legacyBehavior>
          <a target={props.target}>
          <Flex css={sHover} alignItems="center" justifyContent="center" cursor="pointer" borderRadius='full' 
-         backgroundColor={props.bgColor} 
-         color={props.color} 
+         background={props.bgColor ?? "linear-gradient(87.37deg, #2b5b56, #1b756c 40.87%, #00a291)"} 
+         color={props.color ?? "#ffffff"} 
          width={props.wide}
          px={6} py={3} mr={4}  
          border={`1px solid ${props.border}`}

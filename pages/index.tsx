@@ -29,7 +29,6 @@ export default function Home({ allPosts }) {
 
   return (
     <>
-    <ChakraProvider>
 
      <HeadSetting
       title="NAO's Home"
@@ -39,18 +38,21 @@ export default function Home({ allPosts }) {
       />
 
       
-     <Layout bg={"linear-gradient(207.28deg, #bdd2c9, #d6ded4 62.5%, #f3f3f3)"}>
+     <Layout bg={"linear-gradient(207.28deg, #a2c8c2, #bcdad6 30.29%, #f3f3f3)"}>
       
       {/* トップ */}
       <Box css={sFull} h={{ base: "400px", md: "800px"}} backgroundSize={"cover"} >
+
+        <Box pt={40}>
         <AnimatedRibbon />
+        </Box>
       </Box>
 
       {/* メイン */}
       <Flex flexDir="column" gap={8} w={{base:"100%",md:"100%"}}  m="auto">
         
       {/* Profile */}
-      <Flex direction={{base:"column",md:'row'}}  my={16} gap={4}>
+      <Flex direction={{base:"column",md:'row'}}  my={16} gap={8}>
       <Flex flexDir="column" gap={8}>
         <Subtitle size="16px" >About Me</Subtitle>
       <Text fontSize={{base:"28px",md:"32px"}} lineHeight="150%">ユーザー視点とビジネス視点をつなぐ、
@@ -61,10 +63,9 @@ export default function Home({ allPosts }) {
         プロダクトの0→1立ち上げから既存機能の改善まで幅広く担当。
         <br/>
         スマホアプリ・Webアプリで、Figmaによるデザインシステム構築やUI設計に携わってきました。
-        <br/>
         ユーザー体験とチームの開発効率を両立する設計を大切にしています。
       </Text>
-      <ButtonPrime href="/About" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>About Me</ButtonPrime>
+      <ButtonPrime href="/About" target=""  wide="fit-content" icon={''}>About Me</ButtonPrime>
       </Flex>
 
       <RotatingImage
@@ -77,8 +78,10 @@ export default function Home({ allPosts }) {
     minMs={3000}   // 3秒〜
     maxMs={4000}   // 4秒の間でランダム
     width="100%"
-    height={320}
+    height={400}
     rounded="2xl" />
+
+
       </Flex>
 
       {/* What I Do */}
@@ -95,6 +98,7 @@ export default function Home({ allPosts }) {
         img={"/img/Top/WID_1.png"}
         link={"/What"}
         bgColor={"#ffffff50"}
+        iconColor={"#1B756C"}
          />
 
          <RowCard
@@ -103,6 +107,7 @@ export default function Home({ allPosts }) {
         img={"/img/Top/WID_2.png"}
         link={"/What"}
         bgColor={"#ffffff50"}
+        iconColor={"#1B756C"}
          />
 
          <RowCard
@@ -111,6 +116,7 @@ export default function Home({ allPosts }) {
         img={"/img/Top/WID_3.png"}
         link={"/What"}
         bgColor={"#ffffff50"}
+        iconColor={"#1B756C"}
          />
 
          <RowCard
@@ -118,7 +124,7 @@ export default function Home({ allPosts }) {
         text={"実務の詳細は制作実績にてご確認いただけます。普段の仕事でどんなデザインをしているのか気になる方は、ぜひ制作実績ページをご覧ください！"}
         img={"/img/Top/Portfolio.png"}
         link={"/Portfolio"}
-        bgColor={"linear-gradient(87.37deg, #91a59c, #3a5d4e)"}
+        bgColor={"linear-gradient(87.37deg, #1b756c, #279c90 66.83%, #68a8a2)"}
         textColor={"#ffffff"}
          />
 
@@ -138,7 +144,7 @@ export default function Home({ allPosts }) {
 
 
       </Flex>
-      <ButtonPrime href="/Work" bgColor="#23BA78" target="" color="#ffffff" wide="fit-content" icon={''}>Read More</ButtonPrime>
+      <ButtonPrime href="/Work" target=""  wide="fit-content" icon={''}>Read More</ButtonPrime>
     
 
       </Flex>
@@ -168,7 +174,7 @@ export default function Home({ allPosts }) {
      </Flex>
 
 
-      <ButtonPrime href="/Article" bgColor="#23BA78" target="" color="#ffffff" wide="fit-content" icon={''}>Read More</ButtonPrime>
+      <ButtonPrime href="/Article" target="" wide="fit-content" icon={''}>Read More</ButtonPrime>
 
       </Flex>
 
@@ -177,8 +183,6 @@ export default function Home({ allPosts }) {
 
      </Layout>
 
-
-    </ChakraProvider>
     </>
   )
 }

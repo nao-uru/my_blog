@@ -96,7 +96,7 @@ export const Menu = () => {
               <Navigation />
               <Flex my={8}>
                 <ButtonPrime href="https://bento.me/naosawa" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
-                <ButtonPrime passHref href="/Portfolio" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>Portfolio</ButtonPrime>
+                <ButtonPrime passHref href="/Portfolio" target=""  wide="fit-content" icon={''}>Portfolio</ButtonPrime>
                 </Flex>
             </DrawerBody>
           </DrawerContent>
@@ -157,7 +157,7 @@ export const Menu = () => {
 
     <Flex>
        <ButtonPrime href="https://bento.me/naosawa" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
-       <ButtonPrime href="/Portfolio" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>Portfolio</ButtonPrime>
+       <ButtonPrime href="/Portfolio" target=""  wide="fit-content" icon={''}>Portfolio</ButtonPrime>
     </Flex>
     
     </Flex>
@@ -170,17 +170,17 @@ export const Menu = () => {
 
 
 const sBorder = css`
- border-top: 2px solid #23BA78;
+ border-top: 2px solid #1B756C;
 `
 
 const sBorderLink = css`
- border-bottom: 2px solid #23BA78;
+ border-bottom: 2px solid #1B756C;
  padding-bottom: 8px;
 `
 
 const sLink = css`
   :hover {
-    color: #23BA78;
+    color: #1B756C;
   }
 `
 

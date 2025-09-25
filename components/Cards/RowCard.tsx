@@ -17,8 +17,8 @@ export const RowCard = (props) => {
             <Text fontSize={{base:"14px",md:"16px"}} lineHeight="150%" color={props.textColor}>{props.text}</Text>
             </Flex>
             <Link href={props.link} passHref>
-            <Flex css={sHover} h={{base:14 ,md:20 }} w={{base:14 ,md:20 }} border={"1px solid #CACACA"} rounded={4} ml={"auto"} justifyContent={"center"} alignItems={"center"}>
-              <Icon as={AiOutlineArrowRight} boxSize={{ base: 8, md: 10 }} />
+            <Flex css={sHover} h={{base:14 ,md:20 }} w={{base:14 ,md:20 }} border={"1px solid #FFFFFF"} rounded={8} ml={"auto"} justifyContent={"center"} alignItems={"center"}>
+              <Icon as={AiOutlineArrowRight} boxSize={{ base: 8, md: 10 }} color={props.iconColor ?? "#ffffff"} />
             </Flex>
             </Link>
           </Flex>
@@ -33,6 +33,7 @@ const sHover = css`
   
   :hover {
   transition: 0.5s;
-  opacity:0.7;
+  opacity:0.3;
+
 }
 `

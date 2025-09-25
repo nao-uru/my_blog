@@ -1,25 +1,12 @@
-
 import { extendTheme } from "@chakra-ui/react";
 
+const customTheme = extendTheme({
+  colors: {
+    brand: {
+      white: "#ffffff",
+      Green:"#1B756C",
+    },
+  },
+});
 
-const colors = {
-   brand:{
-    "Primary": "#23BA78",
-    "White": "#ffffff",
-   },
-    
-
-  };
-  
-  // export const ChakraTheme = extendTheme(
-  //   {
-  //     colors: {
-  //       brand,
-  //     },
-  //   },
-  // )
-
-
-  const customTheme = extendTheme({ colors,});
-
- export default customTheme;
+export default customTheme;
