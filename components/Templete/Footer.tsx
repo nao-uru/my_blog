@@ -29,7 +29,7 @@ export const Footer = () => {
 
       <Flex mt={4}>
       <ButtonPrime href="https://bento.me/naosawa" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
-      <ButtonPrime href="mailto:nao.uru0419@gmail.com" bgColor="#23BA78" target=""  wide="fit-content" color="#ffffff" icon={''}>Contact</ButtonPrime>
+      <ButtonPrime href="mailto:nao.uru0419@gmail.com" target=""  wide="fit-content" icon={''}>Contact</ButtonPrime>
 
       </Flex>
 
@@ -75,6 +75,6 @@ cursor: pointer;
 
 const sLink = css`
   :hover {
-    color: #25D088;
+    color: linear-gradient(87.37deg, #1b756c, #279c90 66.83%, #68a8a2);
   }
 `

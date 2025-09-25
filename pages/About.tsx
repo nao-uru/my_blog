@@ -6,7 +6,6 @@ import { Pagetitle } from "../components/Parts/Pagetitle";
 import { Layout } from "../components/Templete/Layout";
 import { Subtitle } from "../components/Parts/Subtitle";
 import { css } from "@emotion/react";
-import RotatingImage from "../components/Parts/RotatingImage";
 import { RowCard } from "../components/Cards/RowCard";
 
 
@@ -14,7 +13,6 @@ export default function About() {
 
   return (
     <>
-    <ChakraProvider>
 
      <HeadSetting
       title="About Me"
@@ -43,7 +41,7 @@ export default function About() {
 
           <Tr>
           <Td fontSize="md" fontWeight="bold" p={0} >E-Mail</Td>
-          <Td fontSize="sm" _hover={{color:"#23BA78"}}>
+          <Td fontSize="sm" _hover={{color:"#1B756C"}}>
             <Link href="mailto:nao.uru0419@gmail.com">nao.uru0419@gmail.com</Link>
             </Td>
           </Tr>
@@ -99,7 +97,7 @@ export default function About() {
         text={"個人での活動やSNSのリンクなどをまとめています。ご興味のある方はご覧ください★"}
         img={"/img/About/Slide_1.png"}
         link={"https://bento.me/naosawa"}
-        bgColor={"linear-gradient(87.37deg, #91a59c, #3a5d4e)"}
+        bgColor={"linear-gradient(87.37deg, #1b756c, #279c90 66.83%, #68a8a2)"}
         textColor={"#ffffff"}
          />
 
@@ -110,7 +108,6 @@ export default function About() {
 
     </Box>
     </Layout>
-    </ChakraProvider>
     </>
   )
 }

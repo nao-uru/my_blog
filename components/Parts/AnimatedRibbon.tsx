@@ -15,20 +15,20 @@ type Props = {
 export default function WaveAnimation({
   height = 700,
   thickness = 56,
-  trackColor = "#D4DFDA",
-  headColor = "#23BA78",
+  trackColor = "#d4dfdabb",
+  headColor = "#1b756cde",
   speedSec = 6,           // 8秒で1周
   headLen = 1200,          // 追走セグメントの長さ
   amplitude = 85,
   tiltDeg = -8,           // 負で右上がり
   offsetY = 0,
 }: Props) {
-  const TILE = 1380; // ビュー幅（任意）。アニメは dashoffset のみで無限ループ
+  const TILE = 1200; // ビュー幅（任意）。アニメは dashoffset のみで無限ループ
 
   // 波形を作る（C→Sで滑らかなSカーブ）。横幅に渡る1本のパス
   const pathD = `
-    M 0,100
-    C 260,10  520,10  780,100
+    M -20,100
+    C 200,10  520,10  780,80
     S 1140,190  1400,100
   `;
 

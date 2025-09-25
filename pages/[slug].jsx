@@ -140,7 +140,7 @@ export default function PostPage({blogPost, allPosts }) {
       </Box>
     </Flex>
     <Text fontSize={16} my={4}>プロダクトデザイナー5年目。<br/>SaaSプロダクトデザイナー×アプリ制作会社で副業中。元バックパッカーの旅行好き！</Text>
-    <ButtonPrime href="/About" bgColor="#23BA78"  wide="full" target="" color="#ffffff" icon={''}>About Me</ButtonPrime>
+    <ButtonPrime href="/About" wide="full" target="" icon={''}>About Me</ButtonPrime>
     </Box>
 
 
@@ -159,7 +159,7 @@ export default function PostPage({blogPost, allPosts }) {
             />
     }).slice(0,4)} 
 
-    <ButtonPrime href="/Article" bgColor="#23BA78"  wide="full" target="" color="#ffffff" icon={''}>All Posts</ButtonPrime>
+    <ButtonPrime href="/Article" wide="full" target="" icon={''}>All Posts</ButtonPrime>
     </Flex>
     </Box>
 
@@ -175,8 +175,8 @@ export default function PostPage({blogPost, allPosts }) {
 } 
 
 const sBack = css`
-  background: rgba( 255, 255, 255, 0.2 );
-  box-shadow: 0 8px 32px 0 rgba( 225, 225, 225, 0.2 );
+  background: rgba( 255, 255, 255, 0.6 );
+  box-shadow: 0 8px 32px 0 rgba( 225, 225, 225, 0.4 );
   backdrop-filter: blur( 8px );
   -webkit-backdrop-filter: blur( 8px );
   border-radius: 4px;
