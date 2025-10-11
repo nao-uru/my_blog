@@ -1,9 +1,9 @@
 import { Layout } from "../components/Templete/Layout";
 import { HeadSetting } from "../components/Templete/Head";
-import { ChakraProvider, Flex, Box, Text, SimpleGrid, Image } from "@chakra-ui/react";
+import { Flex, Box, Text, SimpleGrid, Image } from "@chakra-ui/react";
 import { Pagetitle } from "../components/Parts/Pagetitle";
 import { GetDribblePost } from "../libs/dribblepost";
-import { AiOutlineDribbble, AiOutlineExport } from "react-icons/ai";
+import { AiOutlineDribbble, AiOutlineExport, AiOutlineInstagram } from "react-icons/ai";
 import { DribbbleCard } from "../components/Cards/DribbbleCard";
 import { Subtitle } from "../components/Parts/Subtitle";
 import { LinkButton } from "../components/Parts/LinkButton";
@@ -33,11 +33,15 @@ export default function WorkPage() {
 
         <Box>
         <Subtitle size={{base:"24px",md:"32px"}}>Personal Project</Subtitle>
-        <Text my={2}>実務とは別にUI/UXスキル向上のために個人で制作したプロジェクトです。要件定義〜UI設計〜検証までを一貫して行いました。<br/>※実務のプロジェクト詳細には、
-        <Box display={"inline-block"}>
-        <LinkButton href="/Portfolio"  border="#151515" >制作実績</LinkButton>
-        </Box>
-        をご覧ください。</Text>      
+        <Text my={2}>
+          実務とは別にUI/UXスキル向上のために個人で制作したプロジェクトです。要件定義〜UI設計までを行いました。
+        </Text>
+        <Flex>
+          <Text>※実務のプロジェクト詳細は、</Text>
+          <LinkButton href="/Portfolio" border="#151515" color="#151515" target="_parent">制作実績</LinkButton>
+          <Text>をご覧ください。</Text>  
+        </Flex>
+         
         </Box>
 
       {/* IDEAL ME */}
@@ -53,8 +57,8 @@ export default function WorkPage() {
         </Flex>
 
         <Flex gap={4} flexDirection={{ base: "column" , md: 'row' }} >
-        <LinkButton href="https://www.figma.com/file/2r3Lm085yw0U6E9iVLi7Ta/IDEAL-ME?type=design&node-id=503%3A25036&mode=design&t=XTGedAxHjyVln4np-1" icon={<AiOutlineExport size={24} />} border="#151515" target="blank" >figmaファイルはこちら</LinkButton>
-        <LinkButton href="https://www.naosjournal.com/IdealMe_concept" icon={<AiOutlineExport size={24} />} border="#151515" target="blank" >ブログ記事はこちら</LinkButton>
+        <LinkButton href="https://www.figma.com/file/2r3Lm085yw0U6E9iVLi7Ta/IDEAL-ME?type=design&node-id=503%3A25036&mode=design&t=XTGedAxHjyVln4np-1" icon={<AiOutlineExport size={24} />} >figmaファイルはこちら</LinkButton>
+        <LinkButton href="https://www.naosjournal.com/IdealMe_concept" icon={<AiOutlineExport size={24} />} >ブログ記事はこちら</LinkButton>
         </Flex>
 
         </Flex>
@@ -66,8 +70,6 @@ export default function WorkPage() {
 
       <Flex flexDirection={{ base: "column" , md: 'row' }} gap={8} >
         <Image src="/img/Top/Work_2.png"  w={{ base: "full" , md: '400px' }} alt="Main Image" objectFit={"cover"} /> 
-        {/* <iframe src="https://drive.google.com/file/d/19uRqJW35kGEZwuy_8I1NL70Wdf5fD2YJ/preview" width="100%" height="320px"></iframe> */}
-
 
         <Flex flexDirection={"column"}>
         <Flex flexDirection={"column"} gap={4} alignSelf="stretch" h={"100%"} >
@@ -77,8 +79,8 @@ export default function WorkPage() {
         </Flex>
 
         <Flex gap={4} flexDirection={{ base: "column" , md: 'row' }} >
-        <LinkButton href="https://www.figma.com/file/6rmHOT3FTgVR0v28LkECqS/%E6%A5%AD%E5%8B%99%E3%82%A2%E3%83%97%E3%83%AA?type=design&node-id=1200-10081&mode=design&t=wZDQNGLmA3FTDtFR-11" icon={<AiOutlineExport size={24} />} border="#151515" >figmaファイルはこちら</LinkButton>
-        <LinkButton href="https://drive.google.com/file/d/19uRqJW35kGEZwuy_8I1NL70Wdf5fD2YJ/preview" icon={<AiOutlineExport size={24} />} border="#151515" >ドキュメント資料はこちら</LinkButton>
+        <LinkButton href="https://www.figma.com/file/6rmHOT3FTgVR0v28LkECqS/%E6%A5%AD%E5%8B%99%E3%82%A2%E3%83%97%E3%83%AA?type=design&node-id=1200-10081&mode=design&t=wZDQNGLmA3FTDtFR-11" icon={<AiOutlineExport size={24} />} >figmaファイルはこちら</LinkButton>
+        <LinkButton href="https://drive.google.com/file/d/19uRqJW35kGEZwuy_8I1NL70Wdf5fD2YJ/preview" icon={<AiOutlineExport size={24} />} >ドキュメント資料はこちら</LinkButton>
         </Flex>
 
         </Flex>
@@ -88,8 +90,6 @@ export default function WorkPage() {
       {/* OOUI2 */}
       <Flex flexDirection={{ base: "column" , md: 'row' }} gap={8} >
         <Image src="/img/Top/Work_1.png"  w={{ base: "full" , md: '400px' }} alt="Main Image" objectFit={"cover"} /> 
-        {/* <iframe src="https://drive.google.com/file/d/19uRqJW35kGEZwuy_8I1NL70Wdf5fD2YJ/preview" width="100%" height="320px"></iframe> */}
-
 
         <Flex flexDirection={"column"}>
         <Flex flexDirection={"column"} gap={4} alignSelf="stretch" h={"100%"} >
@@ -99,8 +99,8 @@ export default function WorkPage() {
         </Flex>
 
         <Flex gap={4} flexDirection={{ base: "column" , md: 'row' }} >
-        <LinkButton href="https://www.figma.com/file/6rmHOT3FTgVR0v28LkECqS/%E6%A5%AD%E5%8B%99%E3%82%A2%E3%83%97%E3%83%AA?type=design&node-id=1790-27203&mode=design&t=VZwR4WJqpOZ6gXX6-11" icon={<AiOutlineExport size={24} />} border="#151515" >figmaファイルはこちら</LinkButton>
-        <LinkButton href="https://drive.google.com/file/d/1BO9jD0ce-QKqRMERAnD98dOLW-VLjJIq/preview" icon={<AiOutlineExport size={24} />} border="#151515" >ドキュメント資料はこちら</LinkButton>
+        <LinkButton href="https://www.figma.com/file/6rmHOT3FTgVR0v28LkECqS/%E6%A5%AD%E5%8B%99%E3%82%A2%E3%83%97%E3%83%AA?type=design&node-id=1790-27203&mode=design&t=VZwR4WJqpOZ6gXX6-11" icon={<AiOutlineExport size={24} />}>figmaファイルはこちら</LinkButton>
+        <LinkButton href="https://drive.google.com/file/d/1BO9jD0ce-QKqRMERAnD98dOLW-VLjJIq/preview" icon={<AiOutlineExport size={24} />} >ドキュメント資料はこちら</LinkButton>
         </Flex>
 
         </Flex>
@@ -108,6 +108,37 @@ export default function WorkPage() {
       </Flex>
 
       </Flex>
+
+      {/* OHANA Wedding */}
+      <Flex py={{base:12, md:20}} flexDirection={"column"} gap={12}  >
+
+        <Box>
+        <Subtitle size={{base:"24px",md:"32px"}}>OHANA Wedding</Subtitle>
+        <Text my={2}>
+          結婚式プロフィールブックのテンプレート販売 / ブランディング・デザイン
+        </Text>
+        </Box>
+      <Flex flexDirection={{ base: "column" , md: 'row' }} gap={8} >
+        <Image src="/img/Top/Work_4.png" w={{ base: "full" , md: '400px' }} alt="Main Image" objectFit={"cover"} /> 
+
+        <Flex flexDirection={"column"}>
+        <Flex flexDirection={"column"} gap={4} alignSelf="stretch" h={"100%"} >
+          {/* <Subtitle size="24">Ideal Me</Subtitle> */}
+          <Text>結婚式を控えた花嫁に向けて、“自分らしさ”を表現できる結婚式プロフィールブックのテンプレートを販売しています。学生時代からの友人たちと共に、Instagram運用からテンプレートの企画・デザイン・販売ページ制作までを一貫して行っています！</Text>
+          <Text>Instagramフォロワー数 200人 ※2025年10月時点</Text>
+        </Flex>
+
+        <Flex gap={4} flexDirection={{ base: "column" , md: 'row' }} >
+        <LinkButton href="https://www.instagram.com/ohana___wedding/" icon={<AiOutlineInstagram size={24} />}>instagramアカウント</LinkButton>
+        <LinkButton href="https://linktr.ee/ohana_wedding" icon={<AiOutlineExport size={24} />} >販売サイトはこちら</LinkButton>
+        </Flex>
+
+        </Flex>
+
+
+      </Flex>
+      </Flex>
+
 
        {/* Dribble */}
       <Box>
@@ -126,7 +157,7 @@ export default function WorkPage() {
       </SimpleGrid>
 
       <Box mt={6}>      
-      <LinkButton href="https://dribbble.com/nao_uru" icon={<AiOutlineDribbble size={24} />} border="#151515"  >アカウントはこちら</LinkButton>
+      <LinkButton href="https://dribbble.com/nao_uru" icon={<AiOutlineDribbble size={24} />} >アカウントはこちら</LinkButton>
       </Box>
       </Box>
         

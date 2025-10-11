@@ -1,6 +1,6 @@
 import { HeadSetting } from "../components/Templete/Head";
 import { Layout } from "../components/Templete/Layout";
-import { ChakraProvider,Text, Box, Flex } from "@chakra-ui/react";
+import { ChakraProvider,Text, Box, Flex, Image } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import { ButtonPrime } from "../components/Parts/ButtonPrimary";
 import { getAllPosts, client } from "../libs/contentful";
