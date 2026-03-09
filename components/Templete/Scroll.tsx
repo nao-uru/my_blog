@@ -1,6 +1,4 @@
-'use client'
 import { FC, useRef, useEffect } from "react";
-import scrollReveal from "scrollreveal";
 
 interface ScrollRevealContainerProps {
   move?: string;
@@ -14,8 +12,10 @@ const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (sectionRef.current)
-      scrollReveal().reveal(sectionRef.current, {
+    if (!sectionRef.current) return;
+    const el = sectionRef.current;
+    import("scrollreveal").then(({ default: scrollReveal }) => {
+      scrollReveal().reveal(el, {
         reset: true,
         delay: 400,
         opacity: 0,
@@ -29,7 +29,8 @@ const ScrollRevealContainer: FC<ScrollRevealContainerProps> = ({
             : "bottom",
         distance: "40px"
       });
-  }, [sectionRef,move]);
+    });
+  }, [sectionRef, move]);
 
   return <section ref={sectionRef}>{children}</section>;
 };

@@ -72,8 +72,8 @@ export default function About() {
       Design:Figmaを使用したデザインシステム構築・運用、Sketch、Photoshop<br/>
       Code:HTML/CSS/JavaScript、React、Next.js<br/>
       Tools:Notion、Backlog、GitHub<br/>
-      Soft Skills:フルリモート環境・ドキュメント化<br/>
-
+      Soft Skills:フルリモート環境・ドキュメント化
+    </Text>
     <Grid templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={3} columnGap={3} my={8}>
     <SkillCard src='/img/Skills/figma.png'  text="コンポーネントやバリアブルの設計などデザインシステムの構築・運用を行っています。" />
     <SkillCard src='/img/Skills/sketch.png' text="figmaを使う前に使用していたツールです。最近は使っていません。" />
@@ -82,7 +82,6 @@ export default function About() {
     <SkillCard src='/img/Skills/js.png'  text="複雑なコードを書くことは難しいですが、たいていの動きは調べながら作成できます。" />
     <SkillCard src='/img/Skills/react.png'  text="実務経験はありません。このサイトはReat(Next.js)で構築しました。" />
     </Grid>
-    </Text>
     </Stack>
 
     <Stack lineHeight="180%" w={{base:"90%", md:"100%"}} ml="auto" m={{base:"auto"}} mb={24}  width="100%">
@@ -96,7 +95,7 @@ export default function About() {
         title={"プライベートも含めたいろいろ"}
         text={"個人での活動やSNSのリンクなどをまとめています。ご興味のある方はご覧ください★"}
         img={"/img/About/Slide_1.png"}
-        link={"https://bento.me/naosawa"}
+        link={"https://avely.me/nao_uru"}
         bgColor={"linear-gradient(87.37deg, #1b756c, #279c90 66.83%, #68a8a2)"}
         textColor={"#ffffff"}
          />
