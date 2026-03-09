@@ -26,7 +26,7 @@ export const Layout = ({ children, bg, }: LayoutProps) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <Container maxW={{ base: "96%", md: "1200px" }} m="auto">
+            <Container maxW={{ base: "96%", md: "1200px" }} m="auto" minHeight={"40vw"}>
               {children}
             </Container>
           </MotionBox>
