@@ -1,6 +1,6 @@
 import { HeadSetting } from "../components/Templete/Head";
 import Link from "next/link";
-import { ChakraProvider, Box,Text, Flex, Image, Stack, Table, Tbody, Td, Tr, Grid } from "@chakra-ui/react";
+import { Box,Text, Flex, Image, Stack, Table, Tbody, Td, Tr, Grid } from "@chakra-ui/react";
 import { SkillCard } from "../components/Cards/SkillCard";
 import { Pagetitle } from "../components/Parts/Pagetitle";
 import { Layout } from "../components/Templete/Layout";
@@ -36,7 +36,7 @@ export default function About() {
 
           <Tr>
           <Td fontSize="md" fontWeight="bold" p={0} >Age</Td>
-          <Td fontSize="md">29</Td>
+          <Td fontSize="md">30</Td>
           </Tr>
 
           <Tr>
