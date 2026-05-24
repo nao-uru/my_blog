@@ -95,7 +95,7 @@ export const Menu = () => {
             <DrawerBody>
               <Navigation />
               <Flex my={8}>
-                <ButtonPrime href="https://bento.me/naosawa" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
+                <ButtonPrime href="https://avely.me/nao_uru" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
                 <ButtonPrime passHref href="/Portfolio" target=""  wide="fit-content" icon={''}>Portfolio</ButtonPrime>
                 </Flex>
             </DrawerBody>
@@ -156,7 +156,7 @@ export const Menu = () => {
     </Link>
 
     <Flex>
-       <ButtonPrime href="https://bento.me/naosawa" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
+       <ButtonPrime href="https://avely.me/nao_uru" bgColor="#ffffff" target="brank"  wide="fit-content" color="#151515" icon={''}>SNS</ButtonPrime>
        <ButtonPrime href="/Portfolio" target=""  wide="fit-content" icon={''}>Portfolio</ButtonPrime>
     </Flex>
     

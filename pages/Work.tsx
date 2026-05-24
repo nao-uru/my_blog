@@ -125,7 +125,7 @@ export default function WorkPage() {
         <Flex flexDirection={"column"} gap={4} alignSelf="stretch" h={"100%"} >
           {/* <Subtitle size="24">Ideal Me</Subtitle> */}
           <Text>結婚式を控えた花嫁に向けて、“自分らしさ”を表現できる結婚式プロフィールブックのテンプレートを販売しています。学生時代からの友人たちと共に、Instagram運用からテンプレートの企画・デザイン・販売ページ制作までを一貫して行っています！</Text>
-          <Text>Instagramフォロワー数 200人 ※2025年10月時点</Text>
+          <Text>Instagramフォロワー数 500人 ※2026年5月時点</Text>
         </Flex>
 
         <Flex gap={4} flexDirection={{ base: "column" , md: 'row' }} >
