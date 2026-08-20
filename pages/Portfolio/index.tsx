@@ -44,18 +44,20 @@ interface RawItem extends Omit<PortfolioItem, 'thumbnailUrl'> {
 }
 
 function extractRawItems(recordMap: any): RawItem[] {
-  const blocks    = recordMap.block || {};
-  const views     = (recordMap.collection_query || {})[COLLECTION_ID] || {};
-  const firstView = Object.values(views)[0] as any;
-  const blockIds: string[] = firstView?.collection_group_results?.blockIds || [];
+  const blocks = recordMap.block || {};
+  const views  = (recordMap.collection_query || {})[COLLECTION_ID] || {};
 
-  const seen  = new Set<string>();
+  // 全ビューのblockIDを重複なく収集
+  const seen     = new Set<string>();
+  const blockIds: string[] = [];
+  for (const view of Object.values(views) as any[]) {
+    for (const id of (view?.collection_group_results?.blockIds || [])) {
+      if (!seen.has(id)) { seen.add(id); blockIds.push(id); }
+    }
+  }
   const items: RawItem[] = [];
 
   for (const blockId of blockIds) {
-    if (seen.has(blockId)) continue;
-    seen.add(blockId);
-
     const bd    = blocks[blockId] as any;
     const inner = bd?.value?.value ?? bd?.value;
     if (!inner || inner.type !== 'page' || !inner.alive) continue;
@@ -88,7 +90,7 @@ function extractRawItems(recordMap: any): RawItem[] {
 }
 
 export async function getServerSideProps() {
-  const api = new NotionAPI({ authToken: process.env.NOTION_TOKEN });
+  const api = new NotionAPI();
   let items: PortfolioItem[] = [];
 
   try {
@@ -277,6 +279,18 @@ export default function Portfolio({ items }: { items: PortfolioItem[] }) {
         <Pagetitle>Portfolio</Pagetitle>
         <Box my={16}>
           <Text>読み込みに失敗しました。時間をおいて再度お試しください。</Text>
+          <Flex mt={4}>
+            <Text>直接ご覧になりたい方は</Text>
+            <LinkButton
+              href="https://app.notion.com/p/naos-journal/2026-_NAO-OSAWA-13a2316f396e806fb9cede2fb2bb2a9e"
+              border="#151515"
+              color="#151515"
+              target="_blank"
+            >
+              →元のページ
+            </LinkButton>
+            <Text>からご確認ください！</Text>
+          </Flex>
         </Box>
       </Layout>
     );
