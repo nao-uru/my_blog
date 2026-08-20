@@ -31,7 +31,7 @@ function getPageTitle(recordMap: any, pageId: string): string {
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const id  = params?.id as string;
-  const api = new NotionAPI({ authToken: process.env.NOTION_TOKEN });
+  const api = new NotionAPI();
   let recordMap: any = null;
   try {
     recordMap = await Promise.race([
