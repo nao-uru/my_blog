@@ -11,19 +11,17 @@ export const ButtonPrime = ( props ) => {
     <>
     <ChakraProvider>
       
-       <Link href={props.href}  passHref legacyBehavior>
-         <a target={props.target}>
-         <Flex css={sHover} alignItems="center" justifyContent="center" cursor="pointer" borderRadius='full' 
-         background={props.bgColor ?? "linear-gradient(87.37deg, #2b5b56, #1b756c 40.87%, #00a291)"} 
-         color={props.color ?? "#ffffff"} 
+       <Link href={props.href} target={props.target}>
+         <Flex css={sHover} alignItems="center" justifyContent="center" cursor="pointer" borderRadius='full'
+         background={props.bgColor ?? "linear-gradient(87.37deg, #2b5b56, #1b756c 40.87%, #00a291)"}
+         color={props.color ?? "#ffffff"}
          width={props.wide}
-         px={6} py={3} mr={4}  
+         px={6} py={3} mr={4}
          border={`1px solid ${props.border}`}
          >
          <Text>{props.children}</Text>
          <Box>{props.icon}</Box>
          </Flex>
-         </a>
        </Link>
        
     </ChakraProvider>

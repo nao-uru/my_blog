@@ -69,10 +69,11 @@ export default function About() {
     <Stack lineHeight="180%" w={{base:"90%", md:"100%"}} ml="auto" m={{base:"auto"}} width="100%">
     <Subtitle size="24px">Skill</Subtitle>
     <Text mt={0} w={{base:"100%",md:"100%"}} mr="auto" fontSize={{base:"14px", md:"16px"}} >
-      Design:Figmaを使用したデザインシステム構築・運用、Sketch、Photoshop<br/>
-      Code:HTML/CSS/JavaScript、React、Next.js<br/>
-      Tools:Notion、Backlog、GitHub<br/>
-      Soft Skills:フルリモート環境・ドキュメント化
+      Design : Figmaを使用したデザインシステム構築・運用、Sketch、Photoshop<br/>
+      Code : HTML/CSS/JavaScript、React、Next.js<br/>
+      Tools : Notion、Backlog、GitHub<br/>
+      AI: Claude codeを使用したプロトタイプの作成、プロトタイプとfigmaの連携による開発効率の向上<br/>
+      Soft Skills : フルリモート環境・ドキュメント化
     </Text>
     <Grid templateColumns={{sm:'repeat(1, 1fr)',md:'repeat(2, 1fr)',lg:'repeat(3, 1fr)'}} rowGap={3} columnGap={3} my={8}>
     <SkillCard src='/img/Skills/figma.png'  text="コンポーネントやバリアブルの設計などデザインシステムの構築・運用を行っています。" />
