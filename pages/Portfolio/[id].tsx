@@ -54,6 +54,8 @@ export default function PortfolioDetail({ recordMap, id }: { recordMap: any; id:
       if (!raw) return;
       const { expiresAt } = JSON.parse(raw);
       if (typeof expiresAt === 'number' && Date.now() < expiresAt) {
+        // localStorage is only available client-side; syncing here (not during render) avoids SSR hydration mismatch.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setIsAuth(true);
         const t = setTimeout(() => {
           localStorage.removeItem(STORAGE_KEY);

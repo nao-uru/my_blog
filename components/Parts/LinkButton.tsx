@@ -11,8 +11,7 @@ export const LinkButton = ( props ) => {
     <>
     <ChakraProvider>
       
-       <Link href={props.href}  passHref legacyBehavior>
-         <a target={props.target ?? "_blank"}>
+       <Link href={props.href} target={props.target ?? "_blank"}>
          <Flex css={sHover} alignItems="center" justifyContent="center" cursor="pointer" w={"fit-content"}
          color={props.color ?? "#2B5B56"}
          borderBottom={`1px solid ${props.border ?? "#2B5B56"}`}
@@ -20,7 +19,6 @@ export const LinkButton = ( props ) => {
          <Text>{props.children}</Text>
          <Box>{props.icon}</Box>
          </Flex>
-         </a>
        </Link>
        
     </ChakraProvider>

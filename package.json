@@ -6,10 +6,10 @@
     "node": "22.x"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@types/scrollreveal": "0.0.9",
@@ -20,14 +20,14 @@
     "markdown-it": "^13.0.2",
     "markdown-it-container": "^3.0.0",
     "markdown-it-mark": "^3.0.1",
-    "next": "^13.5.4",
+    "next": "16.4.5",
     "node-fetch": "^3.3.2",
     "notion-client": "^8.0.2",
     "notion-types": "^8.0.2",
     "notion-utils": "^8.0.2",
     "prismjs": "^1.30.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "react-icons": "^4.11.0",
     "react-notion-x": "^7.8.2",
     "rss-parser": "^3.13.0",
@@ -44,10 +44,10 @@
     "@emotion/styled": "^11.11.0",
     "@types/gtag.js": "0.0.16",
     "@types/node": "^20.8.4",
-    "@types/react": "^18.2.28",
+    "@types/react": "19.3.0",
     "contentful": "^10.6.1",
-    "eslint": "8.51.0",
-    "eslint-config-next": "13.5.4",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.5",
     "framer-motion": "^10.16.4",
     "styled-components": "^6.0.8",
     "typescript": "^5.2.2"
@@ -55,5 +55,8 @@
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
   "main": "theme.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "overrides": {
+    "@types/react": "19.3.0"
+  }
 }
